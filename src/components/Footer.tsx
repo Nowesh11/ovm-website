@@ -10,10 +10,10 @@ import { ArrowUp, Globe, Mail, MapPin, Phone } from "lucide-react";
    address, phone and email before this goes live.
 --------------------------------------------------------------- */
 const CONTACT = {
-  address: "No. 1, Jalan Perindustrian, 40150 Shah Alam, Selangor Darul Ehsan, Malaysia",
-  phone: "+60 3-5555 0000",
-  phoneHref: "tel:+60355550000",
-  email: "enquiry@ovm.com.my",
+  address: "No. 26-3 (3rd Floor), Jln PJU 5/20B The Strand, Kota Damansara, 47810 Petaling Jaya, Selangor",
+  phone: "+60 17-372 0090",
+  phoneHref: "tel:+60173720090",
+  email: "guox@ovm.cn",
   linkedin: "https://www.linkedin.com/",
   website: "https://www.ovm.cn/",
 };
