@@ -6,27 +6,21 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 
-/* Nav model — edit here to change the menu in both desktop and mobile. */
-const TECHNOLOGIES = [
-  { label: "Post-tensioning systems", href: "#technologies" },
-  { label: "Cable systems", href: "#technologies" },
-  { label: "Bearing", href: "#technologies" },
-  { label: "Expansion joints", href: "#technologies" },
-  { label: "Anti-seismic device", href: "#technologies" },
-  { label: "Dampers", href: "#technologies" },
-];
+import { technologyLinks } from "@/data/technologies";
 
+/* Nav model — edit here to change the menu in both desktop and mobile.
+   Routes are absolute so every entry also works from a sub-page, where a
+   bare "#hash" would resolve against the wrong document. */
 const LINKS = [
-  { label: "Home", href: "#top", children: null },
-  { label: "OVM Technologies", href: "#technologies", children: TECHNOLOGIES },
-  { label: "About", href: "#about", children: null },
-  { label: "Contact", href: "#contact", children: null },
+  { label: "Home", href: "/", children: null },
+  { label: "OVM Technologies", href: "/#technologies", children: technologyLinks },
+  { label: "About", href: "/about", children: null },
 ];
 
 function Logo({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <Link
-      href="#top"
+      href="/"
       aria-label="OVM Malaysia — home"
       onClick={onNavigate}
       className="group flex shrink-0 items-center"
@@ -162,7 +156,7 @@ export default function Navbar() {
             )}
 
             <Link
-              href="#contact"
+              href="/contact"
               className="ml-3 rounded-full bg-gradient-to-r from-amber to-amber-400 px-5 py-2.5 text-sm font-semibold text-ink shadow-[0_10px_30px_-10px_rgba(245,148,31,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-10px_rgba(245,148,31,0.85)]"
             >
               Get in touch
@@ -284,7 +278,7 @@ export default function Navbar() {
                   className="pt-8"
                 >
                   <Link
-                    href="#contact"
+                    href="/contact"
                     onClick={() => setMobileOpen(false)}
                     className="block rounded-xl bg-gradient-to-r from-amber to-amber-400 px-5 py-3.5 text-center text-sm font-semibold text-ink shadow-[0_14px_40px_-12px_rgba(245,148,31,0.7)]"
                   >

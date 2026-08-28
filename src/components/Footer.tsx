@@ -5,33 +5,16 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUp, Globe, Mail, MapPin, Phone } from "lucide-react";
 
-/* ---------------------------------------------------------------
-   PLACEHOLDER CONTACT DETAILS — replace with OVM Malaysia's real
-   address, phone and email before this goes live.
---------------------------------------------------------------- */
-const CONTACT = {
-  address: "No. 26-3 (3rd Floor), Jln PJU 5/20B The Strand, Kota Damansara, 47810 Petaling Jaya, Selangor",
-  phone: "+60 17-372 0090",
-  phoneHref: "tel:+60173720090",
-  email: "guox@ovm.cn",
-  linkedin: "https://www.linkedin.com/",
-  website: "https://www.ovm.cn/",
-};
+import { CONTACT } from "@/data/contact";
+import { technologyLinks } from "@/data/technologies";
 
 const COMPANY_LINKS = [
-  { label: "Home", href: "#top" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
-const TECHNOLOGY_LINKS = [
-  { label: "Post-tensioning systems", href: "#technologies" },
-  { label: "Cable systems", href: "#technologies" },
-  { label: "Bearing", href: "#technologies" },
-  { label: "Expansion joints", href: "#technologies" },
-  { label: "Anti-seismic device", href: "#technologies" },
-  { label: "Dampers", href: "#technologies" },
-];
+const TECHNOLOGY_LINKS = technologyLinks;
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -83,7 +66,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* Column 1 — brand */}
           <div className="sm:col-span-2 lg:col-span-4">
-            <Link href="#top" aria-label="OVM Malaysia — home" className="group inline-flex">
+            <Link href="/" aria-label="OVM Malaysia — home" className="group inline-flex">
               <span className="logo-plate inline-flex items-center rounded-lg px-3 py-2 shadow-[0_6px_24px_-8px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-[1.03]">
                 <Image src="/logo.jpeg" alt="OVM Malaysia" width={1600} height={500} className="h-8 w-auto" />
               </span>
@@ -194,15 +177,18 @@ export default function Footer() {
             Prestressing Technology (M) Sdn. Bhd. All rights reserved.
           </p>
 
-          <a
-            href="#top"
+          {/* A button, not an "#top" anchor — the homepage is the only page
+              with a #top element, so the anchor was inert everywhere else. */}
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="group inline-flex items-center gap-2 text-xs font-medium text-muted-dim transition-colors duration-300 hover:text-amber"
           >
             Back to top
             <span className="flex h-7 w-7 items-center justify-center rounded-full border border-line transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-amber/50">
               <ArrowUp size={13} />
             </span>
-          </a>
+          </button>
         </div>
       </div>
     </footer>

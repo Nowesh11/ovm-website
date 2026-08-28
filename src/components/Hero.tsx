@@ -75,9 +75,11 @@ export default function Hero() {
         {/* Headline */}
         <motion.h1
           variants={rise}
-          className="max-w-4xl font-display text-[2.5rem] font-bold leading-[1.06] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl xl:text-[4.25rem]"
+          className="max-w-4xl lg:max-w-6xl overflow-hidden font-display text-[2.5rem] font-bold leading-[1.06] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl xl:text-[4.25rem]"
         >
-          Engineering quality, leading innovation
+          Engineered quality,
+          <br />
+          leading innovation
           <span className="mt-2 block text-gradient-brand">
             — the strength behind the span
           </span>
@@ -88,13 +90,16 @@ export default function Hero() {
           variants={rise}
           className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
         >
-          For nearly six decades, OVM has engineered the post-tensioning systems,
-          stay cables and bearings that carry the world&rsquo;s longest spans —
-          now delivered across Malaysia with global R&amp;D behind every anchorage.
+          For six decades, OVM has engineered the post-tensioning systems, stay
+          cables and bearings that carry the world&rsquo;s longest spans — now
+          delivered across Malaysia with global R&amp;D behind every anchorage.
         </motion.p>
 
         {/* Calls to action */}
-        <motion.div variants={rise} className="mt-10 flex flex-wrap items-center gap-4">
+        <motion.div
+          variants={rise}
+          className="mt-10 flex flex-wrap items-center gap-4"
+        >
           <Link
             href="#technologies"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber to-amber-400 px-6 py-3.5 text-sm font-semibold text-ink shadow-[0_14px_40px_-12px_rgba(245,148,31,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-12px_rgba(245,148,31,0.9)]"

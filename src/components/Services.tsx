@@ -1,12 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Anchor, Cable, Cpu, HardHat, Radar, Waves, Wrench } from "lucide-react";
+import { Anchor, ArrowRight, Cable, Cpu, HardHat, Radar, Waves, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 type Service = {
+  /** Set where a matching /technologies page exists. */
+  href?: string;
   icon: LucideIcon;
   title: string;
   description: string;
@@ -16,16 +19,19 @@ const SERVICES: Service[] = [
   {
     icon: Anchor,
     title: "Post Tensioning",
+    href: "/technologies/post-tensioning-systems",
     description: "Anchorage systems, strands and jacks for bonded and unbonded tendons.",
   },
   {
     icon: Cable,
     title: "Cable",
+    href: "/technologies/cable-systems",
     description: "Stay cables, suspension and external tendons for long-span structures.",
   },
   {
     icon: Waves,
     title: "Bearing and Vibrating Damping",
+    href: "/technologies/bearing",
     description: "Structural bearings, isolators and dampers that absorb load and motion.",
   },
   {
@@ -41,6 +47,7 @@ const SERVICES: Service[] = [
   {
     icon: Radar,
     title: "Monitoring",
+    href: "/technologies/structural-health-monitoring",
     description: "Structural health monitoring with live sensor data and load analytics.",
   },
   {
@@ -106,11 +113,11 @@ export default function Services() {
           viewport={{ once: true, amount: 0.15 }}
           className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-4 lg:mt-16 lg:grid-cols-8"
         >
-          {SERVICES.map(({ icon: Icon, title, description }, i) => (
+          {SERVICES.map(({ icon: Icon, title, description, href }, i) => (
             <motion.article
               key={title}
               variants={rise}
-              className={`group relative overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)] md:col-span-2 ${
+              className={`group relative flex flex-col overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)] md:col-span-2 ${
                 COL_START[i] ?? ""
               }`}
             >
@@ -118,7 +125,7 @@ export default function Services() {
               <span className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-90" />
               <span className="pointer-events-none absolute inset-0 bg-gradient-to-b from-navy/[0.14] to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
 
-              <div className="relative">
+              <div className="relative flex flex-1 flex-col">
                 {/* Glowing navy → amber circle */}
                 <div className="relative mb-6 inline-flex">
                   <span
@@ -133,7 +140,26 @@ export default function Services() {
                 <h3 className="font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white transition-colors duration-300 group-hover:text-amber-400">
                   {title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-muted">{description}</p>
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted">
+                  {description}
+                </p>
+
+                {/* Only the services backed by a technology page get a link;
+                    the rest have nowhere to go yet. */}
+                {href && (
+                  <Link
+                    href={href}
+                    /* Stretched over the card — one anchor, no nesting. */
+                    className="mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-amber transition-colors duration-300 after:absolute after:inset-0 hover:text-amber-400"
+                  >
+                    Discover
+                    <ArrowRight
+                      size={15}
+                      className="transition-transform duration-300 group-hover:translate-x-1.5"
+                    />
+                    <span className="sr-only"> {title}</span>
+                  </Link>
+                )}
               </div>
             </motion.article>
           ))}
