@@ -76,6 +76,41 @@ export const newsItems: NewsItem[] = [
     linkedinUrl:
       "https://www.linkedin.com/feed/update/urn:li:activity:7483353683481624576/",
   },
+  {
+    slug: "sejingkat-bridge-p7-closure",
+    title: "Milestone Achieved: Sejingkat Bridge P7 Side-Span Closure",
+    category: "Project Milestone",
+    date: "2026-04-13",
+    excerpt:
+      "On 13 April 2026, the side-span of the P7 main girder on Sejingkat Bridge was successfully closed — a key milestone laying a solid foundation for the upcoming full-bridge closure.",
+    image: "/news/sejingkat-bridge/sejingkat-bridge-01.jpg",
+    focus: "50% 50%",
+    gallery: [
+      "/news/sejingkat-bridge/sejingkat-bridge-01.jpg",
+      "/news/sejingkat-bridge/sejingkat-bridge-02.jpg",
+    ],
+    body: [
+      "On 13 April 2026, the side-span of the P7 main girder on Sejingkat Bridge was successfully closed — a key milestone that lays a solid foundation for the upcoming full-bridge closure.",
+      "The Sejingkat Bridge is a 1.28 km cable-stayed crossing over the Sarawak River, forming part of the Kuching–Samarahan coastal corridor under Sarawak's Second Trunk Road Programme — a strategic investment to enhance regional connectivity and ease traffic congestion.",
+      "Engineering highlights: main span arrangement of 200m + 400m + 200m, deck width 25.6m, and a side-span closure segment of 10m executed using an underslung basket as the form traveller.",
+      "As the stay cable sub-contractor, OVM has delivered consistently across production, delivery, and on-site installation. Two features make this bridge technically distinctive: a fire-proof stay cable system for enhanced safety and long-term durability, and a hybrid saddle/non-saddle stay cable configuration on the same bridge — a tailored solution rarely deployed in the region.",
+      "Sejingkat Bridge is one of four cable-stayed bridges in Sarawak where OVM serves as stay cable sub-contractor — a meaningful vote of confidence in our team's technical capability and execution discipline in the Malaysian market.",
+      "Our appreciation to the project owner JKR Sarawak, main contractor, consultants, and all partners working alongside us on this critical piece of infrastructure for Sarawak. Onward to full-bridge closure!",
+    ],
+    tags: [
+      "OVM",
+      "Sarawak",
+      "Malaysia",
+      "CableStayedBridge",
+      "StayCable",
+      "BridgeEngineering",
+      "PostTensioning",
+      "Infrastructure",
+      "TrunkRoad",
+    ],
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7450456044847144960/",
+  },
 ];
 
 export const getNewsItem = (slug: string) =>

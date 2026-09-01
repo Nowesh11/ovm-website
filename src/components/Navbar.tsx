@@ -15,6 +15,7 @@ const LINKS = [
   { label: "Home", href: "/", children: null },
   { label: "OVM Technologies", href: "/#technologies", children: technologyLinks },
   { label: "About", href: "/about", children: null },
+  { label: "News", href: "/news", children: null },
 ];
 
 function Logo({ onNavigate }: { onNavigate?: () => void }) {

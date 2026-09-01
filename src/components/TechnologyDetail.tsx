@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Activity, Anchor, Blocks, Cable, ChevronRight, Layers, MapPin, Radar, ShieldCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-import { DIAGRAM_CAPTIONS, isDiagram } from "@/data/technologies";
+import CatalogueButton from "@/components/CatalogueButton";
 import type { TechIconKey, Technology } from "@/data/technologies";
 
 /* Resolved here rather than in the data module, so `technologies.ts` stays
@@ -51,11 +51,28 @@ const reveal = {
 };
 
 export default function TechnologyDetail({ tech }: { tech: Technology }) {
-  const { name, icon, heroImage, summary, types, galleryImages, projects } = tech;
+  const {
+    name,
+    icon,
+    heroImage,
+    summary,
+    types,
+    components,
+    galleryImages,
+    projects,
+    catalogueUrl,
+  } = tech;
   const Icon = ICONS[icon];
 
-  const diagrams = galleryImages.filter(isDiagram);
-  const photos = galleryImages.filter((src) => !isDiagram(src));
+  /* 1 part gets a single wide card; 2-3 fill the row; 4+ run four across. */
+  const componentColumns =
+    components.length === 1
+      ? "max-w-sm grid-cols-1"
+      : components.length === 2
+        ? "grid-cols-1 sm:grid-cols-2"
+        : components.length === 3
+          ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
 
   return (
     <>
@@ -153,6 +170,12 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
           >
             {summary}
           </motion.p>
+
+          {catalogueUrl && (
+            <motion.div variants={rise} className="mt-9">
+              <CatalogueButton href={catalogueUrl} />
+            </motion.div>
+          )}
         </motion.div>
       </section>
 
@@ -205,48 +228,18 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
             ))}
           </motion.div>
 
-          {/* Supporting imagery. Product diagrams are studio shots on light
-              backgrounds, so they get a light card and a caption; project
-              photography keeps the dark full-bleed treatment. */}
-          {diagrams.length > 0 && (
+          {/* Project photography, in the dark full-bleed treatment. Product
+              shots live in "System Supply" below instead. */}
+          {galleryImages.length > 0 && (
             <motion.div
               {...reveal}
               className={`mt-12 grid gap-5 ${
-                diagrams.length === 1
-                  ? "max-w-md grid-cols-1"
-                  : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                galleryImages.length === 1
+                  ? "max-w-3xl grid-cols-1"
+                  : "grid-cols-1 sm:grid-cols-2"
               }`}
             >
-              {diagrams.map((src) => (
-                <figure
-                  key={src}
-                  className="group overflow-hidden rounded-[16px] border border-line bg-white/95 transition-all duration-400 hover:-translate-y-1 hover:border-navy-300/45 hover:shadow-[0_24px_50px_-22px_rgba(0,0,0,0.9)]"
-                >
-                  <div className="relative aspect-[4/3] p-5">
-                    <Image
-                      src={src}
-                      alt={DIAGRAM_CAPTIONS[src] ?? `${name} product diagram`}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-contain p-2"
-                    />
-                  </div>
-                  <figcaption className="border-t border-ink/10 bg-white px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.12em] text-ink-deep/70">
-                    {DIAGRAM_CAPTIONS[src] ?? name}
-                  </figcaption>
-                </figure>
-              ))}
-            </motion.div>
-          )}
-
-          {photos.length > 0 && (
-            <motion.div
-              {...reveal}
-              className={`mt-12 grid gap-5 ${
-                photos.length === 1 ? "max-w-3xl grid-cols-1" : "grid-cols-1 sm:grid-cols-2"
-              }`}
-            >
-              {photos.map((src) => (
+              {galleryImages.map((src) => (
                 <div
                   key={src}
                   className="relative aspect-[16/10] overflow-hidden rounded-[16px] border border-line bg-surface"
@@ -265,6 +258,77 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
           )}
         </div>
       </section>
+
+      {/* ---------------------------------------------------------------
+          System supply — the parts list. Reads as a spec sheet rather than
+          the editorial cards above: numbered, tightly gridded, and each
+          product shot on the white plate these studio images need.
+          Skipped entirely where we have no component photography.
+      --------------------------------------------------------------- */}
+      {components.length > 0 && (
+        <section className="relative overflow-hidden border-t border-line py-20 sm:py-24">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-40 top-1/3 -z-10 h-[26rem] w-[30rem] rounded-full bg-navy/10 blur-[150px]"
+          />
+
+          <div className="shell">
+            <motion.div {...reveal}>
+              <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
+                <span className="h-px w-8 bg-gradient-to-r from-amber to-transparent" />
+                System Supply
+              </span>
+              <h2 className="mt-5 font-display text-2xl font-bold leading-[1.15] tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
+                Components we supply
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
+                The individual parts that make up a complete {name.toLowerCase()}{" "}
+                installation.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={gridContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.12 }}
+              className={`mt-12 grid gap-5 ${componentColumns}`}
+            >
+              {components.map(({ name: partName, image, desc }, i) => (
+                <motion.figure
+                  key={image}
+                  variants={gridRise}
+                  className="group flex flex-col overflow-hidden rounded-[14px] border border-line bg-surface transition-all duration-400 hover:-translate-y-1 hover:border-amber/40 hover:shadow-[0_24px_50px_-24px_rgba(0,0,0,0.9)]"
+                >
+                  {/* Studio product shots are cut out on white, so they need a
+                      light plate — the dark card would swallow them. */}
+                  <div className="relative aspect-[4/3] bg-white">
+                    <Image
+                      src={image}
+                      alt={`${partName} — OVM ${name}`}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-contain p-5 transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-3 top-3 rounded-md bg-ink-deep/80 px-2 py-1 font-mono text-[10px] font-semibold tabular-nums tracking-[0.1em] text-amber">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  <figcaption className="flex flex-1 flex-col border-t border-line px-5 py-4">
+                    <h3 className="font-display text-sm font-bold leading-snug tracking-[-0.01em] text-white transition-colors duration-300 group-hover:text-amber-400">
+                      {partName}
+                    </h3>
+                    {desc && (
+                      <p className="mt-2 text-xs leading-relaxed text-muted">{desc}</p>
+                    )}
+                  </figcaption>
+                </motion.figure>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* ---------------------------------------------------------------
           Reference projects

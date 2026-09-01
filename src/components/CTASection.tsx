@@ -6,9 +6,11 @@ import { ArrowRight } from "lucide-react";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
+/* The section clips its own overflow: the -inset-x-10 glow below would
+   otherwise escape the viewport and add 16px of horizontal page overflow. */
 export default function CTASection() {
   return (
-    <section id="contact" className="relative py-24 sm:py-28 lg:py-32">
+    <section id="contact" className="relative overflow-hidden py-24 sm:py-28 lg:py-32">
       <div className="shell">
         <motion.div
           initial={{ opacity: 0, y: 34 }}
