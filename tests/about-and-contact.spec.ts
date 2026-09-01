@@ -89,7 +89,14 @@ test.describe("contact page", () => {
 
     const email = card.locator('a[href^="mailto:"]');
     await expect(email).toHaveCount(1);
-    await expect(email).toHaveAttribute("href", "mailto:guox@ovm.cn");
+    await expect(email).toHaveAttribute(
+      "href",
+      "mailto:guox@ovm.cn,keertigaletchumanan@ovm.cn",
+    );
+    /* The second recipient rides in the href only — the card still shows
+       the one public address. */
+    await expect(email).toContainText("guox@ovm.cn");
+    await expect(email).not.toContainText("keertigaletchumanan");
   });
 
   test("google map iframe points at the office address", async ({ page }) => {

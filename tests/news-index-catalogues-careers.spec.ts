@@ -137,18 +137,24 @@ test.describe("careers", () => {
 
     const link = page.locator("#careers a");
     await expect(link).toHaveCount(1);
-    await expect(link).toHaveAttribute("href", "mailto:guox@ovm.cn");
+    await expect(link).toHaveAttribute(
+      "href",
+      "mailto:guox@ovm.cn,keertigaletchumanan@ovm.cn",
+    );
     await expect(link).toHaveText("guox@ovm.cn");
 
     await expect(page.locator("#careers")).toContainText(
       "Interested in joining our team? Send your resume to guox@ovm.cn",
     );
 
-    /* One address across the whole site — no separate careers inbox. */
+    /* One link everywhere — the same pair of recipients, no separate
+       careers inbox. */
     const mailtos = await page
       .locator('a[href^="mailto:"]')
       .evaluateAll((els) => els.map((el) => el.getAttribute("href")));
-    expect(new Set(mailtos)).toEqual(new Set(["mailto:guox@ovm.cn"]));
+    expect(new Set(mailtos)).toEqual(
+      new Set(["mailto:guox@ovm.cn,keertigaletchumanan@ovm.cn"]),
+    );
   });
 });
 

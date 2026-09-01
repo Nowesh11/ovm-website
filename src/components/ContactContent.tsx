@@ -5,7 +5,12 @@ import { motion } from "framer-motion";
 import { Briefcase, ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 
 import ContactForm from "@/components/ContactForm";
-import { CONTACT, MAP_EMBED_URL, MAP_SEARCH_URL } from "@/data/contact";
+import {
+  CONTACT,
+  EMAIL_HREF,
+  MAP_EMBED_URL,
+  MAP_SEARCH_URL,
+} from "@/data/contact";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -170,7 +175,7 @@ export default function ContactContent() {
                   </div>
                 </a>
 
-                <a href={`mailto:${CONTACT.email}`} className={rowClass}>
+                <a href={EMAIL_HREF} className={rowClass}>
                   <span className={iconClass}>
                     <Mail size={19} strokeWidth={1.9} />
                   </span>
@@ -217,7 +222,7 @@ export default function ContactContent() {
                 <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
                   Interested in joining our team? Send your resume to{" "}
                   <a
-                    href={`mailto:${CONTACT.email}`}
+                    href={EMAIL_HREF}
                     className="font-semibold text-white/90 underline decoration-amber/40 underline-offset-4 transition-colors duration-300 hover:text-amber-400 hover:decoration-amber"
                   >
                     {CONTACT.email}

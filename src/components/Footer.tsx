@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUp, Globe, Mail, MapPin, Phone } from "lucide-react";
 
-import { CONTACT } from "@/data/contact";
+import { CONTACT, EMAIL_HREF } from "@/data/contact";
 import { technologyLinks } from "@/data/technologies";
 
 const COMPANY_LINKS = [
@@ -161,7 +161,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={`mailto:${CONTACT.email}`}
+                  href={EMAIL_HREF}
                   className="flex items-start gap-3 break-all text-sm text-muted transition-colors duration-300 hover:text-amber"
                 >
                   <Mail size={16} className="mt-0.5 shrink-0 text-amber" />
