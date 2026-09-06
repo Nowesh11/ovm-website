@@ -26,13 +26,13 @@ export const TECH_EXPECTATIONS: Record<
     diagramCount: number;
   }
 > = {
-  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 7, galleryCount: 2, componentCount: 6, diagramCount: 0 },
-  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 5, galleryCount: 3, componentCount: 9, diagramCount: 5 },
-  bearing: { name: "Bearing", hasHeroImage: true, typeCount: 3, projectCount: 2, galleryCount: 0, componentCount: 4, diagramCount: 0 },
-  "expansion-joints": { name: "Expansion Joints", hasHeroImage: false, typeCount: 3, projectCount: 0, galleryCount: 0, componentCount: 2, diagramCount: 0 },
-  "anti-seismic-device": { name: "Anti-Seismic Device", hasHeroImage: true, typeCount: 1, projectCount: 1, galleryCount: 0, componentCount: 1, diagramCount: 0 },
+  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 23, galleryCount: 2, componentCount: 6, diagramCount: 0 },
+  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 9, galleryCount: 3, componentCount: 9, diagramCount: 5 },
+  bearing: { name: "Bearing", hasHeroImage: true, typeCount: 3, projectCount: 3, galleryCount: 0, componentCount: 4, diagramCount: 0 },
+  "expansion-joints": { name: "Expansion Joints", hasHeroImage: false, typeCount: 3, projectCount: 8, galleryCount: 0, componentCount: 2, diagramCount: 0 },
+  "anti-seismic-device": { name: "Anti-Seismic Device", hasHeroImage: true, typeCount: 1, projectCount: 0, galleryCount: 0, componentCount: 1, diagramCount: 0 },
   dampers: { name: "Dampers", hasHeroImage: false, typeCount: 2, projectCount: 0, galleryCount: 0, componentCount: 2, diagramCount: 0 },
-  "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 3, galleryCount: 1, componentCount: 0, diagramCount: 0 },
+  "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 0, galleryCount: 1, componentCount: 0, diagramCount: 0 },
 };
 
 /** Every image referenced by a `components` entry, across all technologies. */
@@ -85,6 +85,73 @@ export const PROFILE_2026_PROJECTS = [
     title: "East Coast Rail Link (ECRL)",
     image: "/technologies/profile-2026/ecrl-aerial-pptx.jpg",
   },
+] as const;
+
+/**
+ * Reference projects each technology page should list, mirroring the
+ * `technologies` tags in src/data/projects.ts. The three omitted slugs
+ * (anti-seismic-device, dampers, structural-health-monitoring) have no
+ * Malaysian project and must render no Reference Projects section at all.
+ */
+export const PROJECTS_BY_TECHNOLOGY = {
+  "post-tensioning-systems": [
+    "duke-3-highway",
+    "dash-highway",
+    "suke-highway",
+    "sg-pulai-balanced-cantilever-bridge",
+    "lrt-3",
+    "ioi-city-mall-phase-2",
+    "jalan-ums",
+    "batang-rajang-bridge",
+    "batang-igan-bridge",
+    "rts-link",
+    "east-coast-rail-link-ecrl",
+    "bintulu-jepak-bridge",
+    "tun-abdul-taib-mahmud-bridge",
+    "batang-rambungan-bridge",
+    "batang-lupar-1-bridge",
+    "sejingkat-bridge",
+    "kuts-red-line",
+    "kuts-blue-line-2",
+    "bandar-lawas-bridge",
+    "tg-aru-ums-pedestrian-cyclist-bridge",
+    "sungai-paku-bridge",
+    "lrt-mutiara-line",
+    "pan-borneo-highway-sabah",
+  ],
+  "cable-systems": [
+    "batang-igan-bridge",
+    "bintulu-jepak-bridge",
+    "tun-abdul-taib-mahmud-bridge",
+    "batang-rambungan-bridge",
+    "batang-lupar-1-bridge",
+    "sejingkat-bridge",
+    "bandar-lawas-bridge",
+    "tg-aru-ums-pedestrian-cyclist-bridge",
+    "sungai-paku-bridge",
+  ],
+  bearing: [
+    "batang-igan-bridge",
+    "batang-saribas-bridge-no-2",
+    "east-coast-rail-link-ecrl",
+  ],
+  "expansion-joints": [
+    "muara-lassa-bridge",
+    "batang-igan-bridge",
+    "batang-saribas-bridge-no-2",
+    "east-coast-rail-link-ecrl",
+    "bintulu-jepak-bridge",
+    "tun-abdul-taib-mahmud-bridge",
+    "batang-lupar-1-bridge",
+    "sejingkat-bridge",
+  ],
+} as const;
+
+/** Technology pages that must show no Reference Projects section. */
+export const TECHNOLOGIES_WITHOUT_PROJECTS = [
+  "anti-seismic-device",
+  "dampers",
+  "structural-health-monitoring",
 ] as const;
 
 /** Catalogue PDFs offered as downloads, keyed by the page that offers them. */

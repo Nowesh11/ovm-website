@@ -59,41 +59,6 @@ test.describe("project deep links", () => {
     await expect(card).toContainText("approximately 665 kilometers");
   });
 
-  test("reference project cards link only where a carousel entry exists", async ({
-    page,
-  }) => {
-    await page.goto("/technologies/cable-systems");
-    await scrollThroughPage(page);
-
-    const section = page
-      .locator("section")
-      .filter({ has: page.getByRole("heading", { name: "Reference Projects" }) });
-
-    /* Jepak Bridge is in the carousel as "Bintulu-Jepak Bridge". */
-    const jepak = section.locator("article").filter({ hasText: "Jepak Bridge" });
-    await expect(jepak.locator("a")).toHaveAttribute(
-      "href",
-      "/#project-bintulu-jepak-bridge",
-    );
-
-    /* The overseas projects have no carousel card, so no link at all —
-       a href to a missing anchor would scroll nowhere. */
-    const overseas = section.locator("article").filter({ hasText: "FAST Telescope" });
-    await expect(overseas).toHaveCount(1);
-    await expect(overseas.locator("a")).toHaveCount(0);
-
-    /* Every link that is rendered must point at an id that exists. */
-    const hrefs = await section
-      .locator("a")
-      .evaluateAll((els) => els.map((el) => el.getAttribute("href")!));
-
-    await page.goto("/");
-    for (const href of hrefs) {
-      expect(href.startsWith("/#project-")).toBe(true);
-      await expect(page.locator(`#${href.slice(2)}`)).toHaveCount(1);
-    }
-  });
-
   test("clicking a reference project scrolls the homepage card into view and highlights it", async ({
     page,
   }) => {

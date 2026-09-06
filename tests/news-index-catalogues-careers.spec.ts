@@ -254,25 +254,29 @@ test.describe("enriched technology pages", () => {
     );
   });
 
-  test("the new Malaysian reference projects are listed", async ({ page }) => {
+  test("the Malaysian reference projects are listed", async ({ page }) => {
+    const section = () =>
+      page
+        .locator("section")
+        .filter({ has: page.getByRole("heading", { name: "Reference Projects" }) });
+
     await page.goto("/technologies/post-tensioning-systems");
-    const ptProjects = page
-      .locator("section")
-      .filter({ has: page.getByRole("heading", { name: "Reference Projects" }) });
-    await ptProjects.scrollIntoViewIfNeeded();
+    await section().scrollIntoViewIfNeeded();
     await expect(
-      ptProjects.getByRole("heading", { name: "East Coast Rail Link (ECRL)" }),
+      section().getByRole("heading", { name: "East Coast Rail Link (ECRL)" }),
     ).toBeVisible();
 
+    /* The carousel entry's own name now, not the catalogue's "Jepak Bridge". */
     await page.goto("/technologies/cable-systems");
-    await expect(page.getByRole("heading", { name: "Jepak Bridge" })).toBeVisible();
+    await section().scrollIntoViewIfNeeded();
+    await expect(
+      section().getByRole("heading", { name: "Bintulu-Jepak Bridge" }),
+    ).toBeVisible();
 
+    /* Monitoring's reference projects were overseas catalogue entries; with
+       the lists consolidated onto the 24 Malaysian projects it has none. */
     await page.goto("/technologies/structural-health-monitoring");
-    await expect(
-      page.getByRole("heading", { name: "Hong Kong Stonecutters Bridge" }),
-    ).toBeVisible();
-    await expect(
-      page.getByRole("heading", { name: "Jiangxi Jianyi Bridge" }),
-    ).toBeVisible();
+    await scrollThroughPage(page);
+    await expect(page.getByRole("heading", { name: "Reference Projects" })).toHaveCount(0);
   });
 });

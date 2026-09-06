@@ -37,12 +37,6 @@ export type TechnologyDiagram = {
   image: string;
 };
 
-export type TechnologyProject = {
-  name: string;
-  location: string;
-  detail: string;
-};
-
 export type Technology = {
   slug: string;
   name: string;
@@ -57,7 +51,6 @@ export type Technology = {
   /** Line drawings, rendered in their own section above the parts list. */
   diagrams?: TechnologyDiagram[];
   galleryImages: string[];
-  projects: TechnologyProject[];
   /** PDF under /public/catalogues, offered as a download on the page. */
   catalogueUrl?: string;
 };
@@ -131,48 +124,6 @@ export const technologies: Technology[] = [
     galleryImages: [
       "/technologies/post-tensioning-hero-algeria.jpg",
       "/technologies/post-tensioning-china-thailand-railway.jpg",
-    ],
-    projects: [
-      {
-        name: "Central-Wan Chai Bypass",
-        location: "Hong Kong, 2013",
-        detail:
-          "4,500m length. Erection of precast viaducts, transportation of segments on deck, supply and installation of post-tensioning.",
-      },
-      {
-        name: "LNG Tank Project",
-        location: "Tianjin, China",
-        detail:
-          "2×200,000m³ LNG steel storage tank, 8×220,000m³ LNG film tank. OVM supplied cryogenic prestressing system.",
-      },
-      {
-        name: "East Coast Rail Link (ECRL)",
-        location: "Malaysia",
-        detail:
-          "OVM supplied PT system and equipment, elastomeric bearings and expansion joints.",
-      },
-      {
-        name: "Fuqing Nuclear Power Plant",
-        location: "China, 2009-2010",
-        detail:
-          "Supply of anchorage system for containments of Unit 1, 2, 3 and 4 (OVM15R-19K and OVM15R-30K).",
-      },
-      {
-        name: "TWRP Tank",
-        location: "Singapore",
-        detail: "OVM provides PT materials and stressing equipment.",
-      },
-      {
-        name: "Mohmand Hydropower Project",
-        location: "Pakistan",
-        detail: "OVM supplied ground cable system and stressing equipment.",
-      },
-      {
-        name: "CBD Egypt",
-        location: "New Capital, Egypt",
-        detail:
-          "Main business district of Egypt's new capital. OVM supplied PT system and equipment, supervision of prestressing works.",
-      },
     ],
   },
   {
@@ -275,37 +226,6 @@ export const technologies: Technology[] = [
       "/technologies/cable-systems-fast-telescope.jpg",
       "/technologies/cable-systems-night-bridge.jpg",
     ],
-    projects: [
-      {
-        name: "Jepak Bridge",
-        location: "Sarawak, Malaysia (Under Construction)",
-        detail:
-          "OVM supplied stay cables, PT systems, high-strength PT bars and expansion joints.",
-      },
-      {
-        name: "Yavuz Sultan Selim Bridge",
-        location: "Turkey",
-        detail: "Main span 1,500m, the widest bridge in the world. OVM supplied 68 cables.",
-      },
-      {
-        name: "Jiayu Bridge",
-        location: "Hubei Province, China",
-        detail:
-          "Total length 4,660m, main span 920m. 208 PWS stay cables supplied by OVM.",
-      },
-      {
-        name: "Kigamboni Bridge",
-        location: "Tanzania",
-        detail:
-          "Total length 6,800m, main span 200m. Supply of PT system, bridge bearings, expansion joints, and OVM2250 cable system.",
-      },
-      {
-        name: "FAST Telescope",
-        location: "China",
-        detail:
-          "The world's biggest telescope. OVM supplied 6,670 strand cables forming the reflector panel cable network.",
-      },
-    ],
   },
   {
     slug: "bearing",
@@ -349,19 +269,6 @@ export const technologies: Technology[] = [
       },
     ],
     galleryImages: [],
-    projects: [
-      {
-        name: "Hong Kong–Zhuhai–Macao Bridge",
-        location: "China, 2016",
-        detail:
-          "The longest cross-sea bridge in the world at 55km. OVM supplied high damping bearings and lead-rod seismic bearings.",
-      },
-      {
-        name: "El Ferdan Bridge",
-        location: "Egypt",
-        detail: "OVM supplied spherical bearings.",
-      },
-    ],
   },
   {
     slug: "expansion-joints",
@@ -397,7 +304,6 @@ export const technologies: Technology[] = [
       },
     ],
     galleryImages: [],
-    projects: [],
   },
   {
     slug: "anti-seismic-device",
@@ -419,14 +325,6 @@ export const technologies: Technology[] = [
       },
     ],
     galleryImages: [],
-    projects: [
-      {
-        name: "Hong Kong–Zhuhai–Macao Bridge",
-        location: "China, 2016",
-        detail:
-          "OVM supplied high damping bearings and lead-rod seismic bearings for the world's longest cross-sea bridge.",
-      },
-    ],
   },
   {
     slug: "dampers",
@@ -458,7 +356,6 @@ export const technologies: Technology[] = [
       },
     ],
     galleryImages: [],
-    projects: [],
   },
   {
     slug: "structural-health-monitoring",
@@ -491,26 +388,6 @@ export const technologies: Technology[] = [
     components: [],
     /* Reused from the cable systems set — no dedicated monitoring photo exists. */
     galleryImages: ["/technologies/cable-systems-night-bridge.jpg"],
-    projects: [
-      {
-        name: "Hong Kong Stonecutters Bridge",
-        location: "China, 2009",
-        detail:
-          "Total length 1,596m, main span 1,018m. Supply and install magnetic flux sensors to monitor external cable force.",
-      },
-      {
-        name: "Jiangxi Jianyi Bridge",
-        location: "China, 2008",
-        detail:
-          "Set up bridge operation management system, monitoring force of stay cable, stress of pylon and girder, and structural data including displacement, deformation, vibration, temperature and humidity.",
-      },
-      {
-        name: "Yibin Bridge over Yangtze River",
-        location: "China, 2008",
-        detail:
-          "Length 850m, main span 460m. Set up 2 GPRS online cable force monitoring systems, installed 80 magnetic flux sensors on selected stay cables.",
-      },
-    ],
   },
 ];
 

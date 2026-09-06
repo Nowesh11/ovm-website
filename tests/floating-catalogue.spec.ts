@@ -42,7 +42,21 @@ test.describe("floating catalogue button", () => {
         return { x: Math.round(box.x), y: Math.round(box.y) };
       };
 
-      const start = await at();
+      /* The button eases in from a 14px offset, so measure only once that
+         transform has stopped moving — otherwise the baseline is taken
+         mid-animation and every later comparison is a pixel or two out. */
+      const settled = async () => {
+        let previous = await at();
+        for (let i = 0; i < 20; i += 1) {
+          await page.waitForTimeout(150);
+          const current = await at();
+          if (current.x === previous.x && current.y === previous.y) return current;
+          previous = current;
+        }
+        return previous;
+      };
+
+      const start = await settled();
 
       /* Bottom-right corner of the viewport. */
       const viewport = page.viewportSize()!;

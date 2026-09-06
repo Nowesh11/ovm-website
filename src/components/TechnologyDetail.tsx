@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Activity, Anchor, ArrowRight, Blocks, Cable, ChevronRight, Layers, MapPin, Radar, ShieldCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-import { findProjectSlug, projectAnchorId } from "@/data/projects";
+import { projectAnchorId, projectsForTechnology } from "@/data/projects";
 import type { TechIconKey, Technology } from "@/data/technologies";
 
 /* Resolved here rather than in the data module, so `technologies.ts` stays
@@ -51,18 +51,13 @@ const reveal = {
 };
 
 export default function TechnologyDetail({ tech }: { tech: Technology }) {
-  const {
-    name,
-    icon,
-    heroImage,
-    summary,
-    types,
-    components,
-    diagrams,
-    galleryImages,
-    projects,
-  } = tech;
+  const { slug, name, icon, heroImage, summary, types, components, diagrams, galleryImages } =
+    tech;
   const Icon = ICONS[icon];
+
+  /* Pulled from the one project list rather than stored per technology, so
+     the homepage carousel and these cards can never drift apart. */
+  const referenceProjects = projectsForTechnology(slug);
 
   /* 1 part gets a single wide card; 2 fill the row. Past that, prefer the
      column count that divides evenly, so the last row is never a lone
@@ -399,9 +394,12 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
       )}
 
       {/* ---------------------------------------------------------------
-          Reference projects
+          Reference projects — filtered out of the one project list in
+          `data/projects.ts` by this technology's slug, so a project is
+          described once and appears wherever it applies. Technologies none
+          of the Malaysian projects used render nothing at all.
       --------------------------------------------------------------- */}
-      {projects.length > 0 && (
+      {referenceProjects.length > 0 && (
         <section className="relative overflow-hidden border-t border-line py-20 sm:py-24">
           <div
             aria-hidden
@@ -417,40 +415,40 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
               <h2 className="mt-5 font-display text-2xl font-bold leading-[1.15] tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
                 Reference Projects
               </h2>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
+                Malaysian projects carrying OVM {name.toLowerCase()}.
+              </p>
             </motion.div>
 
             <motion.div
               variants={gridContainer}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.12 }}
-              className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2"
+              viewport={{ once: true, amount: 0.08 }}
+              className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
             >
-              {projects.map(({ name: projectName, location, detail }) => {
-                /* Only the projects that also appear in the homepage
-                   carousel can be deep-linked; the rest — mostly overseas
-                   work — stay plain cards rather than dead links. */
-                const carouselSlug = findProjectSlug(projectName);
-
-                return (
+              {referenceProjects.map(
+                ({ slug, title, location, scope, image: projectImage }) => (
                   <motion.article
-                    key={`${projectName}-${location}`}
+                    key={slug}
                     variants={gridRise}
-                    className={`group relative overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 ${
-                      carouselSlug
-                        ? "hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)]"
-                        : ""
-                    }`}
+                    className="group relative flex flex-col overflow-hidden rounded-[16px] border border-line bg-surface transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)]"
                   >
-                    <span className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-90" />
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={projectImage}
+                        alt={`${title}, ${location}`}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                      />
+                      {/* Blends the photo into the card body instead of a hard edge */}
+                      <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface via-surface/25 to-transparent" />
+                    </div>
 
-                    <div className="relative">
-                      <h3
-                        className={`font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white transition-colors duration-300 ${
-                          carouselSlug ? "group-hover:text-amber-400" : ""
-                        }`}
-                      >
-                        {projectName}
+                    <div className="relative flex flex-1 flex-col p-6 pt-5">
+                      <h3 className="font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white transition-colors duration-300 group-hover:text-amber-400">
+                        {title}
                       </h3>
 
                       <div className="mt-2.5 flex items-center gap-2 text-sm text-muted">
@@ -458,27 +456,28 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
                         <span>{location}</span>
                       </div>
 
-                      <p className="mt-4 text-sm leading-relaxed text-muted">{detail}</p>
+                      <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
+                        {scope}
+                      </p>
 
-                      {carouselSlug && (
-                        <Link
-                          href={`/#${projectAnchorId(carouselSlug)}`}
-                          /* Stretched over the card — one anchor, and the
-                             homepage's ScrollToHash does the rest. */
-                          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-amber transition-colors duration-300 after:absolute after:inset-0 hover:text-amber-400"
-                        >
-                          See the project
-                          <ArrowRight
-                            size={15}
-                            className="transition-transform duration-300 group-hover:translate-x-1.5"
-                          />
-                          <span className="sr-only"> {projectName} on the homepage</span>
-                        </Link>
-                      )}
+                      <Link
+                        href={`/#${projectAnchorId(slug)}`}
+                        /* Stretched over the card — one anchor, and the
+                           homepage's ScrollToHash does the scrolling and
+                           the highlight on arrival. */
+                        className="mt-6 inline-flex items-center gap-2 self-start text-sm font-semibold text-amber transition-colors duration-300 after:absolute after:inset-0 hover:text-amber-400"
+                      >
+                        See the project
+                        <ArrowRight
+                          size={15}
+                          className="transition-transform duration-300 group-hover:translate-x-1.5"
+                        />
+                        <span className="sr-only"> {title} on the homepage</span>
+                      </Link>
                     </div>
                   </motion.article>
-                );
-              })}
+                ),
+              )}
             </motion.div>
           </div>
         </section>

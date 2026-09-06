@@ -1,6 +1,10 @@
-/* Reference projects in Malaysia. Drives the homepage carousel
+/* Reference projects in Malaysia — the single source of project truth for
+   the whole site. Drives the homepage carousel
    (`components/FeaturedProjects.tsx`), whose cards carry a
-   `project-${slug}` DOM id so the technology pages can deep-link to one. */
+   `project-${slug}` DOM id, and the "Reference Projects" section on each
+   technology page, which filters this list by `technologies`. */
+
+import type { Technology } from "@/data/technologies";
 
 export type Project = {
   /** Kebab-case, and the anchor target: `/#project-${slug}`. */
@@ -8,6 +12,13 @@ export type Project = {
   title: string;
   location: string;
   scope: string;
+  /**
+   * Which technology pages this project belongs on, as slugs from
+   * `technologies.ts` — derived from the `scope` text above. Typed against
+   * Technology["slug"] so a renamed technology breaks the build here rather
+   * than silently emptying a page's project list.
+   */
+  technologies: Technology["slug"][];
   image: string;
 };
 
@@ -17,6 +28,7 @@ export const projects: Project[] = [
     title: "DUKE 3 Highway",
     location: "Klang Valley",
     scope: "PT system & prestressing equipment to 60m T-Beam",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/duke3-highway.jpg",
   },
   {
@@ -24,6 +36,7 @@ export const projects: Project[] = [
     title: "DASH Highway",
     location: "Klang Valley",
     scope: "PT system & prestressing equipment",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/dash-highway.jpg",
   },
   {
@@ -31,6 +44,7 @@ export const projects: Project[] = [
     title: "SUKE Highway",
     location: "Klang Valley",
     scope: "PT system & prestressing equipment",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/suke-highway.jpg",
   },
   {
@@ -38,6 +52,7 @@ export const projects: Project[] = [
     title: "Sg. Pulai Balanced Cantilever Bridge",
     location: "Johor",
     scope: "PT system & prestressing equipment",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/sg-pulai-bridge.jpg",
   },
   {
@@ -45,6 +60,7 @@ export const projects: Project[] = [
     title: "LRT 3",
     location: "Klang Valley",
     scope: "PT system & prestressing equipment",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/lrt3.jpg",
   },
   {
@@ -52,6 +68,7 @@ export const projects: Project[] = [
     title: "IOI City Mall Phase 2",
     location: "Putrajaya",
     scope: "PT system & prestressing equipment",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/ioi-city-mall.jpg",
   },
   {
@@ -59,6 +76,7 @@ export const projects: Project[] = [
     title: "Jalan UMS",
     location: "Kota Kinabalu, Sabah",
     scope: "PT system & prestressing equipment",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/jalan-ums-kota-kinabalu.jpg",
   },
   {
@@ -66,6 +84,7 @@ export const projects: Project[] = [
     title: "Batang Rajang Bridge",
     location: "Pan Borneo WPC 7, Sibu, Sarawak",
     scope: "PT system, prestressing equipment & incremental launching",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/batang-rajang-bridge.jpg",
   },
   {
@@ -73,6 +92,7 @@ export const projects: Project[] = [
     title: "Muara Lassa Bridge",
     location: "Sarawak",
     scope: "Expansion joints",
+    technologies: ["expansion-joints"],
     image: "/projects/muara-lassa-bridge.jpg",
   },
   {
@@ -80,6 +100,7 @@ export const projects: Project[] = [
     title: "Batang Igan Bridge",
     location: "Sarawak",
     scope: "PT system, bearings, expansion joints & stay cables",
+    technologies: ["post-tensioning-systems", "bearing", "expansion-joints", "cable-systems"],
     image: "/projects/batang-igan-bridge.jpg",
   },
   {
@@ -87,6 +108,7 @@ export const projects: Project[] = [
     title: "Batang Saribas Bridge No. 2",
     location: "Sarawak",
     scope: "Bearings & expansion joints",
+    technologies: ["bearing", "expansion-joints"],
     image: "/projects/batang-saribas-bridge-2.jpg",
   },
   {
@@ -94,6 +116,7 @@ export const projects: Project[] = [
     title: "RTS Link",
     location: "Johor–Singapore",
     scope: "PL2 PT system",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/rts-link-johor.jpg",
   },
   {
@@ -102,6 +125,7 @@ export const projects: Project[] = [
     location: "Malaysia, 665km",
     scope:
       "Anchorage, intelligent tensioning equipment, intelligent grouting equipment, elastomeric bearing, expansion joint. Project total length approximately 665 kilometers.",
+    technologies: ["post-tensioning-systems", "bearing", "expansion-joints"],
     image: "/technologies/profile-2026/ecrl-aerial-pptx.jpg",
   },
   {
@@ -110,6 +134,7 @@ export const projects: Project[] = [
     location: "Sarawak",
     scope:
       "Stay cable subcontractor, PT systems, PT bars, expansion joints — main span 267.6m",
+    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
     image: "/projects/bintulu-jepak-bridge.jpg",
   },
   /* NOTE: possibly the same structure as "Bintulu-Jepak Bridge" above — both
@@ -122,6 +147,7 @@ export const projects: Project[] = [
     location: "Sarawak, Malaysia",
     scope:
       "Supply and installation of 96 stay cables, supply of post-tensioning systems, high-strength PT bars, and expansion joints. Total length 3,586.234m, span arrangement 108.4m + 267.6m + 108.4m.",
+    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
     image: "/technologies/profile-2026/tun-abdul-taib-mahmud-bridge.jpg",
   },
   {
@@ -129,6 +155,7 @@ export const projects: Project[] = [
     title: "Batang Rambungan Bridge",
     location: "Sarawak",
     scope: "Stay cables, installation supervision, PT systems — main span 160m",
+    technologies: ["cable-systems", "post-tensioning-systems"],
     image: "/projects/batang-rambungan-bridge.jpg",
   },
   {
@@ -136,6 +163,7 @@ export const projects: Project[] = [
     title: "Batang Lupar 1 Bridge",
     location: "Sarawak",
     scope: "Stay cable subcontractor, PT bars, expansion joints — main span 324.4m",
+    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
     image: "/projects/batang-lupar-1-bridge.jpg",
   },
   {
@@ -143,6 +171,7 @@ export const projects: Project[] = [
     title: "Sejingkat Bridge",
     location: "Sarawak",
     scope: "Stay cable subcontractor, PT system & expansion joint — main span 400m",
+    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
     image: "/projects/sejingkat-bridge.jpg",
   },
   {
@@ -150,6 +179,7 @@ export const projects: Project[] = [
     title: "KUTS Red Line",
     location: "Sarawak",
     scope: "PT specialist sub-contractor",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/kuts-red-line.jpg",
   },
   {
@@ -157,6 +187,7 @@ export const projects: Project[] = [
     title: "KUTS Blue Line 2",
     location: "Sarawak",
     scope: "PT materials & supervision",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/kuts-blue-line-2.jpg",
   },
   {
@@ -164,6 +195,7 @@ export const projects: Project[] = [
     title: "Bandar Lawas Bridge",
     location: "Sarawak",
     scope: "PT system, suspension bridge solution & installation supervision",
+    technologies: ["post-tensioning-systems", "cable-systems"],
     image: "/projects/bandar-lawas-bridge.jpg",
   },
   {
@@ -171,6 +203,7 @@ export const projects: Project[] = [
     title: "Tg. Aru–UMS Pedestrian & Cyclist Bridge",
     location: "Sabah",
     scope: "PT system, suspension bridge solution & installation supervision",
+    technologies: ["post-tensioning-systems", "cable-systems"],
     image: "/projects/tg-aru-ums-bridge.jpg",
   },
   {
@@ -178,6 +211,7 @@ export const projects: Project[] = [
     title: "Sungai Paku Bridge",
     location: "Sarawak",
     scope: "PT system, hanger system for arch bridge",
+    technologies: ["post-tensioning-systems", "cable-systems"],
     image: "/projects/sungai-paku-bridge.jpg",
   },
   {
@@ -185,6 +219,7 @@ export const projects: Project[] = [
     title: "LRT Mutiara Line",
     location: "Penang",
     scope: "PL3 PT system, equipment & installation supervision, 5km package SLS2",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/lrt-mutiara-line-penang.jpg",
   },
   {
@@ -192,6 +227,7 @@ export const projects: Project[] = [
     title: "Pan Borneo Highway Sabah",
     location: "WP19 & WP33",
     scope: "PT specialist sub-contractor for all bridges & ground anchors",
+    technologies: ["post-tensioning-systems"],
     image: "/projects/pan-borneo-sabah.jpg",
   },
 ];
@@ -199,35 +235,13 @@ export const projects: Project[] = [
 /** The DOM id the homepage carousel puts on a project card. */
 export const projectAnchorId = (slug: string) => `project-${slug}`;
 
-const normalise = (name: string) =>
-  name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-
 /**
- * Resolves a technology page's project name to a carousel slug.
+ * The projects to list on a technology page, in carousel order.
  *
- * Exact match first; then a whole-segment containment check, so the cable
- * page's "Jepak Bridge" finds "Bintulu-Jepak Bridge" while a bare word like
- * "Bridge" cannot match anything. Returns null when the project has no
- * carousel entry — the caller then renders the card as plain text rather
- * than a link that scrolls to nothing.
+ * Empty for the technologies none of the Malaysian projects used
+ * (anti-seismic devices, dampers, monitoring) — the page then skips the
+ * "Reference Projects" section rather than rendering an empty one.
  */
-export function findProjectSlug(name: string): string | null {
-  const key = normalise(name);
+export const projectsForTechnology = (technologySlug: string) =>
+  projects.filter((p) => p.technologies.includes(technologySlug));
 
-  const exact = projects.find((p) => normalise(p.title) === key);
-  if (exact) return exact.slug;
-
-  /* Guard: two or more words, so short generic names never match. */
-  if (key.split("-").length < 2) return null;
-
-  const contained = projects.filter((p) => {
-    const title = normalise(p.title);
-    return title === key || title.endsWith(`-${key}`) || title.startsWith(`${key}-`);
-  });
-
-  /* Ambiguous names stay unlinked rather than guessing wrong. */
-  return contained.length === 1 ? contained[0].slug : null;
-}
