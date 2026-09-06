@@ -18,7 +18,7 @@ type Service = {
 const SERVICES: Service[] = [
   {
     icon: Anchor,
-    title: "Post Tensioning",
+    title: "Post Tensioning Systems",
     href: "/technologies/post-tensioning-systems",
     description: "Anchorage systems, strands and jacks for bonded and unbonded tendons.",
   },
