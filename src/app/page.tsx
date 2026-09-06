@@ -6,11 +6,14 @@ import LatestNews from "@/components/LatestNews";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import ScrollToHash from "@/components/ScrollToHash";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      {/* Handles /#project-<slug> deep links from the technology pages. */}
+      <ScrollToHash />
       <main className="flex-1">
         <Hero />
         <StatsSection />

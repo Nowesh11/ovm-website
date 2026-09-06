@@ -13,6 +13,7 @@ export default async function globalSetup() {
     "/",
     "/about",
     "/contact",
+    "/careers",
     "/news",
     ...TECH_SLUGS.map((slug) => `/technologies/${slug}`),
     ...NEWS_SLUGS.map((slug) => `/news/${slug}`),

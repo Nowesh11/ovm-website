@@ -108,6 +108,32 @@
     background-size: 64px 64px;
   }
 
+  /* Deep-link highlight. `ScrollToHash` adds this to the card named by the
+     URL hash and strips it again once the animation has run, so a visitor
+     arriving from a technology page can see which card was scrolled to. */
+  .anchor-highlight {
+    animation: anchor-highlight 1.5s var(--ease-out-quint, cubic-bezier(0.22, 1, 0.36, 1))
+      forwards;
+  }
+
+  @keyframes anchor-highlight {
+    0% {
+      box-shadow:
+        0 0 0 0 rgb(245 148 31 / 0),
+        0 0 0 0 rgb(245 148 31 / 0);
+    }
+    18% {
+      box-shadow:
+        0 0 0 3px rgb(245 148 31 / 0.9),
+        0 0 42px 6px rgb(245 148 31 / 0.5);
+    }
+    100% {
+      box-shadow:
+        0 0 0 3px rgb(245 148 31 / 0),
+        0 0 42px 6px rgb(245 148 31 / 0);
+    }
+  }
+
   /* Seats the near-white logo JPEG on a plate so it reads on dark chrome */
   .logo-plate {
     background: #ffffff;
@@ -121,5 +147,11 @@
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  /* Hold a static ring instead of pulsing one; the script still removes it. */
+  .anchor-highlight {
+    animation: none;
+    box-shadow: 0 0 0 3px rgb(245 148 31 / 0.9);
   }
 }

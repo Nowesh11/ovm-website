@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Anchor, ArrowRight, Cable, Cpu, HardHat, Radar, Waves, Wrench } from "lucide-react";
+import { Anchor, ArrowRight, Cable, HardHat, Radar, Waves, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
@@ -50,19 +50,7 @@ const SERVICES: Service[] = [
     href: "/technologies/structural-health-monitoring",
     description: "Structural health monitoring with live sensor data and load analytics.",
   },
-  {
-    icon: Cpu,
-    title: "Leading-edge Technology",
-    description: "In-house R&D turning six decades of field data into new systems.",
-  },
 ];
-
-/* Trailing-row centring: with an 8-col grid and 2-col cards, starting the 5th
-   card at column 2 leaves the last three cards balanced instead of left-hung. */
-const COL_START: Record<number, string> = {
-  4: "lg:col-start-2",
-  6: "md:col-start-2 lg:col-start-auto",
-};
 
 const container = {
   hidden: {},
@@ -111,15 +99,15 @@ export default function Services() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
-          className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-4 lg:mt-16 lg:grid-cols-8"
+          /* Six cards across 2-col spans: two per row on md, three on lg —
+             both fill exactly, so no trailing-row centring is needed. */
+          className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-4 lg:mt-16 lg:grid-cols-6"
         >
-          {SERVICES.map(({ icon: Icon, title, description, href }, i) => (
+          {SERVICES.map(({ icon: Icon, title, description, href }) => (
             <motion.article
               key={title}
               variants={rise}
-              className={`group relative flex flex-col overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)] md:col-span-2 ${
-                COL_START[i] ?? ""
-              }`}
+              className="group relative flex flex-col overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)] md:col-span-2"
             >
               {/* Light sweeping across the card's top edge on hover */}
               <span className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-90" />

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import FloatingCatalogueButton from "@/components/FloatingCatalogueButton";
 import StatsSection from "@/components/StatsSection";
 import AboutTimeline from "@/components/AboutTimeline";
 import AboutContent, { AboutExpertise } from "@/components/AboutContent";
@@ -31,6 +32,11 @@ export default function AboutPage() {
         <CTASection />
       </main>
       <Footer />
+
+      {/* The general engineering solutions catalogue, in the same floating
+          treatment the technology pages use. Outside <main> so it is fixed
+          against the viewport. */}
+      <FloatingCatalogueButton catalogueUrl="/catalogues/OVM-Engineering-Solutions-2024.pdf" />
     </>
   );
 }

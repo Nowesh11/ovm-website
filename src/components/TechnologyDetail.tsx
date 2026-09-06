@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Activity, Anchor, Blocks, Cable, ChevronRight, Layers, MapPin, Radar, ShieldCheck } from "lucide-react";
+import { Activity, Anchor, ArrowRight, Blocks, Cable, ChevronRight, Layers, MapPin, Radar, ShieldCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-import CatalogueButton from "@/components/CatalogueButton";
+import { findProjectSlug, projectAnchorId } from "@/data/projects";
 import type { TechIconKey, Technology } from "@/data/technologies";
 
 /* Resolved here rather than in the data module, so `technologies.ts` stays
@@ -58,21 +58,23 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
     summary,
     types,
     components,
+    diagrams,
     galleryImages,
     projects,
-    catalogueUrl,
   } = tech;
   const Icon = ICONS[icon];
 
-  /* 1 part gets a single wide card; 2-3 fill the row; 4+ run four across. */
+  /* 1 part gets a single wide card; 2 fill the row. Past that, prefer the
+     column count that divides evenly, so the last row is never a lone
+     orphan card — 6 and 9 parts run three across, 4 and 8 run four. */
   const componentColumns =
     components.length === 1
       ? "max-w-sm grid-cols-1"
       : components.length === 2
         ? "grid-cols-1 sm:grid-cols-2"
-        : components.length === 3
-          ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+        : components.length % 4 === 0
+          ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
 
   return (
     <>
@@ -170,12 +172,6 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
           >
             {summary}
           </motion.p>
-
-          {catalogueUrl && (
-            <motion.div variants={rise} className="mt-9">
-              <CatalogueButton href={catalogueUrl} />
-            </motion.div>
-          )}
         </motion.div>
       </section>
 
@@ -260,6 +256,70 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
       </section>
 
       {/* ---------------------------------------------------------------
+          Technical reference — labelled line drawings. Same light-plate
+          treatment as System Supply below, but these are drawings rather
+          than parts we sell, so they get their own section.
+      --------------------------------------------------------------- */}
+      {diagrams && diagrams.length > 0 && (
+        <section className="relative overflow-hidden border-t border-line py-20 sm:py-24">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-40 top-1/3 -z-10 h-[26rem] w-[30rem] rounded-full bg-navy/10 blur-[150px]"
+          />
+
+          <div className="shell">
+            <motion.div {...reveal}>
+              <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
+                <span className="h-px w-8 bg-gradient-to-r from-amber to-transparent" />
+                Technical Reference
+              </span>
+              <h2 className="mt-5 font-display text-2xl font-bold leading-[1.15] tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
+                How the system fits together
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
+                Assembly drawings and cross-sections from the OVM {name.toLowerCase()}{" "}
+                engineering documentation.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={gridContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2"
+            >
+              {diagrams.map(({ name: diagramName, image }) => (
+                <motion.figure
+                  key={image}
+                  variants={gridRise}
+                  className="group flex flex-col overflow-hidden rounded-[14px] border border-line bg-surface transition-all duration-400 hover:-translate-y-1 hover:border-amber/40 hover:shadow-[0_24px_50px_-24px_rgba(0,0,0,0.9)]"
+                >
+                  {/* Line art on white — `contain` so nothing is cropped out
+                      of a drawing whose labels run to the edges. */}
+                  <div className="relative aspect-[4/3] bg-white">
+                    <Image
+                      src={image}
+                      alt={`${diagramName} — OVM ${name} technical drawing`}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+
+                  <figcaption className="border-t border-line px-5 py-4">
+                    <h3 className="font-display text-sm font-bold leading-snug tracking-[-0.01em] text-white transition-colors duration-300 group-hover:text-amber-400">
+                      {diagramName}
+                    </h3>
+                  </figcaption>
+                </motion.figure>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* ---------------------------------------------------------------
           System supply — the parts list. Reads as a spec sheet rather than
           the editorial cards above: numbered, tightly gridded, and each
           product shot on the white plate these studio images need.
@@ -294,21 +354,29 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
               viewport={{ once: true, amount: 0.12 }}
               className={`mt-12 grid gap-5 ${componentColumns}`}
             >
-              {components.map(({ name: partName, image, desc }, i) => (
+              {components.map(({ name: partName, image, desc, plate }, i) => (
                 <motion.figure
                   key={image}
                   variants={gridRise}
                   className="group flex flex-col overflow-hidden rounded-[14px] border border-line bg-surface transition-all duration-400 hover:-translate-y-1 hover:border-amber/40 hover:shadow-[0_24px_50px_-24px_rgba(0,0,0,0.9)]"
                 >
-                  {/* Studio product shots are cut out on white, so they need a
-                      light plate — the dark card would swallow them. */}
-                  <div className="relative aspect-[4/3] bg-white">
+                  {/* Studio product shots are cut out on white and need a
+                      light plate — the dark card would swallow them. The
+                      profile-deck renders bring their own dark ground, so
+                      they fill a dark plate instead of floating on white. */}
+                  <div
+                    className={`relative aspect-[4/3] ${
+                      plate === "dark" ? "bg-ink-deep" : "bg-white"
+                    }`}
+                  >
                     <Image
                       src={image}
                       alt={`${partName} — OVM ${name}`}
                       fill
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-contain p-5 transition-transform duration-500 group-hover:scale-[1.04]"
+                      className={`transition-transform duration-500 group-hover:scale-[1.04] ${
+                        plate === "dark" ? "object-cover" : "object-contain p-5"
+                      }`}
                     />
                     <span className="absolute left-3 top-3 rounded-md bg-ink-deep/80 px-2 py-1 font-mono text-[10px] font-semibold tabular-nums tracking-[0.1em] text-amber">
                       {String(i + 1).padStart(2, "0")}
@@ -358,28 +426,59 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
               viewport={{ once: true, amount: 0.12 }}
               className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2"
             >
-              {projects.map(({ name: projectName, location, detail }) => (
-                <motion.article
-                  key={`${projectName}-${location}`}
-                  variants={gridRise}
-                  className="group relative overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)]"
-                >
-                  <span className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-90" />
+              {projects.map(({ name: projectName, location, detail }) => {
+                /* Only the projects that also appear in the homepage
+                   carousel can be deep-linked; the rest — mostly overseas
+                   work — stay plain cards rather than dead links. */
+                const carouselSlug = findProjectSlug(projectName);
 
-                  <div className="relative">
-                    <h3 className="font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white transition-colors duration-300 group-hover:text-amber-400">
-                      {projectName}
-                    </h3>
+                return (
+                  <motion.article
+                    key={`${projectName}-${location}`}
+                    variants={gridRise}
+                    className={`group relative overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 ${
+                      carouselSlug
+                        ? "hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)]"
+                        : ""
+                    }`}
+                  >
+                    <span className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-90" />
 
-                    <div className="mt-2.5 flex items-center gap-2 text-sm text-muted">
-                      <MapPin size={14} className="shrink-0 text-amber" />
-                      <span>{location}</span>
+                    <div className="relative">
+                      <h3
+                        className={`font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white transition-colors duration-300 ${
+                          carouselSlug ? "group-hover:text-amber-400" : ""
+                        }`}
+                      >
+                        {projectName}
+                      </h3>
+
+                      <div className="mt-2.5 flex items-center gap-2 text-sm text-muted">
+                        <MapPin size={14} className="shrink-0 text-amber" />
+                        <span>{location}</span>
+                      </div>
+
+                      <p className="mt-4 text-sm leading-relaxed text-muted">{detail}</p>
+
+                      {carouselSlug && (
+                        <Link
+                          href={`/#${projectAnchorId(carouselSlug)}`}
+                          /* Stretched over the card — one anchor, and the
+                             homepage's ScrollToHash does the rest. */
+                          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-amber transition-colors duration-300 after:absolute after:inset-0 hover:text-amber-400"
+                        >
+                          See the project
+                          <ArrowRight
+                            size={15}
+                            className="transition-transform duration-300 group-hover:translate-x-1.5"
+                          />
+                          <span className="sr-only"> {projectName} on the homepage</span>
+                        </Link>
+                      )}
                     </div>
-
-                    <p className="mt-4 text-sm leading-relaxed text-muted">{detail}</p>
-                  </div>
-                </motion.article>
-              ))}
+                  </motion.article>
+                );
+              })}
             </motion.div>
           </div>
         </section>

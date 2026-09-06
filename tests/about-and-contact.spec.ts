@@ -65,8 +65,8 @@ test.describe("contact page", () => {
   test("address, phone and email carry the correct hrefs", async ({ page }) => {
     await page.goto("/contact");
 
-    /* Scoped to the contact card — the Footer and the Careers block below
-       carry the same mailto: link, so an unscoped locator matches thrice. */
+    /* Scoped to the contact card — the Footer carries the same mailto:
+       link, so an unscoped locator matches twice. */
     const card = page.locator("#contact-details");
     await expect(
       card.getByRole("heading", { name: "Reach us directly" }),

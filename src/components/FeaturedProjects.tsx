@@ -5,160 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 
-type Project = {
-  title: string;
-  location: string;
-  scope: string;
-  image: string;
-};
-
-const PROJECTS: Project[] = [
-  {
-    title: "DUKE 3 Highway",
-    location: "Klang Valley",
-    scope: "PT system & prestressing equipment to 60m T-Beam",
-    image: "/projects/duke3-highway.jpg",
-  },
-  {
-    title: "DASH Highway",
-    location: "Klang Valley",
-    scope: "PT system & prestressing equipment",
-    image: "/projects/dash-highway.jpg",
-  },
-  {
-    title: "SUKE Highway",
-    location: "Klang Valley",
-    scope: "PT system & prestressing equipment",
-    image: "/projects/suke-highway.jpg",
-  },
-  {
-    title: "Sg. Pulai Balanced Cantilever Bridge",
-    location: "Johor",
-    scope: "PT system & prestressing equipment",
-    image: "/projects/sg-pulai-bridge.jpg",
-  },
-  {
-    title: "LRT 3",
-    location: "Klang Valley",
-    scope: "PT system & prestressing equipment",
-    image: "/projects/lrt3.jpg",
-  },
-  {
-    title: "IOI City Mall Phase 2",
-    location: "Putrajaya",
-    scope: "PT system & prestressing equipment",
-    image: "/projects/ioi-city-mall.jpg",
-  },
-  {
-    title: "Jalan UMS",
-    location: "Kota Kinabalu, Sabah",
-    scope: "PT system & prestressing equipment",
-    image: "/projects/jalan-ums-kota-kinabalu.jpg",
-  },
-  {
-    title: "Batang Rajang Bridge",
-    location: "Pan Borneo WPC 7, Sibu, Sarawak",
-    scope: "PT system, prestressing equipment & incremental launching",
-    image: "/projects/batang-rajang-bridge.jpg",
-  },
-  {
-    title: "Muara Lassa Bridge",
-    location: "Sarawak",
-    scope: "Expansion joints",
-    image: "/projects/muara-lassa-bridge.jpg",
-  },
-  {
-    title: "Batang Igan Bridge",
-    location: "Sarawak",
-    scope: "PT system, bearings, expansion joints & stay cables",
-    image: "/projects/batang-igan-bridge.jpg",
-  },
-  {
-    title: "Batang Saribas Bridge No. 2",
-    location: "Sarawak",
-    scope: "Bearings & expansion joints",
-    image: "/projects/batang-saribas-bridge-2.jpg",
-  },
-  {
-    title: "RTS Link",
-    location: "Johor–Singapore",
-    scope: "PL2 PT system",
-    image: "/projects/rts-link-johor.jpg",
-  },
-  {
-    title: "East Coast Rail Link (ECRL)",
-    location: "Malaysia, 665km",
-    scope: "PT system, smart stressing & grouting, bearings & expansion joints for ROBs",
-    image: "/projects/ecrl.jpg",
-  },
-  {
-    title: "Bintulu-Jepak Bridge",
-    location: "Sarawak",
-    scope:
-      "Stay cable subcontractor, PT systems, PT bars, expansion joints — main span 267.6m",
-    image: "/projects/bintulu-jepak-bridge.jpg",
-  },
-  {
-    title: "Batang Rambungan Bridge",
-    location: "Sarawak",
-    scope: "Stay cables, installation supervision, PT systems — main span 160m",
-    image: "/projects/batang-rambungan-bridge.jpg",
-  },
-  {
-    title: "Batang Lupar 1 Bridge",
-    location: "Sarawak",
-    scope: "Stay cable subcontractor, PT bars, expansion joints — main span 324.4m",
-    image: "/projects/batang-lupar-1-bridge.jpg",
-  },
-  {
-    title: "Sejingkat Bridge",
-    location: "Sarawak",
-    scope: "Stay cable subcontractor, PT system & expansion joint — main span 400m",
-    image: "/projects/sejingkat-bridge.jpg",
-  },
-  {
-    title: "KUTS Red Line",
-    location: "Sarawak",
-    scope: "PT specialist sub-contractor",
-    image: "/projects/kuts-red-line.jpg",
-  },
-  {
-    title: "KUTS Blue Line 2",
-    location: "Sarawak",
-    scope: "PT materials & supervision",
-    image: "/projects/kuts-blue-line-2.jpg",
-  },
-  {
-    title: "Bandar Lawas Bridge",
-    location: "Sarawak",
-    scope: "PT system, suspension bridge solution & installation supervision",
-    image: "/projects/bandar-lawas-bridge.jpg",
-  },
-  {
-    title: "Tg. Aru–UMS Pedestrian & Cyclist Bridge",
-    location: "Sabah",
-    scope: "PT system, suspension bridge solution & installation supervision",
-    image: "/projects/tg-aru-ums-bridge.jpg",
-  },
-  {
-    title: "Sungai Paku Bridge",
-    location: "Sarawak",
-    scope: "PT system, hanger system for arch bridge",
-    image: "/projects/sungai-paku-bridge.jpg",
-  },
-  {
-    title: "LRT Mutiara Line",
-    location: "Penang",
-    scope: "PL3 PT system, equipment & installation supervision, 5km package SLS2",
-    image: "/projects/lrt-mutiara-line-penang.jpg",
-  },
-  {
-    title: "Pan Borneo Highway Sabah",
-    location: "WP19 & WP33",
-    scope: "PT specialist sub-contractor for all bridges & ground anchors",
-    image: "/projects/pan-borneo-sabah.jpg",
-  },
-];
+import { projectAnchorId, projects } from "@/data/projects";
 
 /* Technology pills are derived from the scope wording rather than stored per
    project, so the scope text stays the single source of truth. Order here is
@@ -187,11 +34,28 @@ const rise = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
 };
 
+/** Reads `project-<slug>` out of the URL hash, or null. */
+function hashSlug() {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  return id.startsWith("project-") ? id.slice("project-".length) : null;
+}
+
 export default function FeaturedProjects() {
   const railRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState<number | null>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  /* Which card a deep link is pointing at, so its photo can skip lazy
+     loading — see `targeted` below. Read in an effect, not during render,
+     because the hash does not exist on the server. */
+  const [target, setTarget] = useState<string | null>(null);
+
+  useEffect(() => {
+    const read = () => setTarget(hashSlug());
+    read();
+    window.addEventListener("hashchange", read);
+    return () => window.removeEventListener("hashchange", read);
+  }, []);
 
   const sync = useCallback(() => {
     const rail = railRef.current;
@@ -317,13 +181,24 @@ export default function FeaturedProjects() {
           tabIndex={0}
           className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-px-6 px-6 pb-5 [scrollbar-color:var(--color-line)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-line hover:[&::-webkit-scrollbar-thumb]:bg-navy-400/70 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:h-1.5 lg:scroll-px-10 lg:px-10"
         >
-          {PROJECTS.map(({ title, location, scope, image }, i) => {
+          {projects.map(({ slug, title, location, scope, image }, i) => {
             const isActive = active === i;
             const tags = tagsFor(scope);
+            /* A card arrived at by deep link must show its photo. Chrome
+               defers lazy images in this rail and will not re-evaluate one
+               once deferred — not even if `loading` is flipped afterwards —
+               so the target is keyed separately and mounts as a fresh,
+               eager <img> rather than having its attribute changed. */
+            const targeted = target === slug;
 
             return (
               <motion.article
-                key={title}
+                key={slug}
+                /* Deep-link target for the technology pages' Reference
+                   Project cards — see `ScrollToHash`. `scroll-mt` keeps the
+                   card clear of the fixed navbar when the browser, rather
+                   than our effect, does the scrolling. */
+                id={projectAnchorId(slug)}
                 variants={rise}
                 /* Keyed off the pointer that actually fired the event rather
                    than a `(hover: none)` media query, so a touchscreen laptop
@@ -335,16 +210,18 @@ export default function FeaturedProjects() {
                   if (e.pointerType === "mouse") return;
                   setActive(isActive ? null : i);
                 }}
-                className={`group relative aspect-[3/4] w-80 shrink-0 snap-start overflow-hidden rounded-[16px] border bg-surface transition-all duration-400 sm:w-96 ${
+                className={`group relative aspect-[3/4] w-80 shrink-0 scroll-mt-28 snap-start overflow-hidden rounded-[16px] border bg-surface transition-all duration-400 sm:w-96 ${
                   isActive
                     ? "-translate-y-1.5 border-navy-300/45 shadow-[0_30px_65px_-26px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)]"
                     : "border-line"
                 }`}
               >
                 <Image
+                  key={targeted ? `${slug}-eager` : slug}
                   src={image}
                   alt={`${title}, ${location}`}
                   fill
+                  loading={targeted ? "eager" : "lazy"}
                   sizes="(min-width: 640px) 384px, 320px"
                   className={`object-cover transition-transform duration-[900ms] ease-out ${
                     isActive ? "scale-[1.08]" : "scale-100"

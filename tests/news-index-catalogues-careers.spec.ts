@@ -1,9 +1,11 @@
 import { test, expect } from "@playwright/test";
 import {
   CATALOGUE_DOWNLOADS,
+  JOB_TITLES,
   NEWS_SLUGS,
   brokenImages,
   collectConsoleErrors,
+  revealFloatingButton,
   scrollThroughPage,
   waitForImages,
 } from "./helpers";
@@ -70,6 +72,8 @@ test.describe("catalogue downloads", () => {
       request,
     }) => {
       await page.goto(route);
+      /* The button is floating now — it reveals itself past the hero. */
+      await revealFloatingButton(page);
 
       const link = page.locator(`a[href="${pdf}"]`);
       await expect(link).toHaveCount(1);
@@ -87,9 +91,9 @@ test.describe("catalogue downloads", () => {
 
   test("clicking the button actually starts a file download", async ({ page }) => {
     await page.goto("/technologies/post-tensioning-systems");
+    await revealFloatingButton(page);
 
-    const link = page.getByRole("link", { name: /View Catalogue/i });
-    await link.scrollIntoViewIfNeeded();
+    const link = page.getByRole("link", { name: /Download Catalogue/i });
 
     const [download] = await Promise.all([page.waitForEvent("download"), link.click()]);
 
@@ -99,62 +103,111 @@ test.describe("catalogue downloads", () => {
   });
 
   test("technology pages without a catalogue show no download button", async ({ page }) => {
-    await page.goto("/technologies/dampers");
-    await expect(page.getByRole("link", { name: /View Catalogue/i })).toHaveCount(0);
+    for (const slug of ["dampers", "bearing", "expansion-joints"]) {
+      await page.goto(`/technologies/${slug}`);
+      await revealFloatingButton(page);
+
+      await expect(page.getByRole("link", { name: /Download Catalogue/i })).toHaveCount(0);
+      /* Nor any other catalogue — a page without its own PDF must not fall
+         back to somebody else's. */
+      await expect(page.locator('a[href^="/catalogues/"]')).toHaveCount(0);
+    }
   });
 });
 
 test.describe("careers", () => {
-  test("the footer Careers link scrolls to the Careers section on /contact", async ({
-    page,
-  }) => {
+  test("the footer Careers link opens the dedicated /careers page", async ({ page }) => {
     await page.goto("/");
 
-    const careers = page.locator('footer a[href="/contact#careers"]');
+    /* The old link anchored into /contact#careers; careers is its own page now. */
+    await expect(page.locator('footer a[href="/contact#careers"]')).toHaveCount(0);
+
+    const careers = page.locator('footer a[href="/careers"]');
     await careers.scrollIntoViewIfNeeded();
     await expect(careers).toHaveCount(1);
 
     await careers.click();
-    await page.waitForURL("**/contact#careers", { timeout: 60_000 });
-
-    const section = page.locator("#careers");
-    await expect(section).toBeVisible();
-    await expect(
-      section.getByRole("heading", { name: "Careers at OVM" }),
-    ).toBeVisible();
-
-    /* The anchor must have scrolled the section into the viewport, clear of
-       the 5rem fixed navbar. */
-    const top = await section.evaluate((el) => el.getBoundingClientRect().top);
-    expect(top).toBeGreaterThanOrEqual(0);
-    expect(top).toBeLessThan(await page.evaluate(() => window.innerHeight));
+    await page.waitForURL("**/careers", { timeout: 60_000 });
+    await expect(page.locator("h1")).toHaveText("Join OVM Malaysia");
   });
 
-  test("the careers email is a mailto link to the one company address", async ({
+  test("/careers lists every open role", async ({ page }) => {
+    const errors = collectConsoleErrors(page);
+    const response = await page.goto("/careers");
+
+    expect(response?.status()).toBe(200);
+
+    const cards = page.locator("main article");
+    await expect(cards).toHaveCount(JOB_TITLES.length);
+
+    for (const title of JOB_TITLES) {
+      await expect(page.getByRole("heading", { name: title })).toBeVisible();
+    }
+
+    /* The three truncated listings say so; the complete one does not. */
+    await expect(page.getByText("Full role details available on request")).toHaveCount(3);
+
+    /* Grouped responsibilities only exist on the Finance Manager listing. */
+    const finance = page.locator("article#finance-manager");
+    await expect(finance).toContainText("Financial Planning, Reporting & Compliance");
+    await expect(finance).toContainText("Project Finance & Cost Control");
+    await expect(finance).toContainText("Requirements");
+
+    await scrollThroughPage(page);
+    expect(errors, "no console errors").toEqual([]);
+  });
+
+  test("every Apply now button pre-fills a mailto subject for its role", async ({
     page,
   }) => {
+    await page.goto("/careers");
+
+    const buttons = page.getByRole("link", { name: /Apply now/ });
+    await expect(buttons).toHaveCount(JOB_TITLES.length);
+
+    const hrefs = await buttons.evaluateAll((els) =>
+      els.map((el) => el.getAttribute("href")!),
+    );
+
+    hrefs.forEach((href, i) => {
+      expect(href.startsWith("mailto:guox@ovm.cn,keertigaletchumanan@ovm.cn?subject=")).toBe(
+        true,
+      );
+      /* Subject rides in encoded, so the colon and spaces survive the client. */
+      expect(href).toContain(encodeURIComponent(`Application: ${JOB_TITLES[i]}`));
+    });
+  });
+
+  test("the contact page no longer carries a careers section", async ({ page }) => {
     await page.goto("/contact");
 
-    const link = page.locator("#careers a");
-    await expect(link).toHaveCount(1);
-    await expect(link).toHaveAttribute(
-      "href",
-      "mailto:guox@ovm.cn,keertigaletchumanan@ovm.cn",
-    );
-    await expect(link).toHaveText("guox@ovm.cn");
+    await expect(page.locator("#careers")).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: "Careers at OVM" })).toHaveCount(0);
+    await expect(page.locator("main")).not.toContainText("Interested in joining our team");
 
-    await expect(page.locator("#careers")).toContainText(
-      "Interested in joining our team? Send your resume to guox@ovm.cn",
-    );
-
-    /* One link everywhere — the same pair of recipients, no separate
-       careers inbox. */
+    /* Every remaining contact mailto is still the one plain pair of
+       recipients — no subject-tagged careers link stayed behind. */
     const mailtos = await page
-      .locator('a[href^="mailto:"]')
+      .locator("main a[href^='mailto:']")
       .evaluateAll((els) => els.map((el) => el.getAttribute("href")));
     expect(new Set(mailtos)).toEqual(
       new Set(["mailto:guox@ovm.cn,keertigaletchumanan@ovm.cn"]),
     );
+  });
+
+  test("the homepage news section carries the hiring teaser", async ({ page }) => {
+    await page.goto("/");
+
+    const news = page.locator("#news");
+    await news.scrollIntoViewIfNeeded();
+
+    /* The heading renders a typographic apostrophe, as the rest of the site does. */
+    await expect(news.getByRole("heading", { name: /We[’']re Hiring/ })).toBeVisible();
+    await expect(news).toContainText("Join our growing team in Malaysia");
+
+    const cta = news.locator('a[href="/careers"]');
+    await expect(cta).toHaveCount(1);
+    await expect(cta).toContainText("View open roles");
   });
 });
 
@@ -189,8 +242,10 @@ test.describe("enriched technology pages", () => {
     );
 
     await page.goto("/technologies/cable-systems");
+    /* Summary rewritten from the 2026 profile deck — the "160 cable-stayed
+       bridges" line moved out with it. */
     await expect(page.locator("main section").first()).toContainText(
-      "more than 160 cable-stayed bridges worldwide",
+      "test reports from CTL and EMPA",
     );
 
     await page.goto("/technologies/bearing");

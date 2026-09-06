@@ -5,8 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
-import CatalogueButton from "@/components/CatalogueButton";
-
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const container = {
@@ -182,12 +180,8 @@ export function AboutExpertise() {
           </h2>
         </motion.div>
 
-        <motion.div {...reveal} className="mt-10">
-          <CatalogueButton
-            href="/catalogues/OVM-Engineering-Solutions-2024.pdf"
-            label="View Full Engineering Solutions Catalogue"
-          />
-        </motion.div>
+        {/* The engineering solutions catalogue is offered by the floating
+            button on this page — see `app/about/page.tsx`. */}
 
         <div className="mt-16 flex flex-col gap-16 lg:gap-24">
           {EXPERTISE.map(({ name, href, image, description }, i) => (

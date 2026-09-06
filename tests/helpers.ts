@@ -22,15 +22,17 @@ export const TECH_EXPECTATIONS: Record<
     /** Project photography only — product shots are counted by componentCount. */
     galleryCount: number;
     componentCount: number;
+    /** Cards in the "Technical Reference" section; 0 means it must not render. */
+    diagramCount: number;
   }
 > = {
-  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 7, galleryCount: 2, componentCount: 4 },
-  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 5, galleryCount: 3, componentCount: 4 },
-  bearing: { name: "Bearing", hasHeroImage: true, typeCount: 3, projectCount: 2, galleryCount: 0, componentCount: 3 },
-  "expansion-joints": { name: "Expansion Joints", hasHeroImage: false, typeCount: 3, projectCount: 0, galleryCount: 0, componentCount: 1 },
-  "anti-seismic-device": { name: "Anti-Seismic Device", hasHeroImage: true, typeCount: 1, projectCount: 1, galleryCount: 0, componentCount: 1 },
-  dampers: { name: "Dampers", hasHeroImage: false, typeCount: 2, projectCount: 0, galleryCount: 0, componentCount: 1 },
-  "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 3, galleryCount: 1, componentCount: 0 },
+  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 7, galleryCount: 2, componentCount: 6, diagramCount: 0 },
+  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 5, galleryCount: 3, componentCount: 9, diagramCount: 5 },
+  bearing: { name: "Bearing", hasHeroImage: true, typeCount: 3, projectCount: 2, galleryCount: 0, componentCount: 4, diagramCount: 0 },
+  "expansion-joints": { name: "Expansion Joints", hasHeroImage: false, typeCount: 3, projectCount: 0, galleryCount: 0, componentCount: 2, diagramCount: 0 },
+  "anti-seismic-device": { name: "Anti-Seismic Device", hasHeroImage: true, typeCount: 1, projectCount: 1, galleryCount: 0, componentCount: 1, diagramCount: 0 },
+  dampers: { name: "Dampers", hasHeroImage: false, typeCount: 2, projectCount: 0, galleryCount: 0, componentCount: 2, diagramCount: 0 },
+  "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 3, galleryCount: 1, componentCount: 0, diagramCount: 0 },
 };
 
 /** Every image referenced by a `components` entry, across all technologies. */
@@ -39,16 +41,50 @@ export const COMPONENT_IMAGES = [
   "/technologies/system-supply/pt-fiber-anchorage.jpg",
   "/technologies/system-supply/pt-carbon-fiber-anchorage.jpg",
   "/technologies/system-supply/pt-jack-type-ycw.jpg",
-  "/technologies/system-supply/cable-component-duct.jpg",
-  "/technologies/system-supply/cable-component-saddle.jpg",
-  "/technologies/system-supply/cable-component-anchor-head.jpg",
-  "/technologies/system-supply/cable-component-stressing-anchorage.jpg",
   "/technologies/diagrams/bearing-elastomeric-diagram.jpg",
   "/technologies/diagrams/bearing-pot-diagram.jpg",
   "/technologies/diagrams/bearing-spherical-diagram.jpg",
   "/technologies/diagrams/expansion-joint-diagram.jpg",
   "/technologies/diagrams/anti-seismic-lead-core-diagram.jpg",
   "/technologies/diagrams/damper-diagram.jpg",
+  /* Added from the 2026 profile deck. */
+  "/technologies/profile-2026/regular-pt-system.jpg",
+  "/technologies/profile-2026/electrical-isolation-pt.jpg",
+  "/technologies/profile-2026/bearing-photo-real.jpg",
+  "/technologies/profile-2026/expansion-joint-photo-real.jpg",
+  "/technologies/profile-2026/damper-photo-real.jpg",
+  "/technologies/profile-2026/sus-main-cable.jpg",
+  "/technologies/profile-2026/sus-anchor-blocks-system.jpg",
+  "/technologies/profile-2026/sus-hanger.jpg",
+  "/technologies/profile-2026/sus-saddle.jpg",
+  "/technologies/profile-2026/sus-cable-splay-saddle.jpg",
+  "/technologies/profile-2026/sus-cable-clamp.jpg",
+  "/technologies/profile-2026/sus-cable-tightening-machine.jpg",
+  "/technologies/profile-2026/sus-cable-supported-crane.jpg",
+  "/technologies/profile-2026/sus-wire-winding-machine.jpg",
+] as const;
+
+/** Every image referenced by a `diagrams` entry, across all technologies. */
+export const DIAGRAM_IMAGES = [
+  "/technologies/profile-2026/cable-anchorage-diagram.jpg",
+  "/technologies/profile-2026/cable-saddle-diagram.jpg",
+  "/technologies/profile-2026/cable-strand-crosssection.jpg",
+  "/technologies/profile-2026/cable-anchor-plate-exploded.jpg",
+  "/technologies/profile-2026/cable-galvanized-wire-diagram.jpg",
+] as const;
+
+/** Projects added to the homepage carousel from the 2026 profile deck. */
+export const PROFILE_2026_PROJECTS = [
+  {
+    slug: "tun-abdul-taib-mahmud-bridge",
+    title: "Tun Abdul Taib Mahmud Bridge",
+    image: "/technologies/profile-2026/tun-abdul-taib-mahmud-bridge.jpg",
+  },
+  {
+    slug: "east-coast-rail-link-ecrl",
+    title: "East Coast Rail Link (ECRL)",
+    image: "/technologies/profile-2026/ecrl-aerial-pptx.jpg",
+  },
 ] as const;
 
 /** Catalogue PDFs offered as downloads, keyed by the page that offers them. */
@@ -58,12 +94,30 @@ export const CATALOGUE_DOWNLOADS = {
   "/about": "/catalogues/OVM-Engineering-Solutions-2024.pdf",
 } as const;
 
+/** In listing order, mirroring src/data/careers.ts. */
+export const JOB_TITLES = [
+  "Business Development Engineer / Manager",
+  "Site Supervisor",
+  "Site Engineer",
+  "Finance Manager (Engineering)",
+] as const;
+
 /** Newest first, mirroring the order in src/data/news.ts. */
 export const NEWS_SLUGS = [
   "greener-coastline-mangrove-planting",
   "easec19-platinum-sponsor",
   "sejingkat-bridge-p7-closure",
 ] as const;
+
+/**
+ * Scrolls past the hero so `FloatingCatalogueButton` reveals itself, then
+ * waits out its entrance animation. Safe to call on pages that have no
+ * catalogue — it just scrolls.
+ */
+export async function revealFloatingButton(page: Page) {
+  await page.evaluate(() => window.scrollTo(0, 700));
+  await page.waitForTimeout(700);
+}
 
 /**
  * Collects real page errors. Next's dev overlay and the image-optimizer emit

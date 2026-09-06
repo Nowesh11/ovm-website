@@ -23,6 +23,18 @@ export type TechnologyComponent = {
   image: string;
   /** Optional one-liner; most parts are self-explanatory from the photo. */
   desc?: string;
+  /**
+   * Plate the image sits on. Studio shots are cut out on white and need the
+   * light plate (the default); the 2026 profile-deck renders carry their own
+   * dark blue ground and are swallowed by it, so they take "dark".
+   */
+  plate?: "light" | "dark";
+};
+
+/** A labelled technical drawing, shown in the "Technical Reference" section. */
+export type TechnologyDiagram = {
+  name: string;
+  image: string;
 };
 
 export type TechnologyProject = {
@@ -42,6 +54,8 @@ export type Technology = {
   /** Parts list. Empty where we have no product photography — the page then
       skips the "System Supply" section entirely. */
   components: TechnologyComponent[];
+  /** Line drawings, rendered in their own section above the parts list. */
+  diagrams?: TechnologyDiagram[];
   galleryImages: string[];
   projects: TechnologyProject[];
   /** PDF under /public/catalogues, offered as a download on the page. */
@@ -98,6 +112,20 @@ export const technologies: Technology[] = [
       {
         name: "Jack Type YCW",
         image: "/technologies/system-supply/pt-jack-type-ycw.jpg",
+      },
+      /* From the 2026 profile deck — complete systems rather than single
+         parts, and rendered on the deck's own dark ground. */
+      {
+        name: "Regular PT System",
+        image: "/technologies/profile-2026/regular-pt-system.jpg",
+        desc: "Main scope: design, product manufacturing, construction services. Complies with ASTM, AASHTO, FIB, ETAG013, EAD 160004-00-0301, BS, GB/T 14370.",
+        plate: "dark",
+      },
+      {
+        name: "Electrical Isolation PT System",
+        image: "/technologies/profile-2026/electrical-isolation-pt.jpg",
+        desc: "Design with PL2 & PL3, product manufacturing, construction services. Complies with international standards including fib75 and PTI.",
+        plate: "dark",
       },
     ],
     galleryImages: [
@@ -156,7 +184,7 @@ export const technologies: Technology[] = [
     heroImage: "/technologies/cable-systems-jepak-malaysia.jpg",
     catalogueUrl: "/catalogues/OVM250-OVMAT-Cable-System-2025.pdf",
     summary:
-      "OVM stay cable system solutions are based on multi-strand cable, parallel steel wire cable, and strand cable with integral swaging anchorage. OVM has provided systems and erection services for more than 160 cable-stayed bridges worldwide.",
+      "OVM provides complete cable system design, installation, monitoring and maintenance services. Products meet FIB, PTI and CIP international standards, with test reports from CTL and EMPA. Available in steel strand stay cable, high-strength wire stay cable, and carbon fiber cable types.",
     types: [
       {
         name: "OVM250 cable system",
@@ -179,25 +207,67 @@ export const technologies: Technology[] = [
         desc: "A high-strength parallel wire system used in suspension bridges and special cable-supported structures.",
       },
     ],
-    /* NOTE: these four names describe what the product shots show — they are
-       not printed labels from the source catalogue. Confirm against OVM's
-       official part names before this goes in front of customers. */
+    /* Suspension-bridge hardware from the 2026 profile deck. These replaced
+       four guessed labels on unlabelled product shots — every name below is
+       the caption printed against the photo in the deck. */
     components: [
       {
-        name: "Protective Duct",
-        image: "/technologies/system-supply/cable-component-duct.jpg",
+        name: "Main Cable",
+        image: "/technologies/profile-2026/sus-main-cable.jpg",
       },
       {
-        name: "Cable Guide Saddle",
-        image: "/technologies/system-supply/cable-component-saddle.jpg",
+        name: "Anchor Blocks System",
+        image: "/technologies/profile-2026/sus-anchor-blocks-system.jpg",
       },
       {
-        name: "Anchor Head Assembly",
-        image: "/technologies/system-supply/cable-component-anchor-head.jpg",
+        name: "Hanger",
+        image: "/technologies/profile-2026/sus-hanger.jpg",
       },
       {
-        name: "Stressing Anchorage Device",
-        image: "/technologies/system-supply/cable-component-stressing-anchorage.jpg",
+        name: "Saddle",
+        image: "/technologies/profile-2026/sus-saddle.jpg",
+      },
+      {
+        name: "Cable Splay Saddle",
+        image: "/technologies/profile-2026/sus-cable-splay-saddle.jpg",
+      },
+      {
+        name: "Cable Clamp",
+        image: "/technologies/profile-2026/sus-cable-clamp.jpg",
+      },
+      {
+        name: "Cable Tightening Machine",
+        image: "/technologies/profile-2026/sus-cable-tightening-machine.jpg",
+      },
+      {
+        name: "Cable Supported Crane",
+        image: "/technologies/profile-2026/sus-cable-supported-crane.jpg",
+      },
+      {
+        name: "Wire Winding Machine",
+        image: "/technologies/profile-2026/sus-wire-winding-machine.jpg",
+      },
+    ],
+    diagrams: [
+      {
+        name: "Stay Cable Anchorage Assembly",
+        image: "/technologies/profile-2026/cable-anchorage-diagram.jpg",
+      },
+      {
+        name: "Saddle & Pylon Configuration",
+        image: "/technologies/profile-2026/cable-saddle-diagram.jpg",
+      },
+      {
+        name: "Stay Cable Cross-Section",
+        image: "/technologies/profile-2026/cable-strand-crosssection.jpg",
+      },
+      {
+        name: "Anchor Head Assembly (Exploded View)",
+        image: "/technologies/profile-2026/cable-anchor-plate-exploded.jpg",
+      },
+      {
+        name: "Galvanized Wire Stay Cable — Schematic",
+        image: "/technologies/profile-2026/cable-galvanized-wire-diagram.jpg",
       },
     ],
     galleryImages: [
@@ -271,6 +341,12 @@ export const technologies: Technology[] = [
         name: "Spherical Bearing",
         image: "/technologies/diagrams/bearing-spherical-diagram.jpg",
       },
+      {
+        name: "Bearings",
+        image: "/technologies/profile-2026/bearing-photo-real.jpg",
+        desc: "Types: elastomeric, pot, spherical, lead rubber, high damping rubber, and pendulum bearing. Designed and manufactured to AASHTO LRFD, EN1337, EN15129, BS5400, with CE certification and test reports from CTL (USA), MILANO (Italy), and KIT (Germany).",
+        plate: "dark",
+      },
     ],
     galleryImages: [],
     projects: [
@@ -312,6 +388,12 @@ export const technologies: Technology[] = [
       {
         name: "Modular / Finger Expansion Joint",
         image: "/technologies/diagrams/expansion-joint-diagram.jpg",
+      },
+      {
+        name: "Expansion Joints",
+        image: "/technologies/profile-2026/expansion-joint-photo-real.jpg",
+        desc: "Types: rubber expansion joint, strip seal expansion joint, modular expansion joint, finger expansion joint. Same international standards compliance and CE certification as our bearing products.",
+        plate: "dark",
       },
     ],
     galleryImages: [],
@@ -367,6 +449,12 @@ export const technologies: Technology[] = [
       {
         name: "Visco / MR Damper",
         image: "/technologies/diagrams/damper-diagram.jpg",
+      },
+      {
+        name: "Dampers",
+        image: "/technologies/profile-2026/damper-photo-real.jpg",
+        desc: "Types: viscous fluid damper, permanent magnet adjustable magnetorheological damper, eddy current tuned mass damper.",
+        plate: "dark",
       },
     ],
     galleryImages: [],

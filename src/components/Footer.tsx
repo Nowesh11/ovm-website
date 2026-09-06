@@ -13,9 +13,7 @@ const COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "News", href: "/news" },
   { label: "Contact", href: "/contact" },
-  /* Careers has no page of its own — it anchors to the Contact page's
-     "Careers at OVM" block. */
-  { label: "Careers", href: "/contact#careers" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const TECHNOLOGY_LINKS = technologyLinks;

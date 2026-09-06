@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Briefcase, ChevronRight, Mail, MapPin, Phone } from "lucide-react";
+import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 
 import ContactForm from "@/components/ContactForm";
 import {
@@ -202,35 +202,6 @@ export default function ContactContent() {
               </div>
             </motion.div>
           </div>
-
-          {/* Careers — a contact point, not a job board. The Footer's
-              "Careers" link targets this #careers anchor, so scroll-mt keeps
-              the heading clear of the fixed navbar. */}
-          <motion.div
-            {...reveal}
-            id="careers"
-            className="mt-12 scroll-mt-28 rounded-[18px] border border-line bg-surface p-7 sm:p-8"
-          >
-            <div className="flex items-start gap-4">
-              <span className={iconClass}>
-                <Briefcase size={19} strokeWidth={1.9} />
-              </span>
-              <div className="min-w-0">
-                <h2 className="font-display text-xl font-bold leading-snug tracking-[-0.02em] text-white sm:text-2xl">
-                  Careers at OVM
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
-                  Interested in joining our team? Send your resume to{" "}
-                  <a
-                    href={EMAIL_HREF}
-                    className="font-semibold text-white/90 underline decoration-amber/40 underline-offset-4 transition-colors duration-300 hover:text-amber-400 hover:decoration-amber"
-                  >
-                    {CONTACT.email}
-                  </a>
-                </p>
-              </div>
-            </div>
-          </motion.div>
 
           {/* Map */}
           <motion.div

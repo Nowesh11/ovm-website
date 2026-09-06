@@ -8,6 +8,11 @@ import {
   scrollThroughPage,
 } from "./helpers";
 
+/* These pages carry the most photography on the site, and the dev image
+   optimizer serves it one request at a time — the default 30s is not enough
+   headroom for a page with nine product shots on it. */
+test.describe.configure({ timeout: 90_000 });
+
 test.describe("technology pages", () => {
   for (const slug of TECH_SLUGS) {
     const expected = TECH_EXPECTATIONS[slug];
@@ -116,10 +121,15 @@ test.describe("technology pages", () => {
         await expect(card.locator("h3")).not.toBeEmpty();
         await expect(card.getByText(String(i + 1).padStart(2, "0"), { exact: true })).toBeVisible();
 
-        const natural = await card
-          .locator("img")
-          .evaluate((el) => (el as HTMLImageElement).naturalWidth);
-        expect(natural, `component ${i} image should decode`).toBeGreaterThan(0);
+        /* Polled, not asserted once: the dev image optimizer queues, and
+           these pages now carry up to nine product shots apiece. */
+        await expect
+          .poll(
+            () =>
+              card.locator("img").evaluate((el) => (el as HTMLImageElement).naturalWidth),
+            { message: `component ${i} image should decode`, timeout: 25_000 },
+          )
+          .toBeGreaterThan(0);
       }
     });
 
@@ -152,28 +162,40 @@ test.describe("technology pages", () => {
     await scrollThroughPage(page);
 
     const figures = page.locator("figure");
-    await expect(figures).toHaveCount(3);
+    await expect(figures).toHaveCount(4);
 
     await expect(figures.locator("h3")).toHaveText([
       "Elastomeric Bearing",
       "Pot Bearing",
       "Spherical Bearing",
+      /* Added from the 2026 profile deck. */
+      "Bearings",
     ]);
 
     /* Studio shots are cut out on white, so the image plate must be light
-       even though the surrounding card is dark. */
-    const plate = await figures
+       even though the surrounding card is dark, and the part is contained
+       rather than cropped — these are parts, not scenery. */
+    const studio = await figures
       .first()
       .locator("img")
-      .evaluate((el) => getComputedStyle(el.parentElement!).backgroundColor);
-    expect(plate).toBe("rgb(255, 255, 255)");
+      .evaluate((el) => ({
+        plate: getComputedStyle(el.parentElement!).backgroundColor,
+        fit: getComputedStyle(el).objectFit,
+      }));
+    expect(studio.plate).toBe("rgb(255, 255, 255)");
+    expect(studio.fit).toBe("contain");
 
-    /* The image is contained, not cropped — these are parts, not scenery. */
-    const fit = await figures
-      .first()
+    /* The profile-deck renders carry their own dark ground, so they take a
+       dark plate and fill it — a white plate would frame them in a border. */
+    const deck = await figures
+      .last()
       .locator("img")
-      .evaluate((el) => getComputedStyle(el).objectFit);
-    expect(fit).toBe("contain");
+      .evaluate((el) => ({
+        plate: getComputedStyle(el.parentElement!).backgroundColor,
+        fit: getComputedStyle(el).objectFit,
+      }));
+    expect(deck.plate).not.toBe("rgb(255, 255, 255)");
+    expect(deck.fit).toBe("cover");
   });
 
   test("system supply sits between Types and Reference Projects", async ({ page }) => {

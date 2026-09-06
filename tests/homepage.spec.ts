@@ -24,15 +24,20 @@ test.describe("homepage", () => {
     await expect(page.getByText("80+", { exact: true })).toBeVisible();
   });
 
-  test("services grid renders 7 cards with working Discover links", async ({
+  test("services grid renders 6 cards with working Discover links", async ({
     page,
     request,
   }) => {
     await page.goto("/");
     const grid = page.locator("#technologies");
 
-    await expect(grid.locator("article")).toHaveCount(7);
+    await expect(grid.locator("article")).toHaveCount(6);
     await expect(grid.getByRole("heading", { name: "Monitoring", exact: true })).toBeVisible();
+
+    /* Retired from the grid — it had no page of its own to link to. */
+    await expect(
+      grid.getByRole("heading", { name: "Leading-edge Technology" }),
+    ).toHaveCount(0);
 
     const discoverHrefs = await grid
       .locator("a")
