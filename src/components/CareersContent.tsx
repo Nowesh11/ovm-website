@@ -256,7 +256,7 @@ export default function CareersContent() {
               href={EMAIL_HREF}
               className="font-semibold text-white/90 underline decoration-amber/40 underline-offset-4 transition-colors duration-300 hover:text-amber-400 hover:decoration-amber"
             >
-              {CONTACT.email}
+              {CONTACT.emailCc}
             </a>
             .
           </motion.p>

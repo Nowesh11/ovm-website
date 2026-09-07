@@ -1,4 +1,4 @@
-import { TECH_SLUGS, NEWS_SLUGS } from "./helpers";
+import { EQUIPMENT_SLUGS, TECH_SLUGS, NEWS_SLUGS } from "./helpers";
 
 /**
  * The Next dev server compiles each route on its first request. Without this,
@@ -16,6 +16,7 @@ export default async function globalSetup() {
     "/careers",
     "/news",
     ...TECH_SLUGS.map((slug) => `/technologies/${slug}`),
+    ...EQUIPMENT_SLUGS.map((slug) => `/equipment/${slug}`),
     ...NEWS_SLUGS.map((slug) => `/news/${slug}`),
   ];
 

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUp, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUp, Globe, Mail, MapPin } from "lucide-react";
 
 import { CONTACT, EMAIL_HREF } from "@/data/contact";
 import { technologyLinks } from "@/data/technologies";
@@ -147,15 +147,6 @@ export default function Footer() {
                 <address className="text-sm not-italic leading-relaxed text-muted">
                   {CONTACT.address}
                 </address>
-              </li>
-              <li>
-                <a
-                  href={CONTACT.phoneHref}
-                  className="flex items-start gap-3 text-sm text-muted transition-colors duration-300 hover:text-amber"
-                >
-                  <Phone size={16} className="mt-0.5 shrink-0 text-amber" />
-                  {CONTACT.phone}
-                </a>
               </li>
               <li>
                 <a

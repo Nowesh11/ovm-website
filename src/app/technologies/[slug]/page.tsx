@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingCatalogueButton from "@/components/FloatingCatalogueButton";
 import TechCTA from "@/components/TechCTA";
 import TechnologyDetail from "@/components/TechnologyDetail";
 import { getTechnology, technologies } from "@/data/technologies";
@@ -50,12 +49,6 @@ export default async function TechnologyPage({
         <TechCTA technologyName={tech.name} />
       </main>
       <Footer />
-
-      {/* Outside <main> so it is fixed against the viewport, and driven by
-          the technology's own `catalogueUrl` — the pages without one (bearing,
-          dampers, joints, anti-seismic, monitoring) render no button rather
-          than offering a catalogue that is not theirs. */}
-      {tech.catalogueUrl && <FloatingCatalogueButton catalogueUrl={tech.catalogueUrl} />}
     </>
   );
 }

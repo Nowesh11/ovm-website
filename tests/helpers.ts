@@ -11,6 +11,25 @@ export const TECH_SLUGS = [
   "structural-health-monitoring",
 ] as const;
 
+/** Slugs of every equipment page, in sidebar order. /equipment lands on the first. */
+export const EQUIPMENT_SLUGS = [
+  "680t-hydraulic-gantry-crane",
+  "large-diameter-wire-rope-tension-jack-system",
+  "lzdj1000t-cable-supported-crane",
+  "walking-incremental-launching-equipment",
+  "tunnel-construction-equipment",
+] as const;
+
+/** Every image referenced by src/data/equipment.ts, sub-items included. */
+export const EQUIPMENT_IMAGES = [
+  "/equipment/680t-hydraulic-gantry-crane.png",
+  "/equipment/large-diameter-wire-rope-tension-jack-system.png",
+  "/equipment/lzdj1000t-cable-supported-crane.png",
+  "/equipment/walking-incremental-launching-equipment.png",
+  "/equipment/tunnel-arc-component-installation.png",
+  "/equipment/tunnel-midpartition-wall-equipment.png",
+] as const;
+
 /** Mirrors src/data/technologies.ts for assertions that depend on content shape. */
 export const TECH_EXPECTATIONS: Record<
   (typeof TECH_SLUGS)[number],
@@ -181,13 +200,6 @@ export const TECHNOLOGIES_WITHOUT_PROJECTS = [
   "structural-health-monitoring",
 ] as const;
 
-/** Catalogue PDFs offered as downloads, keyed by the page that offers them. */
-export const CATALOGUE_DOWNLOADS = {
-  "/technologies/post-tensioning-systems": "/catalogues/OVM-Post-Tensioning-System-2025.pdf",
-  "/technologies/cable-systems": "/catalogues/OVM250-OVMAT-Cable-System-2025.pdf",
-  "/about": "/catalogues/OVM-Engineering-Solutions-2024.pdf",
-} as const;
-
 /** In listing order, mirroring src/data/careers.ts. */
 export const JOB_TITLES = [
   "Business Development Engineer / Manager",
@@ -202,16 +214,6 @@ export const NEWS_SLUGS = [
   "easec19-platinum-sponsor",
   "sejingkat-bridge-p7-closure",
 ] as const;
-
-/**
- * Scrolls past the hero so `FloatingCatalogueButton` reveals itself, then
- * waits out its entrance animation. Safe to call on pages that have no
- * catalogue — it just scrolls.
- */
-export async function revealFloatingButton(page: Page) {
-  await page.evaluate(() => window.scrollTo(0, 700));
-  await page.waitForTimeout(700);
-}
 
 /**
  * Collects real page errors. Next's dev overlay and the image-optimizer emit

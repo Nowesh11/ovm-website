@@ -180,9 +180,6 @@ export function AboutExpertise() {
           </h2>
         </motion.div>
 
-        {/* The engineering solutions catalogue is offered by the floating
-            button on this page — see `app/about/page.tsx`. */}
-
         <div className="mt-16 flex flex-col gap-16 lg:gap-24">
           {EXPERTISE.map(({ name, href, image, description }, i) => (
             <motion.div

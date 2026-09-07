@@ -51,8 +51,6 @@ export type Technology = {
   /** Line drawings, rendered in their own section above the parts list. */
   diagrams?: TechnologyDiagram[];
   galleryImages: string[];
-  /** PDF under /public/catalogues, offered as a download on the page. */
-  catalogueUrl?: string;
 };
 
 export const technologies: Technology[] = [
@@ -63,7 +61,6 @@ export const technologies: Technology[] = [
     /* An in-market project leads the page; the Algeria photo moved into the
        gallery below. */
     heroImage: "/technologies/post-tensioning-ecrl-malaysia.jpg",
-    catalogueUrl: "/catalogues/OVM-Post-Tensioning-System-2025.pdf",
     summary:
       "As one of the earliest post-tensioning systems in China, OVM has extensive experience in prestressing technology, and the reliability of the OVM system is extensively acknowledged worldwide.",
     types: [
@@ -151,7 +148,6 @@ export const technologies: Technology[] = [
     /* A live Malaysian project leads the page; the arch bridge moved into
        the gallery below. */
     heroImage: "/technologies/cable-systems-jepak-malaysia.jpg",
-    catalogueUrl: "/catalogues/OVM250-OVMAT-Cable-System-2025.pdf",
     summary:
       "OVM provides complete cable system design, installation, monitoring and maintenance services. Products meet FIB, PTI and CIP international standards, with test reports from CTL and EMPA. Available in steel strand stay cable, high-strength wire stay cable, and carbon fiber cable types.",
     types: [
