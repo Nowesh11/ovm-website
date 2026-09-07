@@ -162,7 +162,7 @@ test.describe("technology pages", () => {
     await scrollThroughPage(page);
 
     const figures = page.locator("figure");
-    await expect(figures).toHaveCount(4);
+    await expect(figures).toHaveCount(7);
 
     await expect(figures.locator("h3")).toHaveText([
       "Elastomeric Bearing",
@@ -170,6 +170,10 @@ test.describe("technology pages", () => {
       "Spherical Bearing",
       /* Added from the 2026 profile deck. */
       "Bearings",
+      /* Added from the 2026 render set. */
+      "Laminated Elastomeric Bearing (Square)",
+      "Laminated Elastomeric Bearing (Round)",
+      "Load Testing Rig",
     ]);
 
     /* Studio shots are cut out on white, so the image plate must be light
@@ -188,7 +192,7 @@ test.describe("technology pages", () => {
     /* The profile-deck renders carry their own dark ground, so they take a
        dark plate and fill it — a white plate would frame them in a border. */
     const deck = await figures
-      .last()
+      .filter({ has: page.getByRole("heading", { name: "Bearings", exact: true }) })
       .locator("img")
       .evaluate((el) => ({
         plate: getComputedStyle(el.parentElement!).backgroundColor,

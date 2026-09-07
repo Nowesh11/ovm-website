@@ -15,12 +15,12 @@ test.describe("homepage", () => {
 
   test("stats count up and settle on their final values", async ({ page }) => {
     await page.goto("/");
-    await page.locator("text=Turnover in 2024").scrollIntoViewIfNeeded();
+    await page.locator("text=Turnover 2025").scrollIntoViewIfNeeded();
 
     /* The count-up tween runs 2.1s; assert the settled values. */
-    await expect(page.getByText("USD 571M")).toBeVisible({ timeout: 15_000 });
-    await expect(page.getByText("2,000+", { exact: true })).toBeVisible();
-    await expect(page.getByText("1,200+", { exact: true })).toBeVisible();
+    await expect(page.getByText("USD 450M")).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByText("1,700+", { exact: true })).toBeVisible();
+    await expect(page.getByText("1,350+", { exact: true })).toBeVisible();
     await expect(page.getByText("80+", { exact: true })).toBeVisible();
   });
 

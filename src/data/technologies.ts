@@ -94,31 +94,49 @@ export const technologies: Technology[] = [
         image: "/technologies/system-supply/pt-system-full-assembly.jpg",
         desc: "The complete assembly — anchorage, strand, and duct working as one system.",
       },
-      {
-        name: "Fiber Anchorage",
-        image: "/technologies/system-supply/pt-fiber-anchorage.jpg",
-      },
-      {
-        name: "High-Strength Carbon Fiber Anchorage",
-        image: "/technologies/system-supply/pt-carbon-fiber-anchorage.jpg",
-      },
+      
       {
         name: "Jack Type YCW",
         image: "/technologies/system-supply/pt-jack-type-ycw.jpg",
       },
       /* From the 2026 profile deck — complete systems rather than single
          parts, and rendered on the deck's own dark ground. */
+      
+      /* 2026 render set. */
       {
-        name: "Regular PT System",
-        image: "/technologies/profile-2026/regular-pt-system.jpg",
-        desc: "Main scope: design, product manufacturing, construction services. Complies with ASTM, AASHTO, FIB, ETAG013, EAD 160004-00-0301, BS, GB/T 14370.",
-        plate: "dark",
+        name: "Anchor Head Assembly",
+        image: "/technologies/renders-2026/post-tensioning/pt-anchor-head-assembly.png",
       },
       {
-        name: "Electrical Isolation PT System",
-        image: "/technologies/profile-2026/electrical-isolation-pt.jpg",
-        desc: "Design with PL2 & PL3, product manufacturing, construction services. Complies with international standards including fib75 and PTI.",
-        plate: "dark",
+        name: "Complete Tendon System",
+        image: "/technologies/renders-2026/post-tensioning/pt-full-tendon-system.png",
+      },
+      {
+        name: "Hydraulic Pump Unit",
+        image: "/technologies/renders-2026/post-tensioning/pt-hydraulic-pump-unit-large.png",
+      },
+      {
+        name: "Compact Pump Unit",
+        image: "/technologies/renders-2026/post-tensioning/pt-hydraulic-pump-unit-small.png",
+      },
+      /* pt-protective-cap-device.png is held back until the client confirms
+         what the part is called. */
+    ],
+    /* Construction equipment. There is no dedicated equipment page, and this
+       system's scope already covers construction services, so the plant sits
+       here rather than on a page of its own. */
+    diagrams: [
+      {
+        name: "Segment Launching Gantry",
+        image: "/technologies/renders-2026/equipment/equipment-segment-launching-gantry.png",
+      },
+      {
+        name: "Cable Tightening Machine",
+        image: "/technologies/renders-2026/equipment/equipment-cable-tightening-machine.png",
+      },
+      {
+        name: "Girder Lifting Gantry",
+        image: "/technologies/renders-2026/equipment/equipment-girder-lifting-gantry.png",
       },
     ],
     galleryImages: [
@@ -198,6 +216,25 @@ export const technologies: Technology[] = [
         name: "Wire Winding Machine",
         image: "/technologies/profile-2026/sus-wire-winding-machine.jpg",
       },
+      /* 2026 render set. cable-layer-diagram-partial-chinese.png is held back
+         until an English version exists, or the client confirms it as-is. */
+      {
+        name: "Anchor Head, Wedge & Socket Assembly",
+        image: "/technologies/renders-2026/cable-systems/cable-anchor-head-labeled-diagram.png",
+        desc: "Anchor head, wedge, socket, nut, sealing set, and PE-sheathed strand.",
+      },
+      {
+        name: "Stay Cable Cross-Section",
+        image: "/technologies/renders-2026/cable-systems/cable-strand-cross-section.png",
+      },
+      {
+        name: "Complete Cable Assembly",
+        image: "/technologies/renders-2026/cable-systems/cable-full-assembly.png",
+      },
+      {
+        name: "Stressing Anchorage Detail",
+        image: "/technologies/renders-2026/cable-systems/cable-stressing-anchorage-closeup.png",
+      },
     ],
     diagrams: [
       {
@@ -267,6 +304,20 @@ export const technologies: Technology[] = [
         desc: "Types: elastomeric, pot, spherical, lead rubber, high damping rubber, and pendulum bearing. Designed and manufactured to AASHTO LRFD, EN1337, EN15129, BS5400, with CE certification and test reports from CTL (USA), MILANO (Italy), and KIT (Germany).",
         plate: "dark",
       },
+      /* 2026 render set. */
+      {
+        name: "Laminated Elastomeric Bearing (Square)",
+        image: "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-square.png",
+      },
+      {
+        name: "Laminated Elastomeric Bearing (Round)",
+        image: "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-round.png",
+      },
+      {
+        name: "Load Testing Rig",
+        image: "/technologies/renders-2026/bearing/bearing-load-testing-rig.png",
+        desc: "Bearing performance is verified under controlled load testing before deployment.",
+      },
     ],
     galleryImages: [],
   },
@@ -301,6 +352,15 @@ export const technologies: Technology[] = [
         image: "/technologies/profile-2026/expansion-joint-photo-real.jpg",
         desc: "Types: rubber expansion joint, strip seal expansion joint, modular expansion joint, finger expansion joint. Same international standards compliance and CE certification as our bearing products.",
         plate: "dark",
+      },
+      /* 2026 render set. */
+      {
+        name: "Expansion Joint — Deck Cross-Section",
+        image: "/technologies/renders-2026/expansion-joints/expansion-joint-deck-cutaway.png",
+      },
+      {
+        name: "Modular Expansion Joint Hardware",
+        image: "/technologies/renders-2026/expansion-joints/expansion-joint-modular-hardware.png",
       },
     ],
     galleryImages: [],
@@ -353,6 +413,11 @@ export const technologies: Technology[] = [
         image: "/technologies/profile-2026/damper-photo-real.jpg",
         desc: "Types: viscous fluid damper, permanent magnet adjustable magnetorheological damper, eddy current tuned mass damper.",
         plate: "dark",
+      },
+      /* 2026 render set. */
+      {
+        name: "Cylindrical Damper",
+        image: "/technologies/renders-2026/dampers/damper-cylindrical-gold-pair.png",
       },
     ],
     galleryImages: [],

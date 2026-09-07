@@ -26,12 +26,12 @@ export const TECH_EXPECTATIONS: Record<
     diagramCount: number;
   }
 > = {
-  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 23, galleryCount: 2, componentCount: 6, diagramCount: 0 },
-  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 9, galleryCount: 3, componentCount: 9, diagramCount: 5 },
-  bearing: { name: "Bearing", hasHeroImage: true, typeCount: 3, projectCount: 3, galleryCount: 0, componentCount: 4, diagramCount: 0 },
-  "expansion-joints": { name: "Expansion Joints", hasHeroImage: false, typeCount: 3, projectCount: 8, galleryCount: 0, componentCount: 2, diagramCount: 0 },
+  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 23, galleryCount: 2, componentCount: 10, diagramCount: 3 },
+  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 9, galleryCount: 3, componentCount: 13, diagramCount: 5 },
+  bearing: { name: "Bearing", hasHeroImage: true, typeCount: 3, projectCount: 3, galleryCount: 0, componentCount: 7, diagramCount: 0 },
+  "expansion-joints": { name: "Expansion Joints", hasHeroImage: false, typeCount: 3, projectCount: 8, galleryCount: 0, componentCount: 4, diagramCount: 0 },
   "anti-seismic-device": { name: "Anti-Seismic Device", hasHeroImage: true, typeCount: 1, projectCount: 0, galleryCount: 0, componentCount: 1, diagramCount: 0 },
-  dampers: { name: "Dampers", hasHeroImage: false, typeCount: 2, projectCount: 0, galleryCount: 0, componentCount: 2, diagramCount: 0 },
+  dampers: { name: "Dampers", hasHeroImage: false, typeCount: 2, projectCount: 0, galleryCount: 0, componentCount: 3, diagramCount: 0 },
   "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 0, galleryCount: 1, componentCount: 0, diagramCount: 0 },
 };
 
@@ -62,16 +62,43 @@ export const COMPONENT_IMAGES = [
   "/technologies/profile-2026/sus-cable-tightening-machine.jpg",
   "/technologies/profile-2026/sus-cable-supported-crane.jpg",
   "/technologies/profile-2026/sus-wire-winding-machine.jpg",
+  /* The 2026 render set. */
+  "/technologies/renders-2026/post-tensioning/pt-anchor-head-assembly.png",
+  "/technologies/renders-2026/post-tensioning/pt-full-tendon-system.png",
+  "/technologies/renders-2026/post-tensioning/pt-hydraulic-pump-unit-large.png",
+  "/technologies/renders-2026/post-tensioning/pt-hydraulic-pump-unit-small.png",
+  "/technologies/renders-2026/cable-systems/cable-anchor-head-labeled-diagram.png",
+  "/technologies/renders-2026/cable-systems/cable-strand-cross-section.png",
+  "/technologies/renders-2026/cable-systems/cable-full-assembly.png",
+  "/technologies/renders-2026/cable-systems/cable-stressing-anchorage-closeup.png",
+  "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-square.png",
+  "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-round.png",
+  "/technologies/renders-2026/bearing/bearing-load-testing-rig.png",
+  "/technologies/renders-2026/expansion-joints/expansion-joint-deck-cutaway.png",
+  "/technologies/renders-2026/expansion-joints/expansion-joint-modular-hardware.png",
+  "/technologies/renders-2026/dampers/damper-cylindrical-gold-pair.png",
 ] as const;
 
+/** Images referenced by a `diagrams` entry, keyed by the page they sit on. */
+export const DIAGRAM_IMAGES_BY_TECHNOLOGY = {
+  "cable-systems": [
+    "/technologies/profile-2026/cable-anchorage-diagram.jpg",
+    "/technologies/profile-2026/cable-saddle-diagram.jpg",
+    "/technologies/profile-2026/cable-strand-crosssection.jpg",
+    "/technologies/profile-2026/cable-anchor-plate-exploded.jpg",
+    "/technologies/profile-2026/cable-galvanized-wire-diagram.jpg",
+  ],
+  /* Construction equipment, parked on the post-tensioning page for want of
+     an equipment page of its own. */
+  "post-tensioning-systems": [
+    "/technologies/renders-2026/equipment/equipment-segment-launching-gantry.png",
+    "/technologies/renders-2026/equipment/equipment-cable-tightening-machine.png",
+    "/technologies/renders-2026/equipment/equipment-girder-lifting-gantry.png",
+  ],
+} as const;
+
 /** Every image referenced by a `diagrams` entry, across all technologies. */
-export const DIAGRAM_IMAGES = [
-  "/technologies/profile-2026/cable-anchorage-diagram.jpg",
-  "/technologies/profile-2026/cable-saddle-diagram.jpg",
-  "/technologies/profile-2026/cable-strand-crosssection.jpg",
-  "/technologies/profile-2026/cable-anchor-plate-exploded.jpg",
-  "/technologies/profile-2026/cable-galvanized-wire-diagram.jpg",
-] as const;
+export const DIAGRAM_IMAGES = Object.values(DIAGRAM_IMAGES_BY_TECHNOLOGY).flat();
 
 /** Projects added to the homepage carousel from the 2026 profile deck. */
 export const PROFILE_2026_PROJECTS = [

@@ -1,5 +1,11 @@
 import { test, expect } from "@playwright/test";
-import { DIAGRAM_IMAGES, PROFILE_2026_PROJECTS, scrollThroughPage } from "./helpers";
+import {
+  DIAGRAM_IMAGES,
+  DIAGRAM_IMAGES_BY_TECHNOLOGY,
+  PROFILE_2026_PROJECTS,
+  TECH_EXPECTATIONS,
+  scrollThroughPage,
+} from "./helpers";
 
 /* The carousel lazily loads 25 photos and the deep-link test waits on a
    smooth scroll plus a 1.5s highlight, so the default 30s is too tight. */
@@ -116,31 +122,37 @@ test.describe("project deep links", () => {
 });
 
 test.describe("technical reference diagrams", () => {
-  test("cable systems renders every diagram and they all decode", async ({ page }) => {
-    await page.goto("/technologies/cable-systems");
+  for (const [slug, images] of Object.entries(DIAGRAM_IMAGES_BY_TECHNOLOGY)) {
+    test(`${slug} renders every diagram and they all decode`, async ({ page }) => {
+      await page.goto(`/technologies/${slug}`);
 
-    const heading = page.getByRole("heading", { name: "How the system fits together" });
-    await heading.scrollIntoViewIfNeeded();
-    await expect(heading).toBeVisible();
+      const heading = page.getByRole("heading", { name: "How the system fits together" });
+      await heading.scrollIntoViewIfNeeded();
+      await expect(heading).toBeVisible();
 
-    const section = page.locator("section").filter({ has: heading });
-    await expect(section.getByText("Technical Reference", { exact: true })).toBeVisible();
+      const section = page.locator("section").filter({ has: heading });
+      await expect(section.getByText("Technical Reference", { exact: true })).toBeVisible();
 
-    const cards = section.locator("figure");
-    await expect(cards).toHaveCount(DIAGRAM_IMAGES.length);
+      const cards = section.locator("figure");
+      await expect(cards).toHaveCount(images.length);
 
-    await scrollThroughPage(page);
-    for (let i = 0; i < DIAGRAM_IMAGES.length; i += 1) {
-      const img = cards.nth(i).locator("img");
-      await expect
-        .poll(() => img.evaluate((el) => (el as HTMLImageElement).naturalWidth))
-        .toBeGreaterThan(0);
-      await expect(cards.nth(i).locator("h3")).not.toBeEmpty();
-    }
-  });
+      await scrollThroughPage(page);
+      for (let i = 0; i < images.length; i += 1) {
+        const img = cards.nth(i).locator("img");
+        await expect
+          .poll(() => img.evaluate((el) => (el as HTMLImageElement).naturalWidth))
+          .toBeGreaterThan(0);
+        await expect(cards.nth(i).locator("h3")).not.toBeEmpty();
+      }
+    });
+  }
 
   test("technologies without diagrams skip the section entirely", async ({ page }) => {
-    for (const slug of ["bearing", "dampers", "post-tensioning-systems"]) {
+    const slugs = Object.entries(TECH_EXPECTATIONS)
+      .filter(([, expected]) => expected.diagramCount === 0)
+      .map(([slug]) => slug);
+
+    for (const slug of slugs) {
       await page.goto(`/technologies/${slug}`);
       await scrollThroughPage(page);
       await expect(page.getByText("Technical Reference", { exact: true })).toHaveCount(0);

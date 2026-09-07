@@ -10,8 +10,8 @@ test.describe("about page", () => {
     await expect(page.locator("h1")).toHaveText("Global leader in prestressing technology");
     await expect(page.getByText("Founded in 1966", { exact: false })).toBeVisible();
 
-    await page.locator("text=Turnover in 2024").scrollIntoViewIfNeeded();
-    await expect(page.getByText("USD 571M")).toBeVisible({ timeout: 15_000 });
+    await page.locator("text=Turnover 2025").scrollIntoViewIfNeeded();
+    await expect(page.getByText("USD 450M")).toBeVisible({ timeout: 15_000 });
     await expect(page.getByText("80+", { exact: true })).toBeVisible();
 
     expect(errors).toEqual([]);
