@@ -1,0 +1,210 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - generic [ref=f1e7]:
+      - generic [ref=f1e11]:
+        - list [ref=f1e14]:
+          - listitem [ref=f1e15]:
+            - link "ꀅ Service System" [ref=f1e17] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f1e18]:
+            - link "Project" [ref=f1e20] [cursor=pointer]:
+              - /url: /gcyj
+          - listitem [ref=f1e21]:
+            - link "ꀅ About us" [ref=f1e23] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f1e24]:
+            - link "ꀅ Download" [ref=f1e26] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f1e27]:
+            - link "News" [ref=f1e29] [cursor=pointer]:
+              - /url: /xw
+          - listitem [ref=f1e30]:
+            - link "Global Websites" [ref=f1e32] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f1e36]:
+          - link "끠" [ref=f1e37] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - textbox "Please enter keyword" [ref=f1e39]
+        - generic [ref=f1e44] [cursor=pointer]:
+          - generic [ref=f1e45]: ꀅ
+          - link "English" [ref=f1e47]:
+            - /url: javascript:void(0)
+        - generic [ref=f1e50]:
+          - link "Share 微信" [ref=f1e51] [cursor=pointer]:
+            - /url: "#"
+          - link "Share linkedin" [ref=f1e52] [cursor=pointer]:
+            - /url: "#"
+          - link "Share Facebook" [ref=f1e53] [cursor=pointer]:
+            - /url: "#"
+      - link [ref=f1e61] [cursor=pointer]:
+        - /url: /sy
+      - list [ref=f1e64]:
+        - listitem [ref=f1e65]:
+          - link "Construction Service" [ref=f1e67] [cursor=pointer]:
+            - /url: /sgfw
+        - listitem [ref=f1e68]:
+          - link "Maintenance" [ref=f1e70] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f1e71]:
+          - link "Monitoring" [ref=f1e73] [cursor=pointer]:
+            - /url: /productinfo/1270177.html
+        - listitem [ref=f1e74]:
+          - link "Leading-edge Technology" [ref=f1e76] [cursor=pointer]:
+            - /url: /qyjs
+        - listitem [ref=f1e77]:
+          - link "Equipment" [ref=f1e79] [cursor=pointer]:
+            - /url: /zb
+      - generic [ref=f1e82]:
+        - list [ref=f1e83]:
+          - listitem
+          - listitem [ref=f1e84] [cursor=pointer]:
+            - link "Post-tensioning" [ref=f1e85]:
+              - /url: /hz
+          - listitem
+        - list
+      - generic [ref=f1e88]:
+        - list [ref=f1e89]:
+          - listitem
+          - listitem [ref=f1e90] [cursor=pointer]:
+            - link "Cable" [ref=f1e91]:
+              - /url: /ql
+          - listitem
+        - list
+      - generic [ref=f1e94]:
+        - list [ref=f1e95]:
+          - listitem
+          - listitem [ref=f1e96] [cursor=pointer]:
+            - link "Bearing and EJ." [ref=f1e97]:
+              - /url: /xjjgz
+          - listitem
+        - list
+    - generic [ref=f1e103]:
+      - paragraph [ref=f1e108]:
+        - strong [ref=f1e113]: Bearing and Vibration Damping
+      - generic [ref=f1e116]:
+        - link "Home" [ref=f1e117] [cursor=pointer]:
+          - /url: /sy
+        - generic [ref=f1e118]: ꄷ
+        - generic [ref=f1e119]: Bearing and EJ.
+      - generic [ref=f1e121]:
+        - generic [ref=f1e122]:
+          - list:
+            - listitem [ref=f1e123]:
+              - link [ref=f1e124] [cursor=pointer]:
+                - /url: /productinfo/1276766.html
+                - heading "Eddy Current Tuned Mass Damper" [level=5] [ref=f1e128]
+            - listitem [ref=f1e129]:
+              - link [ref=f1e130] [cursor=pointer]:
+                - /url: /productinfo/1276757.html
+                - heading "Permanent Magnet Adjustable Magnetorheological Damper" [level=5] [ref=f1e134]
+            - listitem [ref=f1e135]:
+              - link [ref=f1e136] [cursor=pointer]:
+                - /url: /productinfo/1276737.html
+                - heading "Viscous Fluid Damper" [level=5] [ref=f1e140]
+            - listitem [ref=f1e141]:
+              - link [ref=f1e142] [cursor=pointer]:
+                - /url: /productinfo/1276727.html
+                - heading "Finger Expansion Joints" [level=5] [ref=f1e146]
+            - listitem [ref=f1e147]:
+              - link [ref=f1e148] [cursor=pointer]:
+                - /url: /productinfo/1276715.html
+                - heading "Modular Expansion Joints" [level=5] [ref=f1e152]
+            - listitem [ref=f1e153]:
+              - link [ref=f1e154] [cursor=pointer]:
+                - /url: /productinfo/1276702.html
+                - heading "Strip Seal Expansion Joints" [level=5] [ref=f1e158]
+            - listitem [ref=f1e159]:
+              - link [ref=f1e160] [cursor=pointer]:
+                - /url: /productinfo/1276688.html
+                - heading "Pendulum Bearing" [level=5] [ref=f1e164]
+            - listitem [ref=f1e165]:
+              - link [ref=f1e166] [cursor=pointer]:
+                - /url: /productinfo/1276682.html
+                - heading "Lead Rubber Bearing & High-Damping Rubber Bearing" [level=5] [ref=f1e170]
+        - list [ref=f1e172]:
+          - listitem [ref=f1e173]:
+            - link "Prev" [ref=f1e174]:
+              - /url: javascript:void(0);
+          - listitem [ref=f1e175]:
+            - link "1" [ref=f1e176] [cursor=pointer]:
+              - /url: javascript:void(0);
+          - listitem [ref=f1e177]:
+            - link "2" [ref=f1e178] [cursor=pointer]:
+              - /url: javascript:void(0);
+          - listitem [ref=f1e179]:
+            - link "Next" [ref=f1e180] [cursor=pointer]:
+              - /url: javascript:void(0);
+      - list [ref=f1e185]:
+        - listitem [ref=f1e186]:
+          - link "Normal Bearings" [ref=f1e187] [cursor=pointer]:
+            - /url: /gzxjzz
+        - listitem [ref=f1e188]:
+          - link "Anti-seismic Device" [ref=f1e189] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f1e190]:
+          - link "Expansion Joints" [ref=f1e191] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f1e192]:
+          - link "Dampers" [ref=f1e193] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f1e195]:
+      - generic [ref=f1e198]:
+        - link "All rights reserved © Liuzhou OVM Machinery Co., Ltd." [ref=f1e211] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - text:  All rights reserved © Liuzhou OVM Machinery Co., Ltd.
+        - generic [ref=f1e215]:
+          - paragraph [ref=f1e220]:
+            - generic [ref=f1e221]: Liuzhou OVM Machinery Co., Ltd.
+          - generic [ref=f1e227]:
+            - paragraph [ref=f1e228]:
+              - generic [ref=f1e229]: "Tel: +86-772-3116402"
+            - paragraph [ref=f1e231]:
+              - generic [ref=f1e233]:
+                - text: "Website:"
+                - link "www.ovm.cn" [ref=f1e234] [cursor=pointer]:
+                  - /url: http://www.ovm.cn
+            - paragraph [ref=f1e235]:
+              - generic [ref=f1e237]:
+                - text: "E-mail:"
+                - link "sales@ovm.cn" [ref=f1e238] [cursor=pointer]:
+                  - /url: mailto:sales@ovm.cn
+            - paragraph [ref=f1e239]:
+              - generic [ref=f1e240]: "Address: No.1 Yanghui Road, Liuzhou, Guangxi, 545006, P.R.China."
+        - generic [ref=f1e245]:
+          - paragraph [ref=f1e250]:
+            - generic [ref=f1e251]: ABOUT OVM
+          - list [ref=f1e257]:
+            - listitem [ref=f1e258]:
+              - link "Corporate Culture" [ref=f1e260] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f1e261]:
+              - link "Company Profile" [ref=f1e263] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f1e264]:
+              - link "Developing Route" [ref=f1e266] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f1e267]:
+              - link "Qualification Certification" [ref=f1e269] [cursor=pointer]:
+                - /url: /qyjj
+          - list [ref=f1e273]:
+            - listitem [ref=f1e274]:
+              - link "Innovative Technology" [ref=f1e276] [cursor=pointer]:
+                - /url: /cxnl
+            - listitem [ref=f1e277]:
+              - link "Marketing Network" [ref=f1e279] [cursor=pointer]:
+                - /url: /yxwl
+            - listitem [ref=f1e280]:
+              - link "Employee Story" [ref=f1e282] [cursor=pointer]:
+                - /url: /yggs
+            - listitem [ref=f1e283]:
+              - link "Talent Recruitment" [ref=f1e285] [cursor=pointer]:
+                - /url: /rczp
+      - link "낂" [ref=f1e289] [cursor=pointer]:
+        - /url: mailto:sales@ovm.cn
+        - emphasis [ref=f1e291]:
+          - generic [ref=f1e292]: 낂
+  - generic [ref=f1e296]:
+    - link "本网站由阿里云提供云计算及安全服务" [ref=f1e298] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com/webdesign/webdesign?source=5176.11533457&userCode=i7rzleoi
+    - link "Powered by 万网" [ref=f1e310] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com

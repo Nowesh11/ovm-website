@@ -4,9 +4,7 @@ import type { Page, ConsoleMessage } from "@playwright/test";
 export const TECH_SLUGS = [
   "post-tensioning-systems",
   "cable-systems",
-  "bearing",
-  "expansion-joints",
-  "anti-seismic-device",
+  "bearing-expansion-joints-anti-seismic-device",
   "dampers",
   "structural-health-monitoring",
 ] as const;
@@ -43,13 +41,27 @@ export const TECH_EXPECTATIONS: Record<
     componentCount: number;
     /** Cards in the "Technical Reference" section; 0 means it must not render. */
     diagramCount: number;
+    /** Product-line sections on a combined page, in order. Counts above are
+        then totals across every line. */
+    groups?: readonly { id: string; name: string; typeCount: number; componentCount: number }[];
   }
 > = {
   "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 23, galleryCount: 2, componentCount: 10, diagramCount: 3 },
   "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 9, galleryCount: 3, componentCount: 13, diagramCount: 5 },
-  bearing: { name: "Bearing", hasHeroImage: true, typeCount: 3, projectCount: 3, galleryCount: 0, componentCount: 7, diagramCount: 0 },
-  "expansion-joints": { name: "Expansion Joints", hasHeroImage: false, typeCount: 3, projectCount: 8, galleryCount: 0, componentCount: 4, diagramCount: 0 },
-  "anti-seismic-device": { name: "Anti-Seismic Device", hasHeroImage: true, typeCount: 1, projectCount: 0, galleryCount: 0, componentCount: 1, diagramCount: 0 },
+  "bearing-expansion-joints-anti-seismic-device": {
+    name: "Bearing, Expansion Joints & Anti-Seismic Device",
+    hasHeroImage: true,
+    typeCount: 7,
+    projectCount: 8,
+    galleryCount: 0,
+    componentCount: 12,
+    diagramCount: 0,
+    groups: [
+      { id: "bearing", name: "Bearing", typeCount: 3, componentCount: 7 },
+      { id: "expansion-joints", name: "Expansion Joints", typeCount: 3, componentCount: 4 },
+      { id: "anti-seismic-device", name: "Anti-Seismic Device", typeCount: 1, componentCount: 1 },
+    ],
+  },
   dampers: { name: "Dampers", hasHeroImage: false, typeCount: 2, projectCount: 0, galleryCount: 0, componentCount: 3, diagramCount: 0 },
   "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 0, galleryCount: 1, componentCount: 0, diagramCount: 0 },
 };
@@ -135,8 +147,8 @@ export const PROFILE_2026_PROJECTS = [
 
 /**
  * Reference projects each technology page should list, mirroring the
- * `technologies` tags in src/data/projects.ts. The three omitted slugs
- * (anti-seismic-device, dampers, structural-health-monitoring) have no
+ * `technologies` tags in src/data/projects.ts. The two omitted slugs
+ * (dampers, structural-health-monitoring) have no
  * Malaysian project and must render no Reference Projects section at all.
  */
 export const PROJECTS_BY_TECHNOLOGY = {
@@ -176,12 +188,7 @@ export const PROJECTS_BY_TECHNOLOGY = {
     "tg-aru-ums-pedestrian-cyclist-bridge",
     "sungai-paku-bridge",
   ],
-  bearing: [
-    "batang-igan-bridge",
-    "batang-saribas-bridge-no-2",
-    "east-coast-rail-link-ecrl",
-  ],
-  "expansion-joints": [
+  "bearing-expansion-joints-anti-seismic-device": [
     "muara-lassa-bridge",
     "batang-igan-bridge",
     "batang-saribas-bridge-no-2",
@@ -195,7 +202,6 @@ export const PROJECTS_BY_TECHNOLOGY = {
 
 /** Technology pages that must show no Reference Projects section. */
 export const TECHNOLOGIES_WITHOUT_PROJECTS = [
-  "anti-seismic-device",
   "dampers",
   "structural-health-monitoring",
 ] as const;

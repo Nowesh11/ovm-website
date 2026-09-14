@@ -1,0 +1,783 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e3]:
+    - generic [ref=f4e4]: Freyssinet (corporate website)
+    - generic:
+      - list
+  - banner [ref=f4e5]:
+    - generic:
+      - link [ref=f4e6] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+        - img "Freyssinet Corporate" [ref=f4e7]
+      - link " Menu" [ref=f4e8] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=f4e9]: 
+        - text: 
+        - generic [ref=f4e10]: Menu
+      - text:  
+  - text:         
+  - main [ref=f4e11]:
+    - generic [ref=f4e12]:
+      - generic [ref=f4e13]:
+        - text:  
+        - generic [ref=f4e14]:
+          - list [ref=f4e15]:
+            - listitem [ref=f4e16]:
+              - generic [ref=f4e17]: Homepage
+          - heading "Freyssinet sustainable technology" [level=1] [ref=f4e19]
+          - generic [ref=f4e21]: Your specialist partner to build and repair
+          - list [ref=f4e22]:
+            - listitem [ref=f4e23]:
+              - generic [ref=f4e24]: Post-tensioning
+            - listitem [ref=f4e25]:
+              - generic [ref=f4e26]: Structural fittings
+            - listitem [ref=f4e27]:
+              - generic [ref=f4e28]: Cable systems
+            - listitem [ref=f4e29]:
+              - generic [ref=f4e30]: Structural strengthening
+            - listitem [ref=f4e31]:
+              - generic [ref=f4e32]: Seismic protection
+            - listitem [ref=f4e33]:
+              - generic [ref=f4e34]: Repair
+            - listitem [ref=f4e35]:
+              - generic [ref=f4e36]: Corrosion protection
+          - link "Scroll down Scroll down  " [ref=f4e37] [cursor=pointer]:
+            - /url: "#main-content"
+            - generic: Scroll down
+            - generic: Scroll down
+            - generic: 
+            - generic: 
+      - tabpanel [ref=f4e40]:
+        - generic [ref=f4e41]:
+          - generic [ref=f4e43]:
+            - generic [ref=f4e44]: Freyssinet
+            - heading "80 years of innovation" [level=2] [ref=f4e45]
+            - generic [ref=f4e46]: Founded by Eugène Freyssinet, the inventor of post-tensioning, Freyssinet brings together an unrivalled range of civil engineering skills. We contribute, as a general contractor or as a subcontractor, to the construction and repair of structures on five continents through a network of 60 subsidiaries located close to its customers. From engineering to the implementation of technical solutions on site and the manufacture of products, we support each project with the same principles of excellence, innovation, performance and sustainability.
+          - generic [ref=f4e49]:
+            - generic [ref=f4e51]:
+              - img "Location picto - key figures" [ref=f4e53]
+              - generic [ref=f4e54]: 7,300
+              - generic [ref=f4e55]: Employees worldwide
+            - generic [ref=f4e57]:
+              - img "Picto people" [ref=f4e59]
+              - generic [ref=f4e60]: "+60"
+              - generic [ref=f4e61]: Country locations
+            - generic [ref=f4e63]:
+              - img "Picto projects" [ref=f4e65]
+              - generic [ref=f4e66]: 10,000
+              - generic [ref=f4e67]: Projects per year, large and small
+        - generic [ref=f4e68]:
+          - text:                                  
+          - generic [ref=f4e69]:
+            - heading "What we do" [level=2] [ref=f4e73]
+            - tablist [ref=f4e76]:
+              - listitem [ref=f4e77]:
+                - tab "Build" [selected] [ref=f4e78] [cursor=pointer]
+              - listitem [ref=f4e79]:
+                - tab "Repair" [selected] [ref=f4e80] [cursor=pointer]
+            - generic [ref=f4e81]:
+              - tabpanel "Build" [ref=f4e82]:
+                - generic [ref=f4e83]:
+                  - generic [ref=f4e85]:
+                    - link "Cable systems " [ref=f4e87] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/cable-systems/
+                      - generic [ref=f4e88]:
+                        - generic [ref=f4e89]: Cable systems
+                        - generic [ref=f4e90]: 
+                    - link "Post-tensioning systems " [ref=f4e92] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/post-tensioning-systems/
+                      - generic [ref=f4e93]:
+                        - generic [ref=f4e94]: Post-tensioning systems
+                        - generic [ref=f4e95]: 
+                    - link "Expansion joints " [ref=f4e97] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/expansion-joints/
+                      - generic [ref=f4e98]:
+                        - generic [ref=f4e99]: Expansion joints
+                        - generic [ref=f4e100]: 
+                    - link "Bearings " [ref=f4e102] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/bearings/
+                      - generic [ref=f4e103]:
+                        - generic [ref=f4e104]: Bearings
+                        - generic [ref=f4e105]: 
+                    - link "Seismic protection " [ref=f4e107] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/seismic-protection/
+                      - generic [ref=f4e108]:
+                        - generic [ref=f4e109]: Seismic protection
+                        - generic [ref=f4e110]: 
+                    - link "Heavy lifting and handling " [ref=f4e112] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/heavy-lifting-handling/
+                      - generic [ref=f4e113]:
+                        - generic [ref=f4e114]: Heavy lifting and handling
+                        - generic [ref=f4e115]: 
+                    - link "Bridge and deck construction " [ref=f4e117] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/bridge-deck-construction/
+                      - generic [ref=f4e118]:
+                        - generic [ref=f4e119]: Bridge and deck construction
+                        - generic [ref=f4e120]: 
+                    - link "Anchoring systems for geotechnics " [ref=f4e122] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/anchoring-systems-for-geotechnics/
+                      - generic [ref=f4e123]:
+                        - generic [ref=f4e124]: Anchoring systems for geotechnics
+                        - generic [ref=f4e125]: 
+                    - link "Waterproofing geomembranes " [ref=f4e127] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/solution/build/waterproofing-geomembranes/
+                      - generic [ref=f4e128]:
+                        - generic [ref=f4e129]: Waterproofing geomembranes
+                        - generic [ref=f4e130]: 
+                  - text:  
+                  - generic [ref=f4e131]:
+                    - button [ref=f4e132] [cursor=pointer]
+                    - button [ref=f4e133] [cursor=pointer]
+                    - button [ref=f4e134] [cursor=pointer]
+                    - button [ref=f4e135] [cursor=pointer]
+                    - button [ref=f4e136] [cursor=pointer]
+                    - button [ref=f4e137] [cursor=pointer]
+                    - button [ref=f4e138] [cursor=pointer]
+                    - button [ref=f4e139] [cursor=pointer]
+              - text:          
+        - generic [ref=f4e140]:
+          - heading "Who we are" [level=2] [ref=f4e143]
+          - text:    
+          - generic [ref=f4e146]:
+            - link [ref=f4e148] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/who-we-are/
+              - heading "A specialist civil engineering company" [level=3] [ref=f4e150]
+            - link [ref=f4e152] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/our-commitments/
+              - heading "Our commitments" [level=3] [ref=f4e154]
+        - generic [ref=f4e156]:
+          - heading "Our latest news" [level=2] [ref=f4e158]
+          - generic [ref=f4e160]:
+            - 'link "News — Projects Freyssinet Test Arch: bringing a 20th‑century engineering revolution test arch back to life! 2026.03.03  Read now " [ref=f4e162] [cursor=pointer]':
+              - /url: https://www.freyssinet.com/freyssinet-test-arch-bringing-a-20th‑century-engineering-revolution-test-arch-back-to-life/
+              - generic [ref=f4e164]: News — Projects
+              - 'heading "Freyssinet Test Arch: bringing a 20th‑century engineering revolution test arch back to life!" [level=3] [ref=f4e167]'
+              - generic [ref=f4e168]: 2026.03.03
+              - generic [ref=f4e169]:
+                - text: 
+                - generic [ref=f4e170]: Read now
+                - text: 
+            - link "News — Projects Freyssinet Polska reinforces and optimizes a key infrastructure project over the Odra river 2025.02.27  Read now " [ref=f4e172] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/freyssinet-polska-reinforces-and-optimizes-a-key-infrastructure-project-over-the-odra-river/
+              - generic [ref=f4e174]: News — Projects
+              - heading "Freyssinet Polska reinforces and optimizes a key infrastructure project over the Odra river" [level=3] [ref=f4e176]
+              - generic [ref=f4e177]: 2025.02.27
+              - generic [ref=f4e178]:
+                - text: 
+                - generic [ref=f4e179]: Read now
+                - text: 
+            - link "News — Projects Building stronger foundations for tomorrow in Puerto Rico 2024.06.11  Read now " [ref=f4e181] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/building-stronger-foundations-for-tomorrow-with-the-freyssinet-team/
+              - generic [ref=f4e183]: News — Projects
+              - heading "Building stronger foundations for tomorrow in Puerto Rico" [level=3] [ref=f4e185]
+              - generic [ref=f4e186]: 2024.06.11
+              - generic [ref=f4e187]:
+                - text: 
+                - generic [ref=f4e188]: Read now
+                - text: 
+            - link "News — Projects Our contribution to the Allegiant Stadium! 2024.02.26  Read now " [ref=f4e190] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/our-contribution-to-the-allegiant-stadium/
+              - generic [ref=f4e192]: News — Projects
+              - heading "Our contribution to the Allegiant Stadium!" [level=3] [ref=f4e194]
+              - generic [ref=f4e195]: 2024.02.26
+              - generic [ref=f4e196]:
+                - text: 
+                - generic [ref=f4e197]: Read now
+                - text: 
+          - link " Discover more " [ref=f4e199] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/newsroom/
+        - generic [ref=f4e200]:
+          - heading "Our case studies" [level=2] [ref=f4e203]
+          - generic [ref=f4e206]:
+            - generic [ref=f4e208]:
+              - generic [ref=f4e211]:
+                - link [ref=f4e212] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/an-dong-bridge-multihole-saddle/
+                - generic [ref=f4e213]:
+                  - generic [ref=f4e214]:
+                    - generic [ref=f4e215]: Build
+                    - generic [ref=f4e216]:
+                      - generic: 
+                      - text: Vietnam
+                  - heading [level=3] [ref=f4e217]:
+                    - link "An Dong bridge’s multihole saddle" [ref=f4e218] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/case-study/an-dong-bridge-multihole-saddle/
+                  - generic [ref=f4e219]: The latest generation of Freyssinet’s multihole saddle, which offers improved performance and durability, was used for the first time on Vietnam’s An Dong extradosed bridge.
+                - link " " [ref=f4e222] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/an-dong-bridge-multihole-saddle/
+              - generic [ref=f4e225]:
+                - link [ref=f4e226] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/sultan-yavuz-selim-bridge-stay-cable-technology/
+                - generic [ref=f4e227]:
+                  - generic [ref=f4e228]:
+                    - generic [ref=f4e229]: Build
+                    - generic [ref=f4e230]:
+                      - generic: 
+                      - text: Turkey
+                  - heading [level=3] [ref=f4e231]:
+                    - link "Sultan Yavuz Selim, the hybrid bridge" [ref=f4e232] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/case-study/sultan-yavuz-selim-bridge-stay-cable-technology/
+                  - generic [ref=f4e233]: The third Bosphorus crossing pushed stay cable technology to the next level, combining a traditional suspension system with high-strength cables to stabilise the bridge and future-proof it for trains.
+                - link " " [ref=f4e236] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/sultan-yavuz-selim-bridge-stay-cable-technology/
+              - generic [ref=f4e239]:
+                - link [ref=f4e240] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/barbazan-culvert-uhpfrc-reinforcement/
+                - generic [ref=f4e241]:
+                  - generic [ref=f4e242]:
+                    - generic [ref=f4e243]: Repair
+                    - generic [ref=f4e244]:
+                      - generic: 
+                      - text: France
+                  - heading [level=3] [ref=f4e245]:
+                    - link "Barbazan culvert reinforcement using UHPFRC" [ref=f4e246] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/case-study/barbazan-culvert-uhpfrc-reinforcement/
+                  - generic [ref=f4e247]: A specially developed mix and custom-designed equipment now allow ultra-high-performance fibre-reinforced concrete to be spray-applied, opening up a world of possibilities for this durable material.
+                - link " " [ref=f4e250] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/barbazan-culvert-uhpfrc-reinforcement/
+              - generic [ref=f4e253]:
+                - link [ref=f4e254] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/bulacan-preheater-tower-cement-plant-structural-strengthening-philippines/
+                - generic [ref=f4e255]:
+                  - generic [ref=f4e256]:
+                    - generic [ref=f4e257]: Repair
+                    - generic [ref=f4e258]:
+                      - generic: 
+                      - text: Philippines
+                  - heading [level=3] [ref=f4e259]:
+                    - link "Preheater tower structural strengthening for the Bulacan cement plant" [ref=f4e260] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/case-study/bulacan-preheater-tower-cement-plant-structural-strengthening-philippines/
+                  - generic [ref=f4e261]: Structural strengthening works were needed to renovate the ageing prestressed concrete preheater tower of a plant to increase its bearing capacity before installation of new equipment.
+                - link " " [ref=f4e264] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/bulacan-preheater-tower-cement-plant-structural-strengthening-philippines/
+              - generic [ref=f4e267]:
+                - link [ref=f4e268] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/colorado-bridge-beam-replacement/
+                - generic [ref=f4e269]:
+                  - generic [ref=f4e270]:
+                    - generic [ref=f4e271]: Repair
+                    - generic [ref=f4e272]:
+                      - generic: 
+                      - text: Chile
+                  - heading [level=3] [ref=f4e273]:
+                    - link "Colorado bridge beam replacement" [ref=f4e274] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/case-study/colorado-bridge-beam-replacement/
+                  - generic [ref=f4e275]: One of the main beams of a bridge that crosses a key motorway in Chile had to be urgently replaced after it was irreparably damaged by an overheight vehicle.
+                - link " " [ref=f4e278] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/colorado-bridge-beam-replacement/
+              - generic [ref=f4e281]:
+                - link [ref=f4e282] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/clemenceau-medical-center-building-rehabilitation/
+                - generic [ref=f4e283]:
+                  - generic [ref=f4e284]:
+                    - generic [ref=f4e285]: Repair
+                    - generic [ref=f4e286]:
+                      - generic: 
+                      - text: Jordan
+                  - heading [level=3] [ref=f4e287]:
+                    - link "Clemenceau Medical Center rehabilitation" [ref=f4e288] [cursor=pointer]:
+                      - /url: https://www.freyssinet.com/case-study/clemenceau-medical-center-building-rehabilitation/
+                  - generic [ref=f4e289]: Building rehabilitation project to turn a high-rise hotel building into a hospital facility, that needed extensive strengthening works to accommodate the revised loads.
+                - link " " [ref=f4e292] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/clemenceau-medical-center-building-rehabilitation/
+            - text:  
+            - generic [ref=f4e293]:
+              - button [ref=f4e294] [cursor=pointer]
+              - button [ref=f4e295] [cursor=pointer]
+              - button [ref=f4e296] [cursor=pointer]
+              - button [ref=f4e297] [cursor=pointer]
+              - button [ref=f4e298] [cursor=pointer]
+        - generic [ref=f4e300]:
+          - generic [ref=f4e305]:
+            - heading "Discover more case studies" [level=2] [ref=f4e306]
+            - link " Innovation portfolio " [ref=f4e307] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/innovation-portfolio/
+          - text:    
+        - generic [ref=f4e308]:
+          - generic [ref=f4e310]:
+            - generic [ref=f4e311]: Employees stories
+            - heading "Build your career with us" [level=2] [ref=f4e312]
+            - text:  
+          - generic [ref=f4e314]:
+            - generic [ref=f4e316]:
+              - link " Russell Freyssinet Australia and New Zealand Health and Safety Manager « Innovative, determined and inclusive. » Read the story" [ref=f4e318] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/russell-driver-freyssinet-australia-and-new-zealand-health-and-safety-manager/
+                - generic [ref=f4e319]:
+                  - generic [ref=f4e320]: 
+                  - generic [ref=f4e321]: Russell
+                  - generic [ref=f4e322]: Freyssinet Australia and New Zealand Health and Safety Manager
+                  - generic [ref=f4e323]: « Innovative, determined and inclusive. »
+                  - generic [ref=f4e324]: Read the story
+              - link " Fanny Languedoc Branch Manager, South-East Division – Freyssinet France « Heritage, technicity, innovation. » Read the story" [ref=f4e327] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/fanny-bonnand-branch-manager-freyssinet-france/
+                - generic [ref=f4e328]:
+                  - generic [ref=f4e329]: 
+                  - generic [ref=f4e330]: Fanny
+                  - generic [ref=f4e331]: Languedoc Branch Manager, South-East Division – Freyssinet France
+                  - generic [ref=f4e332]: « Heritage, technicity, innovation. »
+                  - generic [ref=f4e333]: Read the story
+              - link " Kaïs Operations Manager – Freyssinet Morocco « Challenge, mobility, and above all identity. » Read the story" [ref=f4e336] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/kais-al-barouni-operations-manager-freyssinet-morocco/
+                - generic [ref=f4e337]:
+                  - generic [ref=f4e338]: 
+                  - generic [ref=f4e339]: Kaïs
+                  - generic [ref=f4e340]: Operations Manager – Freyssinet Morocco
+                  - generic [ref=f4e341]: « Challenge, mobility, and above all identity. »
+                  - generic [ref=f4e342]: Read the story
+              - link " Tri Head of marketing and engineering, Freyssinet Indonesia « Solution-providing and customer-oriented Company » Read the story" [ref=f4e345] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/tri-suryadi-head-of-marketing-and-engineering-for-freyssinet-indonesia/
+                - generic [ref=f4e346]:
+                  - generic [ref=f4e347]: 
+                  - generic [ref=f4e348]: Tri
+                  - generic [ref=f4e349]: Head of marketing and engineering, Freyssinet Indonesia
+                  - generic [ref=f4e350]: « Solution-providing and customer-oriented Company »
+                  - generic [ref=f4e351]: Read the story
+              - link " Michal Technical Manager, FPC Italy « Technicality, Audacity, Openness » Read the story" [ref=f4e354] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/michal-ambor-technical-manager-industrial-plant-italy/
+                - generic [ref=f4e355]:
+                  - generic [ref=f4e356]: 
+                  - generic [ref=f4e357]: Michal
+                  - generic [ref=f4e358]: Technical Manager, FPC Italy
+                  - generic [ref=f4e359]: « Technicality, Audacity, Openness »
+                  - generic [ref=f4e360]: Read the story
+            - text:  
+            - generic [ref=f4e362]:
+              - button [ref=f4e363] [cursor=pointer]
+              - button [ref=f4e364] [cursor=pointer]
+              - button [ref=f4e365] [cursor=pointer]
+              - button [ref=f4e366] [cursor=pointer]
+              - button [ref=f4e367] [cursor=pointer]
+          - text:     
+          - link " Discover all interviews " [ref=f4e369] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/category/employee-stories/
+        - generic [ref=f4e371]:
+          - heading "Contact us" [level=2] [ref=f4e372]
+          - paragraph [ref=f4e374]: You have a question about our solutions or you already have a project in mind? Please fill out the form below and our teams will get back to you shortly.
+          - generic [ref=f4e377]:
+            - list [ref=f4e379]:
+              - listitem [ref=f4e380]:
+                - generic [ref=f4e382]:
+                  - generic [ref=f4e383]:
+                    - text: Your profile*
+                    - generic [ref=f4e384]: "*"
+                  - generic [ref=f4e385]:
+                    - combobox "Your profile**" [ref=f4e386]:
+                      - option "I'm a company"
+                      - option "I'm a candidate"
+                      - option "I'm a journalist"
+                      - option "Other"
+                    - text: 
+              - listitem [ref=f4e387]:
+                - generic [ref=f4e389]:
+                  - generic [ref=f4e390]:
+                    - text: Country*
+                    - generic [ref=f4e391]: "*"
+                  - generic [ref=f4e392]:
+                    - combobox "Country**" [ref=f4e393]:
+                      - option "Afghanistan"
+                      - option "Albania"
+                      - option "Algeria"
+                      - option "American Samoa"
+                      - option "Andorra"
+                      - option "Angola"
+                      - option "Anguilla"
+                      - option "Antarctica"
+                      - option "Antigua and Barbuda"
+                      - option "Argentina"
+                      - option "Armenia"
+                      - option "Aruba"
+                      - option "Australia"
+                      - option "Austria"
+                      - option "Azerbaijan"
+                      - option "Bahamas"
+                      - option "Bahrain"
+                      - option "Bangladesh"
+                      - option "Barbados"
+                      - option "Belarus"
+                      - option "Belgium"
+                      - option "Belize"
+                      - option "Benin"
+                      - option "Bermuda"
+                      - option "Bhutan"
+                      - option "Bolivia"
+                      - option "Bonaire, Sint Eustatius and Saba"
+                      - option "Bosnia and Herzegovina"
+                      - option "Botswana"
+                      - option "Bouvet Island"
+                      - option "Brazil"
+                      - option "British Indian Ocean Territory"
+                      - option "Brunei Darussalam"
+                      - option "Bulgaria"
+                      - option "Burkina Faso"
+                      - option "Burundi"
+                      - option "Cabo Verde"
+                      - option "Cambodia"
+                      - option "Cameroon"
+                      - option "Canada"
+                      - option "Cayman Islands"
+                      - option "Central African Republic"
+                      - option "Chad"
+                      - option "Chile"
+                      - option "China"
+                      - option "Christmas Island"
+                      - option "Cocos Islands"
+                      - option "Colombia"
+                      - option "Comoros"
+                      - option "Congo"
+                      - option "Congo, Democratic Republic of the"
+                      - option "Cook Islands"
+                      - option "Costa Rica"
+                      - option "Croatia"
+                      - option "Cuba"
+                      - option "Curaçao"
+                      - option "Cyprus"
+                      - option "Czechia"
+                      - option "Côte d'Ivoire"
+                      - option "Denmark"
+                      - option "Djibouti"
+                      - option "Dominica"
+                      - option "Dominican Republic"
+                      - option "Ecuador"
+                      - option "Egypt"
+                      - option "El Salvador"
+                      - option "Equatorial Guinea"
+                      - option "Eritrea"
+                      - option "Estonia"
+                      - option "Eswatini"
+                      - option "Ethiopia"
+                      - option "Falkland Islands"
+                      - option "Faroe Islands"
+                      - option "Fiji"
+                      - option "Finland"
+                      - option "France"
+                      - option "French Guiana"
+                      - option "French Polynesia"
+                      - option "French Southern Territories"
+                      - option "Gabon"
+                      - option "Gambia"
+                      - option "Georgia"
+                      - option "Germany"
+                      - option "Ghana"
+                      - option "Gibraltar"
+                      - option "Greece"
+                      - option "Greenland"
+                      - option "Grenada"
+                      - option "Guadeloupe"
+                      - option "Guam"
+                      - option "Guatemala"
+                      - option "Guernsey"
+                      - option "Guinea"
+                      - option "Guinea-Bissau"
+                      - option "Guyana"
+                      - option "Haiti"
+                      - option "Heard Island and McDonald Islands"
+                      - option "Holy See"
+                      - option "Honduras"
+                      - option "Hong Kong"
+                      - option "Hungary"
+                      - option "Iceland"
+                      - option "India"
+                      - option "Indonesia"
+                      - option "Iran"
+                      - option "Iraq"
+                      - option "Ireland"
+                      - option "Isle of Man"
+                      - option "Israel"
+                      - option "Italy"
+                      - option "Jamaica"
+                      - option "Japan"
+                      - option "Jersey"
+                      - option "Jordan"
+                      - option "Kazakhstan"
+                      - option "Kenya"
+                      - option "Kiribati"
+                      - option "Korea, Democratic People's Republic of"
+                      - option "Korea, Republic of"
+                      - option "Kuwait"
+                      - option "Kyrgyzstan"
+                      - option "Lao People's Democratic Republic"
+                      - option "Latvia"
+                      - option "Lebanon"
+                      - option "Lesotho"
+                      - option "Liberia"
+                      - option "Libya"
+                      - option "Liechtenstein"
+                      - option "Lithuania"
+                      - option "Luxembourg"
+                      - option "Macao"
+                      - option "Madagascar"
+                      - option "Malawi"
+                      - option "Malaysia"
+                      - option "Maldives"
+                      - option "Mali"
+                      - option "Malta"
+                      - option "Marshall Islands"
+                      - option "Martinique"
+                      - option "Mauritania"
+                      - option "Mauritius"
+                      - option "Mayotte"
+                      - option "Mexico"
+                      - option "Micronesia"
+                      - option "Moldova"
+                      - option "Monaco"
+                      - option "Mongolia"
+                      - option "Montenegro"
+                      - option "Montserrat"
+                      - option "Morocco"
+                      - option "Mozambique"
+                      - option "Myanmar"
+                      - option "Namibia"
+                      - option "Nauru"
+                      - option "Nepal"
+                      - option "Netherlands"
+                      - option "New Caledonia"
+                      - option "New Zealand"
+                      - option "Nicaragua"
+                      - option "Niger"
+                      - option "Nigeria"
+                      - option "Niue"
+                      - option "Norfolk Island"
+                      - option "North Macedonia"
+                      - option "Northern Mariana Islands"
+                      - option "Norway"
+                      - option "Oman"
+                      - option "Pakistan"
+                      - option "Palau"
+                      - option "Palestine, State of"
+                      - option "Panama"
+                      - option "Papua New Guinea"
+                      - option "Paraguay"
+                      - option "Peru"
+                      - option "Philippines"
+                      - option "Pitcairn"
+                      - option "Poland"
+                      - option "Portugal"
+                      - option "Puerto Rico"
+                      - option "Qatar"
+                      - option "Romania"
+                      - option "Russian Federation"
+                      - option "Rwanda"
+                      - option "Réunion"
+                      - option "Saint Barthélemy"
+                      - option "Saint Helena, Ascension and Tristan da Cunha"
+                      - option "Saint Kitts and Nevis"
+                      - option "Saint Lucia"
+                      - option "Saint Martin"
+                      - option "Saint Pierre and Miquelon"
+                      - option "Saint Vincent and the Grenadines"
+                      - option "Samoa"
+                      - option "San Marino"
+                      - option "Sao Tome and Principe"
+                      - option "Saudi Arabia"
+                      - option "Senegal"
+                      - option "Serbia"
+                      - option "Seychelles"
+                      - option "Sierra Leone"
+                      - option "Singapore"
+                      - option "Sint Maarten"
+                      - option "Slovakia"
+                      - option "Slovenia"
+                      - option "Solomon Islands"
+                      - option "Somalia"
+                      - option "South Africa"
+                      - option "South Georgia and the South Sandwich Islands"
+                      - option "South Sudan"
+                      - option "Spain"
+                      - option "Sri Lanka"
+                      - option "Sudan"
+                      - option "Suriname"
+                      - option "Svalbard and Jan Mayen"
+                      - option "Sweden"
+                      - option "Switzerland"
+                      - option "Syria Arab Republic"
+                      - option "Taiwan"
+                      - option "Tajikistan"
+                      - option "Tanzania, the United Republic of"
+                      - option "Thailand"
+                      - option "Timor-Leste"
+                      - option "Togo"
+                      - option "Tokelau"
+                      - option "Tonga"
+                      - option "Trinidad and Tobago"
+                      - option "Tunisia"
+                      - option "Turkmenistan"
+                      - option "Turks and Caicos Islands"
+                      - option "Tuvalu"
+                      - option "Türkiye"
+                      - option "US Minor Outlying Islands"
+                      - option "Uganda"
+                      - option "Ukraine"
+                      - option "United Arab Emirates"
+                      - option "United Kingdom"
+                      - option "United States"
+                      - option "Uruguay"
+                      - option "Uzbekistan"
+                      - option "Vanuatu"
+                      - option "Venezuela"
+                      - option "Viet Nam"
+                      - option "Virgin Islands, British"
+                      - option "Virgin Islands, U.S."
+                      - option "Wallis and Futuna"
+                      - option "Western Sahara"
+                      - option "Yemen"
+                      - option "Zambia"
+                      - option "Zimbabwe"
+                      - option "Åland Islands"
+                    - text: 
+              - listitem [ref=f4e394]:
+                - generic [ref=f4e395]:
+                  - generic [ref=f4e396]:
+                    - text: First name
+                    - generic [ref=f4e397]: "*"
+                  - textbox "First name*" [ref=f4e399]
+              - listitem [ref=f4e400]:
+                - generic [ref=f4e401]:
+                  - generic [ref=f4e402]:
+                    - text: Last name
+                    - generic [ref=f4e403]: "*"
+                  - textbox "Last name*" [ref=f4e405]
+              - listitem [ref=f4e406]:
+                - generic [ref=f4e407]:
+                  - generic [ref=f4e408]:
+                    - text: Email
+                    - generic [ref=f4e409]: "*"
+                  - textbox "Email*" [ref=f4e411]
+              - listitem [ref=f4e412]:
+                - generic [ref=f4e413]:
+                  - generic [ref=f4e414]: Phone number
+                  - textbox "Phone number" [ref=f4e416]
+              - listitem [ref=f4e417]:
+                - generic [ref=f4e418]:
+                  - generic [ref=f4e419]:
+                    - text: Message
+                    - generic [ref=f4e420]: "*"
+                  - textbox "Message*" [ref=f4e422]
+              - listitem [ref=f4e423]:
+                - generic [ref=f4e427]:
+                  - superscript [ref=f4e428]: "*"
+                  - text: Mandatory fields
+              - listitem [ref=f4e429]:
+                - generic [ref=f4e432]:
+                  - generic [ref=f4e433]:
+                    - text: Consent
+                    - generic [ref=f4e434]: "*"
+                  - generic [ref=f4e435]:
+                    - checkbox "I agree to be contacted back by email provided following our terms of use*" [ref=f4e436]
+                    - generic [ref=f4e437] [cursor=pointer]:
+                      - generic [ref=f4e438]:
+                        - text: I agree to be contacted back by email provided following our
+                        - link "terms of use" [ref=f4e439]:
+                          - /url: https://www.freyssinet.com/legal-notice/
+                      - text: "*"
+              - listitem [ref=f4e440]:
+                - strong [ref=f4e443] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f4e444]: Attach a file
+                  - text: 
+              - listitem [ref=f4e445]:
+                - iframe [ref=f4e451]:
+                  - generic [ref=f5e2]:
+                    - generic [ref=f5e3]:
+                      - checkbox "I'm not a robot" [ref=f5e7]
+                      - generic [aria-hidden] [ref=f5e11]: I'm not a robot
+                    - generic [ref=f5e12]: reCAPTCHA
+            - button " Send your message " [ref=f4e453] [cursor=pointer]
+  - contentinfo:
+    - link " Back to top" [ref=f4e454] [cursor=pointer]:
+      - /url: javascript:void(0)
+      - generic [ref=f4e455]: 
+      - generic [ref=f4e456]: Back to top
+    - generic [ref=f4e459]:
+      - link [ref=f4e461] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+      - generic [ref=f4e462]:
+        - heading "About Freyssinet" [level=3]
+        - list [ref=f4e463]:
+          - listitem [ref=f4e464]:
+            - link "Who we are" [ref=f4e465] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/who-we-are/
+          - listitem [ref=f4e466]:
+            - link "Our commitments" [ref=f4e467] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/our-commitments/
+          - listitem [ref=f4e468]:
+            - link "New build" [ref=f4e469] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/
+          - listitem [ref=f4e470]:
+            - link "Structural repair" [ref=f4e471] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/repair/
+          - listitem [ref=f4e472]:
+            - link "Our locations" [ref=f4e473] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/find-us/
+      - generic [ref=f4e474]:
+        - heading "Join us" [level=3]
+        - list [ref=f4e475]:
+          - listitem [ref=f4e476]:
+            - link "Careers" [ref=f4e477] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/join-our-teams/
+          - listitem [ref=f4e478]:
+            - link "Job offers" [ref=f4e479] [cursor=pointer]:
+              - /url: https://jobs.vinci.com/en/freyssinet
+          - listitem [ref=f4e480]:
+            - link "Employee stories" [ref=f4e481] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/category/employee-stories/
+      - generic [ref=f4e482]:
+        - heading "Stay updated" [level=3]
+        - list [ref=f4e483]:
+          - listitem [ref=f4e484]:
+            - link "Newsroom" [ref=f4e485] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/newsroom/
+          - listitem [ref=f4e486]:
+            - link "Contact us" [ref=f4e487] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/contact/
+        - list [ref=f4e488]:
+          - listitem [ref=f4e489]:
+            - link " linkedin Freyssinet Corporate" [ref=f4e490] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/freyssinet
+              - generic [ref=f4e491]: 
+              - generic [ref=f4e492]: linkedin Freyssinet Corporate
+          - listitem [ref=f4e493]:
+            - link " youtube Freyssinet Corporate" [ref=f4e494] [cursor=pointer]:
+              - /url: https://www.youtube.com/@freyssinetgroup
+              - generic [ref=f4e495]: 
+              - generic [ref=f4e496]: youtube Freyssinet Corporate
+    - generic [ref=f4e499]:
+      - generic [ref=f4e500]: © Freyssinet copyright 2026. All Rights Reserved
+      - list [ref=f4e503]:
+        - listitem [ref=f4e504]:
+          - link "Sitemap" [ref=f4e505] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/sitemap/
+        - listitem [ref=f4e506]:
+          - text: •
+          - link "Legal notice" [ref=f4e507] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/legal-notice/
+        - listitem [ref=f4e508]:
+          - text: •
+          - link "Credits" [ref=f4e509] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/credits/
+        - listitem [ref=f4e510]:
+          - text: •
+          - link "Privacy policy" [ref=f4e511] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/privacy-policy/
+        - listitem [ref=f4e512]:
+          - text: •
+          - link "Cookies policy" [ref=f4e513] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/cookies-policy/
+        - listitem [ref=f4e514]:
+          - text: •
+          - link "Accessibility" [ref=f4e515] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/accessibility/
+        - listitem [ref=f4e516]:
+          - text: •
+          - link "Ethics" [ref=f4e517] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/company/our-commitments/#content_3
+  - generic [ref=f4e519]:
+    - generic [ref=f4e520]:
+      - strong [ref=f4e521]: With full transparency…
+      - text: By continuing to visit this website, you are agreeing to the use of cookies and other similar technologies by Soletanche Freyssinet, in order to improve your experience on our site, to enable gathering traffic statistics and to enable sharing content on social medias.
+    - generic [ref=f4e522]:
+      - link "Accept" [ref=f4e524] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "Refuse cookies" [ref=f4e526] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - generic [ref=f4e527]: Read more
+      - generic [ref=f4e529]: Cookies Settings
+  - text:                                                                             

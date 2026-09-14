@@ -148,10 +148,10 @@ test.describe("equipment navbar link", () => {
     "/news",
     "/contact",
     "/careers",
-    "/technologies/bearing",
+    "/technologies/bearing-expansion-joints-anti-seismic-device",
   ] as const;
 
-  test("appears between OVM Technologies and About", async ({ page }) => {
+  test("appears between Home and OVM Technologies", async ({ page }) => {
     await page.goto("/");
 
     const labels = await page
@@ -161,12 +161,12 @@ test.describe("equipment navbar link", () => {
       .allInnerTexts();
     const trimmed = labels.map((label) => label.trim()).filter(Boolean);
 
-    const tech = trimmed.findIndex((l) => l.startsWith("OVM Technologies"));
+    const home = trimmed.indexOf("Home");
     const equipment = trimmed.indexOf("Equipment");
-    const about = trimmed.indexOf("About");
+    const tech = trimmed.findIndex((l) => l.startsWith("OVM Technologies"));
 
-    expect(equipment).toBeGreaterThan(tech);
-    expect(equipment).toBeLessThan(about);
+    expect(equipment).toBeGreaterThan(home);
+    expect(equipment).toBeLessThan(tech);
   });
 
   test("navigates to the first item from every other page", async ({ page }) => {

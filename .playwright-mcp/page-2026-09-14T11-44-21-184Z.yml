@@ -1,0 +1,234 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - generic [ref=f3e7]:
+      - generic [ref=f3e11]:
+        - list [ref=f3e14]:
+          - listitem [ref=f3e15]:
+            - link "ꀅ Service System" [ref=f3e17] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f3e18]:
+            - link "Project" [ref=f3e20] [cursor=pointer]:
+              - /url: /gcyj
+          - listitem [ref=f3e21]:
+            - link "ꀅ About us" [ref=f3e23] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f3e24]:
+            - link "ꀅ Download" [ref=f3e26] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f3e27]:
+            - link "News" [ref=f3e29] [cursor=pointer]:
+              - /url: /xw
+          - listitem [ref=f3e30]:
+            - link "Global Websites" [ref=f3e32] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f3e36]:
+          - link "끠" [ref=f3e37] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - textbox "Please enter keyword" [ref=f3e39]
+        - generic [ref=f3e44] [cursor=pointer]:
+          - generic [ref=f3e45]: ꀅ
+          - link "English" [ref=f3e47]:
+            - /url: javascript:void(0)
+        - generic [ref=f3e50]:
+          - link "Share 微信" [ref=f3e51] [cursor=pointer]:
+            - /url: "#"
+          - link "Share linkedin" [ref=f3e52] [cursor=pointer]:
+            - /url: "#"
+          - link "Share Facebook" [ref=f3e53] [cursor=pointer]:
+            - /url: "#"
+      - link [ref=f3e61] [cursor=pointer]:
+        - /url: /sy
+      - list [ref=f3e64]:
+        - listitem [ref=f3e65]:
+          - link "Construction Service" [ref=f3e67] [cursor=pointer]:
+            - /url: /sgfw
+        - listitem [ref=f3e68]:
+          - link "Maintenance" [ref=f3e70] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f3e71]:
+          - link "Monitoring" [ref=f3e73] [cursor=pointer]:
+            - /url: /productinfo/1270177.html
+        - listitem [ref=f3e74]:
+          - link "Leading-edge Technology" [ref=f3e76] [cursor=pointer]:
+            - /url: /qyjs
+        - listitem [ref=f3e77]:
+          - link "Equipment" [ref=f3e79] [cursor=pointer]:
+            - /url: /zb
+      - generic [ref=f3e82]:
+        - list [ref=f3e83]:
+          - listitem
+          - listitem [ref=f3e84] [cursor=pointer]:
+            - link "Post-tensioning" [ref=f3e85]:
+              - /url: /hz
+          - listitem
+        - list
+      - generic [ref=f3e88]:
+        - list [ref=f3e89]:
+          - listitem
+          - listitem [ref=f3e90] [cursor=pointer]:
+            - link "Cable" [ref=f3e91]:
+              - /url: /ql
+          - listitem
+        - list
+      - generic [ref=f3e94]:
+        - list [ref=f3e95]:
+          - listitem
+          - listitem [ref=f3e96] [cursor=pointer]:
+            - link "Bearing and EJ." [ref=f3e97]:
+              - /url: /xjjgz
+          - listitem
+        - list
+    - generic [ref=f3e103]:
+      - paragraph [ref=f3e108]:
+        - strong [ref=f3e109]:
+          - generic [ref=f3e110]: Bridge anti-seismic solutions
+      - paragraph [ref=f3e117]:
+        - generic [ref=f3e118]: OVM leads the industry in bridge seismic isolation technology, focusing on providingcomprehensive solutions for bridge engineering from design to construction with onestop services. This includes efficient bearing systems, advanced expansion devices,and high-performance dampers. By integrating innovative engineering technology andexcellent manufacturing processes, we ensure structural safety and durability.
+      - paragraph [ref=f3e124]:
+        - generic [ref=f3e125]: Features
+      - paragraph [ref=f3e132]:
+        - strong [ref=f3e136]: ·
+        - generic [ref=f3e137]: Seismicisolation technology.Reduce structural responsethrough increasing structural damping, extending thenatural vibration period of structure,isolating seismicenergy to achieve excellent anti-seismic effect;
+        - strong [ref=f3e142]: ·
+        - generic [ref=f3e143]: Adopting seismicisolation technology.Compared withtraditionalanti-seismic structures, the acceleration ofisolated structures is only equivalent to 1/4~ 1/12 of theacceleration of traditional structures, greatly improvingsafety and reliability;
+        - strong [ref=f3e148]: ·
+        - generic [ref=f3e149]: It has good durability, resistance to low cycle fatigue, hot airaging, ozone aging, acid resistance, waterresistance, and alifespan of over 60 years,
+        - strong [ref=f3e154]: ·
+        - generic [ref=f3e155]: According to customer needs, monitoring systems and fireprevention technology can be provided
+      - paragraph [ref=f3e161]:
+        - generic [ref=f3e162]: Application cases
+      - paragraph [ref=f3e169]:
+        - generic [ref=f3e170]: Editor in Chief and Participated in the Compilation of Some Standards for this System by OVM
+      - generic [ref=f3e176]:
+        - table [ref=f3e177]:
+          - rowgroup [ref=f3e178]:
+            - row [ref=f3e179]:
+              - cell [ref=f3e180]:
+                - strong [ref=f3e183]: Number
+              - cell [ref=f3e184]:
+                - strong [ref=f3e187]: Standard type
+              - cell [ref=f3e188]:
+                - strong [ref=f3e191]: Standard name
+              - cell [ref=f3e192]:
+                - strong [ref=f3e195]: Standard number
+              - cell "Participate in editing" [ref=f3e196]:
+                - strong [ref=f3e198]:
+                  - generic [ref=f3e199]: Participate in editing
+            - row [ref=f3e200]:
+              - cell "1" [ref=f3e201]
+              - cell "Transportation industry standards" [ref=f3e203]
+              - cell "Lead core seismic isolation rubber bearings for highway bridges" [ref=f3e205]
+              - cell "JTIT 822-2011" [ref=f3e207]
+              - cell "Preside over" [ref=f3e209]
+            - row [ref=f3e211]:
+              - cell "2" [ref=f3e212]
+              - cell "Transportation industry standards" [ref=f3e214]
+              - cell "Bridge ultra-high damping isolation rubber bearings" [ref=f3e216]
+              - cell "JT/T928-2014" [ref=f3e218]
+              - cell "Preside over" [ref=f3e220]
+            - row [ref=f3e222]:
+              - cell "3" [ref=f3e223]
+              - cell "Chinese Highway Society Standards" [ref=f3e225]
+              - cell "Elastic Anchorage Multidirectional Displacement Comb Plate Expansion Device for Highway Bridges" [ref=f3e227]
+              - cell "T/CHTS 20028-2022" [ref=f3e229]
+              - cell "Preside over" [ref=f3e231]
+        - paragraph [ref=f3e233]
+      - paragraph [ref=f3e238]:
+        - generic [ref=f3e239]: Certificate
+      - paragraph [ref=f3e258]:
+        - generic [ref=f3e259]: Guangdong Science and Technology Award Certificate
+      - paragraph [ref=f3e274]:
+        - generic [ref=f3e275]: Guangxi Science and Technology Award Certificate
+      - paragraph [ref=f3e290]:
+        - generic [ref=f3e291]: Hubei Science and Technology Award Certificate
+      - paragraph [ref=f3e306]:
+        - generic [ref=f3e307]: Guangxi Science and Technology Award Certificate
+      - paragraph [ref=f3e322]:
+        - generic [ref=f3e323]: LRB Lead-core Rubber Bearing
+      - paragraph [ref=f3e338]:
+        - generic [ref=f3e339]: Pendulum Bearing
+      - paragraph [ref=f3e354]:
+        - generic [ref=f3e355]: Viscous Fluid Damper
+      - paragraph [ref=f3e370]:
+        - generic [ref=f3e371]: Permanent Magnet Adjustable Magnetorheological Damper
+      - paragraph [ref=f3e387]:
+        - generic [ref=f3e388]: Force monitoring and adjusting bearing
+      - paragraph [ref=f3e404]:
+        - generic [ref=f3e405]: High Damping Rubber Bearing
+      - paragraph [ref=f3e420]:
+        - generic [ref=f3e421]: Steel wire rope Bearing
+      - paragraph [ref=f3e436]:
+        - generic [ref=f3e437]: Intelligent Viscous Fluid Damper
+      - paragraph [ref=f3e452]:
+        - generic [ref=f3e453]: Eddy Current Tuned Mass Damper
+      - paragraph [ref=f3e469]:
+        - generic [ref=f3e470]: Polyurethane bearing
+      - paragraph [ref=f3e485]:
+        - generic [ref=f3e486]: Shenzhen-Zhongshan Connection Line (2020) - Applied anchorage and pendulum bearing with different performance in each direction.
+      - paragraph [ref=f3e501]:
+        - generic [ref=f3e502]: Indonesia JAPEK Project (2018) The project is located in the earthquake zone of Indonesia, and the entire elevated bridge uses a seismic isolation system. It is the largest overseas anti-seismic bearing project of OVM Company. And the bearing of this project has completed the type-test following European standard series in the Italian laboratory.
+      - paragraph [ref=f3e518]:
+        - generic [ref=f3e519]: Tian'e Longtan Bridge (2024) - with a main span of 600 meters, the world's largest span rigid frame concrete arch bridge, applied intelligent height-adjustable bearing.
+      - paragraph [ref=f3e535]:
+        - generic [ref=f3e536]: Bogota Metro Line 1, Colombia, 2024 OVM’s largest bearing project in the South American market, in which has successfully applied anti-seismic and anti-lifting bearings to the rail transit field under the American standard.
+    - generic [ref=f3e554]:
+      - generic [ref=f3e557]:
+        - link "All rights reserved © Liuzhou OVM Machinery Co., Ltd." [ref=f3e570] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - text:  All rights reserved © Liuzhou OVM Machinery Co., Ltd.
+        - generic [ref=f3e574]:
+          - paragraph [ref=f3e579]:
+            - generic [ref=f3e580]: Liuzhou OVM Machinery Co., Ltd.
+          - generic [ref=f3e586]:
+            - paragraph [ref=f3e587]:
+              - generic [ref=f3e588]: "Tel: +86-772-3116402"
+            - paragraph [ref=f3e590]:
+              - generic [ref=f3e592]:
+                - text: "Website:"
+                - link "www.ovm.cn" [ref=f3e593] [cursor=pointer]:
+                  - /url: http://www.ovm.cn
+            - paragraph [ref=f3e594]:
+              - generic [ref=f3e596]:
+                - text: "E-mail:"
+                - link "sales@ovm.cn" [ref=f3e597] [cursor=pointer]:
+                  - /url: mailto:sales@ovm.cn
+            - paragraph [ref=f3e598]:
+              - generic [ref=f3e599]: "Address: No.1 Yanghui Road, Liuzhou, Guangxi, 545006, P.R.China."
+        - generic [ref=f3e604]:
+          - paragraph [ref=f3e609]:
+            - generic [ref=f3e610]: ABOUT OVM
+          - list [ref=f3e616]:
+            - listitem [ref=f3e617]:
+              - link "Corporate Culture" [ref=f3e619] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f3e620]:
+              - link "Company Profile" [ref=f3e622] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f3e623]:
+              - link "Developing Route" [ref=f3e625] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f3e626]:
+              - link "Qualification Certification" [ref=f3e628] [cursor=pointer]:
+                - /url: /qyjj
+          - list [ref=f3e632]:
+            - listitem [ref=f3e633]:
+              - link "Innovative Technology" [ref=f3e635] [cursor=pointer]:
+                - /url: /cxnl
+            - listitem [ref=f3e636]:
+              - link "Marketing Network" [ref=f3e638] [cursor=pointer]:
+                - /url: /yxwl
+            - listitem [ref=f3e639]:
+              - link "Employee Story" [ref=f3e641] [cursor=pointer]:
+                - /url: /yggs
+            - listitem [ref=f3e642]:
+              - link "Talent Recruitment" [ref=f3e644] [cursor=pointer]:
+                - /url: /rczp
+      - link "낂" [ref=f3e648] [cursor=pointer]:
+        - /url: mailto:sales@ovm.cn
+        - emphasis [ref=f3e650]:
+          - generic [ref=f3e651]: 낂
+  - generic [ref=f3e655]:
+    - link "本网站由阿里云提供云计算及安全服务" [ref=f3e657] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com/webdesign/webdesign?source=5176.11533457&userCode=i7rzleoi
+    - link "Powered by 万网" [ref=f3e669] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com

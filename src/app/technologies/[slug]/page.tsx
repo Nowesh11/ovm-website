@@ -11,7 +11,7 @@ export function generateStaticParams() {
   return technologies.map(({ slug }) => ({ slug }));
 }
 
-/* Anything outside the six known slugs is a 404, not an on-demand render. */
+/* Anything outside the known slugs is a 404, not an on-demand render. */
 export const dynamicParams = false;
 
 export async function generateMetadata({

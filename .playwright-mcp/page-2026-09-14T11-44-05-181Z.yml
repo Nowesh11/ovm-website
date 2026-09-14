@@ -1,0 +1,167 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e7]:
+      - generic [ref=f2e11]:
+        - list [ref=f2e14]:
+          - listitem [ref=f2e15]:
+            - link "ꀅ Service System" [ref=f2e17] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f2e18]:
+            - link "Project" [ref=f2e20] [cursor=pointer]:
+              - /url: /gcyj
+          - listitem [ref=f2e21]:
+            - link "ꀅ About us" [ref=f2e23] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f2e24]:
+            - link "ꀅ Download" [ref=f2e26] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f2e27]:
+            - link "News" [ref=f2e29] [cursor=pointer]:
+              - /url: /xw
+          - listitem [ref=f2e30]:
+            - link "Global Websites" [ref=f2e32] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f2e36]:
+          - link "끠" [ref=f2e37] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - textbox "Please enter keyword" [ref=f2e39]
+        - generic [ref=f2e44] [cursor=pointer]:
+          - generic [ref=f2e45]: ꀅ
+          - link "English" [ref=f2e47]:
+            - /url: javascript:void(0)
+        - generic [ref=f2e50]:
+          - link "Share 微信" [ref=f2e51] [cursor=pointer]:
+            - /url: "#"
+          - link "Share linkedin" [ref=f2e52] [cursor=pointer]:
+            - /url: "#"
+          - link "Share Facebook" [ref=f2e53] [cursor=pointer]:
+            - /url: "#"
+      - link [ref=f2e61] [cursor=pointer]:
+        - /url: /sy
+      - list [ref=f2e64]:
+        - listitem [ref=f2e65]:
+          - link "Construction Service" [ref=f2e67] [cursor=pointer]:
+            - /url: /sgfw
+        - listitem [ref=f2e68]:
+          - link "Maintenance" [ref=f2e70] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f2e71]:
+          - link "Monitoring" [ref=f2e73] [cursor=pointer]:
+            - /url: /productinfo/1270177.html
+        - listitem [ref=f2e74]:
+          - link "Leading-edge Technology" [ref=f2e76] [cursor=pointer]:
+            - /url: /qyjs
+        - listitem [ref=f2e77]:
+          - link "Equipment" [ref=f2e79] [cursor=pointer]:
+            - /url: /zb
+      - generic [ref=f2e82]:
+        - list [ref=f2e83]:
+          - listitem
+          - listitem [ref=f2e84] [cursor=pointer]:
+            - link "Post-tensioning" [ref=f2e85]:
+              - /url: /hz
+          - listitem
+        - list
+      - generic [ref=f2e88]:
+        - list [ref=f2e89]:
+          - listitem
+          - listitem [ref=f2e90] [cursor=pointer]:
+            - link "Cable" [ref=f2e91]:
+              - /url: /ql
+          - listitem
+        - list
+      - generic [ref=f2e94]:
+        - list [ref=f2e95]:
+          - listitem
+          - listitem [ref=f2e96] [cursor=pointer]:
+            - link "Bearing and EJ." [ref=f2e97]:
+              - /url: /xjjgz
+          - listitem
+        - list
+    - generic [ref=f2e103]:
+      - heading "Pot Bearing" [level=1] [ref=f2e106]
+      - generic [ref=f2e114]:
+        - paragraph [ref=f2e115]:
+          - generic [ref=f2e117]:
+            - generic [ref=f2e118]: "Pot bearing can be divided into three types: fixed, guided sliding, and"
+            - generic [ref=f2e119]: free sliding. It
+            - generic [ref=f2e120]: can satisfy the requirements of large load capacity in three directions, great horizontal displacement and big
+            - generic [ref=f2e121]: rotation.
+        - paragraph [ref=f2e122]
+        - paragraph [ref=f2e123]:
+          - generic [ref=f2e125]:
+            - generic [ref=f2e126]: Pot bearing can be designed and manufactured according to AASHTO, EN1337, BS5400 Standards
+            - generic [ref=f2e127]: as well as customization.
+        - paragraph [ref=f2e128]
+        - paragraph [ref=f2e129]
+      - generic [ref=f2e136]:
+        - paragraph [ref=f2e141]:
+          - strong [ref=f2e145]: Learn more about our product systems
+        - link [ref=f2e148] [cursor=pointer]:
+          - /url: /home#smv_con_188_53
+          - emphasis [ref=f2e151]: Conatct us
+      - generic [ref=f2e155]:
+        - link "Home" [ref=f2e156] [cursor=pointer]:
+          - /url: /
+        - text: ꄵ Pot Bearing
+    - generic [ref=f2e158]:
+      - generic [ref=f2e161]:
+        - link "All rights reserved © Liuzhou OVM Machinery Co., Ltd." [ref=f2e174] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - text:  All rights reserved © Liuzhou OVM Machinery Co., Ltd.
+        - generic [ref=f2e178]:
+          - paragraph [ref=f2e183]:
+            - generic [ref=f2e184]: Liuzhou OVM Machinery Co., Ltd.
+          - generic [ref=f2e190]:
+            - paragraph [ref=f2e191]:
+              - generic [ref=f2e192]: "Tel: +86-772-3116402"
+            - paragraph [ref=f2e194]:
+              - generic [ref=f2e196]:
+                - text: "Website:"
+                - link "www.ovm.cn" [ref=f2e197] [cursor=pointer]:
+                  - /url: http://www.ovm.cn
+            - paragraph [ref=f2e198]:
+              - generic [ref=f2e200]:
+                - text: "E-mail:"
+                - link "sales@ovm.cn" [ref=f2e201] [cursor=pointer]:
+                  - /url: mailto:sales@ovm.cn
+            - paragraph [ref=f2e202]:
+              - generic [ref=f2e203]: "Address: No.1 Yanghui Road, Liuzhou, Guangxi, 545006, P.R.China."
+        - generic [ref=f2e208]:
+          - paragraph [ref=f2e213]:
+            - generic [ref=f2e214]: ABOUT OVM
+          - list [ref=f2e220]:
+            - listitem [ref=f2e221]:
+              - link "Corporate Culture" [ref=f2e223] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f2e224]:
+              - link "Company Profile" [ref=f2e226] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f2e227]:
+              - link "Developing Route" [ref=f2e229] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=f2e230]:
+              - link "Qualification Certification" [ref=f2e232] [cursor=pointer]:
+                - /url: /qyjj
+          - list [ref=f2e236]:
+            - listitem [ref=f2e237]:
+              - link "Innovative Technology" [ref=f2e239] [cursor=pointer]:
+                - /url: /cxnl
+            - listitem [ref=f2e240]:
+              - link "Marketing Network" [ref=f2e242] [cursor=pointer]:
+                - /url: /yxwl
+            - listitem [ref=f2e243]:
+              - link "Employee Story" [ref=f2e245] [cursor=pointer]:
+                - /url: /yggs
+            - listitem [ref=f2e246]:
+              - link "Talent Recruitment" [ref=f2e248] [cursor=pointer]:
+                - /url: /rczp
+      - link "낂" [ref=f2e252] [cursor=pointer]:
+        - /url: mailto:sales@ovm.cn
+        - emphasis [ref=f2e254]:
+          - generic [ref=f2e255]: 낂
+  - generic [ref=f2e259]:
+    - link "本网站由阿里云提供云计算及安全服务" [ref=f2e261] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com/webdesign/webdesign?source=5176.11533457&userCode=i7rzleoi
+    - link "Powered by 万网" [ref=f2e273] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com

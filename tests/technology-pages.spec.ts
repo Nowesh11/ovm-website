@@ -45,12 +45,21 @@ test.describe("technology pages", () => {
       // Summary paragraph
       await expect(hero.locator("p").first()).not.toBeEmpty();
 
-      // Types grid
-      await expect(page.getByRole("heading", { name: "Systems we supply" })).toBeVisible();
-      const typesGrid = page
-        .locator("section")
-        .filter({ has: page.getByRole("heading", { name: "Systems we supply" }) });
-      await expect(typesGrid.locator("article")).toHaveCount(expected.typeCount);
+      // Types grid — one per product line on a combined page
+      if (expected.groups) {
+        await expect(page.getByRole("heading", { name: "Systems we supply" })).toHaveCount(0);
+        for (const group of expected.groups) {
+          const section = page.locator(`section#${group.id}`);
+          await expect(section.locator("h2")).toHaveText(group.name);
+          await expect(section.locator("article")).toHaveCount(group.typeCount);
+        }
+      } else {
+        await expect(page.getByRole("heading", { name: "Systems we supply" })).toBeVisible();
+        const typesGrid = page
+          .locator("section")
+          .filter({ has: page.getByRole("heading", { name: "Systems we supply" }) });
+        await expect(typesGrid.locator("article")).toHaveCount(expected.typeCount);
+      }
 
       // Reference projects render only when the entry has projects
       const refHeading = page.getByRole("heading", { name: "Reference Projects" });
@@ -93,6 +102,21 @@ test.describe("technology pages", () => {
 
     test(`${slug} system supply matches its parts list`, async ({ page }) => {
       await page.goto(`/technologies/${slug}`);
+
+      /* Combined pages carry a parts list inside each product line. */
+      if (expected.groups) {
+        await scrollThroughPage(page);
+        for (const group of expected.groups) {
+          const section = page.locator(`section#${group.id}`);
+          await expect(section.getByText("System Supply", { exact: true })).toBeVisible();
+          await expect(
+            section.getByRole("heading", { name: `${group.name} components` }),
+          ).toBeVisible();
+          await expect(section.locator("figure")).toHaveCount(group.componentCount);
+        }
+        await expect(page.locator("main figure")).toHaveCount(expected.componentCount);
+        return;
+      }
 
       const heading = page.getByRole("heading", { name: "Components we supply" });
 
@@ -158,10 +182,10 @@ test.describe("technology pages", () => {
   }
 
   test("system supply product shots sit on a light plate", async ({ page }) => {
-    await page.goto("/technologies/bearing");
+    await page.goto("/technologies/bearing-expansion-joints-anti-seismic-device");
     await scrollThroughPage(page);
 
-    const figures = page.locator("figure");
+    const figures = page.locator("section#bearing figure");
     await expect(figures).toHaveCount(7);
 
     await expect(figures.locator("h3")).toHaveText([
@@ -220,6 +244,31 @@ test.describe("technology pages", () => {
     expect(order.types).toBeGreaterThanOrEqual(0);
     expect(order.supply).toBeGreaterThan(order.types);
     expect(order.projects).toBeGreaterThan(order.supply);
+  });
+
+  test("combined page links each product line from the hero", async ({ page }) => {
+    await page.goto("/technologies/bearing-expansion-joints-anti-seismic-device");
+
+    const jump = page.getByRole("navigation", { name: "Product lines on this page" });
+    await expect(jump.locator("a")).toHaveText([
+      "Bearing",
+      "Expansion Joints",
+      "Anti-Seismic Device",
+    ]);
+
+    await jump.getByRole("link", { name: "Expansion Joints" }).click();
+    await page.waitForURL("**#expansion-joints");
+    await expect(page.locator("section#expansion-joints h2")).toBeInViewport();
+  });
+
+  test("retired per-line URLs redirect to their section on the combined page", async ({
+    request,
+  }) => {
+    for (const id of ["bearing", "expansion-joints", "anti-seismic-device"]) {
+      const response = await request.get(`/technologies/${id}`, { maxRedirects: 0 });
+      expect(response.status(), id).toBe(308);
+      expect(response.headers().location, id).toBe(`/technologies/bearing-expansion-joints-anti-seismic-device#${id}`);
+    }
   });
 
   test("every component image is served, none 404", async ({ request }) => {

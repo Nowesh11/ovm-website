@@ -1,0 +1,577 @@
+- generic [active] [ref=f33e1]:
+  - link "Skip content" [ref=f33e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=f33e3]:
+    - list [ref=f33e6]:
+      - listitem [ref=f33e7]:
+        - generic [ref=f33e8]:
+          - button " VSL Near You" [ref=f33e9] [cursor=pointer]:
+            - generic [ref=f33e10]: 
+            - text: VSL Near You
+          - generic [ref=f33e11]:
+            - generic [ref=f33e12]:
+              - generic [ref=f33e13]:
+                - generic [ref=f33e14]: VSL Near You
+                - button "" [ref=f33e15] [cursor=pointer]
+              - generic [ref=f33e17]: Wherever your project is, VSL is close by and ready to help. Explore your country page to discover tailored solutions, local projects, and the right people to contact.
+              - list [ref=f33e18]:
+                - listitem [ref=f33e19]:
+                  - link "Australia " [ref=f33e20] [cursor=pointer]:
+                    - /url: https://vsl.com/australia
+                - listitem [ref=f33e23]:
+                  - link "Canada " [ref=f33e24] [cursor=pointer]:
+                    - /url: https://vsl.com/canada
+                - listitem [ref=f33e27]:
+                  - link "Chile " [ref=f33e28] [cursor=pointer]:
+                    - /url: https://vsl.com/chile
+                - listitem [ref=f33e31]:
+                  - link "Czech Republic " [ref=f33e32] [cursor=pointer]:
+                    - /url: https://vsl.com/czech-republic/en
+                - listitem [ref=f33e35]:
+                  - link "Hong Kong " [ref=f33e36] [cursor=pointer]:
+                    - /url: https://vsl.com/hong-kong
+                - listitem [ref=f33e39]:
+                  - link "India " [ref=f33e40] [cursor=pointer]:
+                    - /url: https://vsl.com/india
+                - listitem [ref=f33e43]:
+                  - link "Kingdom of Saudi Arabia " [ref=f33e44] [cursor=pointer]:
+                    - /url: https://vsl.com/kingdom-saudi-arabia
+                - listitem [ref=f33e47]:
+                  - link "Mexico " [ref=f33e48] [cursor=pointer]:
+                    - /url: https://vsl.com/mexico
+                - listitem [ref=f33e51]:
+                  - link "Portugal " [ref=f33e52] [cursor=pointer]:
+                    - /url: https://vsl.com/portugal
+                - listitem [ref=f33e55]:
+                  - link "Spain " [ref=f33e56] [cursor=pointer]:
+                    - /url: https://vsl.com/spain/en
+                - listitem [ref=f33e59]:
+                  - link "Switzerland " [ref=f33e60] [cursor=pointer]:
+                    - /url: https://vsl.com/switzerland
+                - listitem [ref=f33e63]:
+                  - link "United Arab Emirates " [ref=f33e64] [cursor=pointer]:
+                    - /url: https://vsl.com/united-arab-emirates
+                - listitem [ref=f33e67]:
+                  - link "United Kingdom " [ref=f33e68] [cursor=pointer]:
+                    - /url: https://vsl.com/united-kingdom
+                - listitem [ref=f33e71]:
+                  - link "Vietnam " [ref=f33e72] [cursor=pointer]:
+                    - /url: https://vsl.com/vietnam/en
+            - link "VSL Around the World Find your nearest office and contact details." [ref=f33e76] [cursor=pointer]:
+              - /url: https://vsl.com/office-locator
+              - generic [ref=f33e79]:
+                - generic [ref=f33e80]: VSL Around the World
+                - generic [ref=f33e81]: Find your nearest office and contact details.
+      - text:  
+      - listitem [ref=f33e82]:
+        - button "Change language" [ref=f33e84] [cursor=pointer]:
+          - generic [ref=f33e85]: "Current language :"
+          - text: English 
+    - generic [ref=f33e87]:
+      - link "VSL International Home - VSL International" [ref=f33e88] [cursor=pointer]:
+        - /url: https://vsl.com
+        - img "VSL International"
+        - generic [ref=f33e89]: Home - VSL International
+      - text:                                                                                                                                                                                                                                            
+      - generic [ref=f33e90]:
+        - button "Contact us" [ref=f33e91] [cursor=pointer]
+        - button "Menu" [ref=f33e92] [cursor=pointer]
+  - main [ref=f33e95]:
+    - generic [ref=f33e96]:
+      - generic [ref=f33e97]:
+        - navigation "breadcrumb" [ref=f33e100]:
+          - list [ref=f33e101]:
+            - listitem [ref=f33e102]:
+              - link "Home" [ref=f33e103] [cursor=pointer]:
+                - /url: https://vsl.com
+              - text: 
+            - listitem [ref=f33e104]: Technologies 
+            - listitem [ref=f33e105]:
+              - generic [ref=f33e106]: Bearings
+        - generic [ref=f33e108]:
+          - generic [ref=f33e110]:
+            - heading "Bearings" [level=1] [ref=f33e111]
+            - generic [ref=f33e112]: High-performance products for load transfer and movement control
+            - generic [ref=f33e114]:
+              - paragraph [ref=f33e116]:
+                - text: VSL bearings
+                - strong [ref=f33e117]: ensure efficient load transfer
+                - text: and
+                - strong [ref=f33e118]: accommodate structural movements
+                - text: in bridges, buildings, and other infrastructure. Made with high-quality materials, they deliver
+                - strong [ref=f33e119]: long-lasting performance with minimal maintenance
+                - text: . Available in elastomeric, pot, and spherical types, they offer
+                - strong [ref=f33e120]: safety and durability
+                - text: in demanding environments. P
+                - strong [ref=f33e121]: roducts are available in standard or fully customised formats
+                - text: ", with optional end-to-end support from design to supply and on-site installation."
+              - text: 
+          - button "Download VSL structural bearings catalogue " [ref=f33e128] [cursor=pointer]:
+            - generic [ref=f33e129]: Download VSL structural bearings catalogue
+            - generic [ref=f33e130]: 
+      - generic [ref=f33e133]:
+        - text: 
+        - navigation [ref=f33e134]:
+          - text: 
+          - list [ref=f33e135]:
+            - listitem [ref=f33e136]:
+              - link "Select your product" [ref=f33e137] [cursor=pointer]:
+                - /url: "#product-choose"
+            - listitem [ref=f33e138]:
+              - link "Select the right bearing for you" [ref=f33e139] [cursor=pointer]:
+                - /url: "#product-features"
+            - listitem [ref=f33e140]:
+              - 'link "From product-only to full support: what do you need" [ref=f33e141] [cursor=pointer]':
+                - /url: "#product-options"
+            - listitem [ref=f33e142]:
+              - link "Why choose VSL bearings" [ref=f33e143] [cursor=pointer]:
+                - /url: "#why-choose-vsl-bearings"
+            - listitem [ref=f33e144]:
+              - link "FAQ" [ref=f33e145] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=f33e146]:
+              - link "Related technologies" [ref=f33e147] [cursor=pointer]:
+                - /url: "#related-technologies"
+            - listitem [ref=f33e148]:
+              - link "Contact our experts" [ref=f33e149] [cursor=pointer]:
+                - /url: "#contact-our-experts"
+          - button " Scroll to right" [ref=f33e150] [cursor=pointer]:
+            - generic [ref=f33e151]: 
+            - generic [ref=f33e152]: Scroll to right
+      - generic [ref=f33e153]:
+        - generic [ref=f33e156]:
+          - generic [ref=f33e157]: Choose your product
+          - heading "Select the right bearing for you" [level=2] [ref=f33e158]
+          - tablist [ref=f33e159]:
+            - tab "Selected Elastomeric bearing VPRENE Good rotation capacity Moderate vertical load capacit Moderate load/area efficiency" [selected] [ref=f33e160] [cursor=pointer]:
+              - generic [ref=f33e161]: Selected
+              - generic [ref=f33e162]:
+                - generic [ref=f33e163]: Elastomeric bearing
+                - generic [ref=f33e164]: VPRENE
+              - list [ref=f33e165]:
+                - listitem [ref=f33e166]:
+                  - generic [aria-hidden]: 
+                  - text: Good rotation capacity
+                - listitem [ref=f33e167]:
+                  - generic [aria-hidden]: 
+                  - text: Moderate vertical load capacit
+                - listitem [ref=f33e168]:
+                  - generic [aria-hidden]: 
+                  - text: Moderate load/area efficiency
+            - tab "Selected Pot bearing VPOT Excellent vertical & horizontal load capacity, with good load/area efficiency Excellent movement capacity Excellent design life" [ref=f33e169] [cursor=pointer]:
+              - generic [ref=f33e170]: Selected
+              - generic [ref=f33e171]:
+                - generic [ref=f33e172]: Pot bearing
+                - generic [ref=f33e173]: VPOT
+              - list [ref=f33e174]:
+                - listitem [ref=f33e175]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent vertical & horizontal load capacity, with good load/area efficiency
+                - listitem [ref=f33e176]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent movement capacity
+                - listitem [ref=f33e177]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent design life
+            - tab "Selected Spherical bearing VSPHERE Excellent vertical & horizontal load capacity, with improved load/area efficiency Excellent movement & rotation capacity Excellent design life" [ref=f33e178] [cursor=pointer]:
+              - generic [ref=f33e179]: Selected
+              - generic [ref=f33e180]:
+                - generic [ref=f33e181]: Spherical bearing
+                - generic [ref=f33e182]: VSPHERE
+              - list [ref=f33e183]:
+                - listitem [ref=f33e184]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent vertical & horizontal load capacity, with improved load/area efficiency
+                - listitem [ref=f33e185]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent movement & rotation capacity
+                - listitem [ref=f33e186]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent design life
+            - tab "Selected Advanced spherical bearing VSlide™ series Excellent vertical & horizontal load capacity, with the highest load/area efficiency Excellent movement & rotation capacity Excellent design life with a much wider temperature range" [ref=f33e187] [cursor=pointer]:
+              - generic [ref=f33e188]: Selected
+              - generic [ref=f33e189]:
+                - generic [ref=f33e190]: Advanced spherical bearing
+                - generic [ref=f33e191]: VSlide™ series
+              - list [ref=f33e192]:
+                - listitem [ref=f33e193]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent vertical & horizontal load capacity, with the highest load/area efficiency
+                - listitem [ref=f33e194]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent movement & rotation capacity
+                - listitem [ref=f33e195]:
+                  - generic [aria-hidden]: 
+                  - text: Excellent design life with a much wider temperature range
+        - generic [ref=f33e197]:
+          - tabpanel "Selected Elastomeric bearing VPRENE Good rotation capacity Moderate vertical load capacit Moderate load/area efficiency" [ref=f33e198]:
+            - generic [ref=f33e199]:
+              - generic [ref=f33e201]: Explore Product Features
+              - heading [level=2] [ref=f33e202]:
+                - text: "VPrene bearings:"
+                - strong [ref=f33e203]: Cost-effective elastomeric bearings
+              - generic [ref=f33e204]:
+                - text: 
+                - tablist [ref=f33e205]:
+                  - tab "What is VPrene?" [selected] [ref=f33e206] [cursor=pointer]
+                  - tab "Features & benefits" [ref=f33e207] [cursor=pointer]
+                  - tab "Available configurations" [ref=f33e208] [cursor=pointer]
+                  - tab "Applications" [ref=f33e209] [cursor=pointer]
+                  - tab "Project reference" [ref=f33e210] [cursor=pointer]
+              - tabpanel "What is VPrene?" [ref=f33e212]:
+                - generic [ref=f33e214]:
+                  - heading "What is VPrene?" [level=3] [ref=f33e215]
+                  - generic [ref=f33e216]:
+                    - paragraph [ref=f33e217]:
+                      - text: Elastomeric bearings are
+                      - strong [ref=f33e218]: the most efficient and cost-effective solution for vertical loads
+                      - strong [ref=f33e219]: from a few hundred to 10,000 kN
+                      - text: .
+                    - paragraph [ref=f33e220]:
+                      - text: They provide reliable performance
+                      - strong [ref=f33e221]: with limited movements and rotations.
+                    - paragraph [ref=f33e222]:
+                      - text: They resist up to 15 MPa at SLS and
+                      - strong [ref=f33e223]: accommodate small translational and rotational movements
+                      - text: through the elastic deformation of rubber.
+                    - paragraph [ref=f33e224]:
+                      - text: Their
+                      - strong [ref=f33e225]: simplicity, durability, and low maintenance
+                      - text: suit bridge and building structures. They also offer high vertical stiffness, low horizontal stiffness, and strong ageing resistance.
+          - text:    
+        - generic [ref=f33e229]:
+          - generic [ref=f33e231]: Build your own solution with VSL
+          - 'heading "From product-only to full support: what do you need" [level=2] [ref=f33e232]'
+          - generic [ref=f33e233]:
+            - generic [ref=f33e234]:
+              - generic [ref=f33e235]:
+                - generic [ref=f33e236]: option A
+                - generic [ref=f33e237]:
+                  - generic [ref=f33e238]: Standardized product
+                  - paragraph [ref=f33e240]:
+                    - strong [ref=f33e241]: Buy high-quality, CE-certified bearings directly from VSL
+                  - generic [ref=f33e242]:
+                    - generic [aria-hidden]: 
+                    - paragraph [ref=f33e243]:
+                      - strong [ref=f33e244]: Best for
+                      - text: ": straightforward supply-only needs"
+                  - button "Contact us to order standardized bearings" [ref=f33e245] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e246]: 
+                    - text: Contact us to order standardized bearings
+              - text:     
+            - generic [ref=f33e247]:
+              - generic [ref=f33e248]:
+                - generic [ref=f33e249]: option B
+                - generic [ref=f33e250]:
+                  - generic [ref=f33e251]: Customized product on demand
+                  - paragraph [ref=f33e253]:
+                    - strong [ref=f33e254]: Get tailor-made bearings designed specifically for your project.
+                  - generic [ref=f33e255]:
+                    - generic [aria-hidden]: 
+                    - paragraph [ref=f33e256]:
+                      - strong [ref=f33e257]: Best for
+                      - text: ": complex projects or special requirements"
+                  - button "Discuss your custom bearing needs with our experts" [ref=f33e258] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e259]: 
+                    - text: Discuss your custom bearing needs with our experts
+              - text:      
+            - generic [ref=f33e260]:
+              - generic [ref=f33e261]:
+                - generic [ref=f33e262]: option C
+                - generic [ref=f33e263]:
+                  - generic [ref=f33e264]: Full 360° Support with VSL
+                  - paragraph [ref=f33e266]: "Opt for the complete package: from design to delivery, installation and lifetime service."
+                  - generic [ref=f33e267]:
+                    - generic [aria-hidden]: 
+                    - paragraph [ref=f33e268]:
+                      - strong [ref=f33e269]: Best for
+                      - text: ": turnkey projects with full technical and execution support"
+                  - button "Request a full-service proposal" [ref=f33e270] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e271]: 
+                    - text: Request a full-service proposal
+              - text:      
+      - generic [ref=f33e273]:
+        - heading "Why choose VSL bearings" [level=2] [ref=f33e274]
+        - generic [ref=f33e275]:
+          - figure [ref=f33e277]
+          - generic [ref=f33e278]:
+            - list [ref=f33e279]:
+              - listitem [ref=f33e280]:
+                - text: 
+                - heading "Certified quality" [level=3] [ref=f33e281]
+                - generic [ref=f33e282]: CE-marked bearings that meet EN 1337, ETA 21/0726, ETA 23/0943 and key local approvals (Hong Kong, Czech Republic, SNCF, RTA Dubai, RCRC KSA, Ontario).
+              - listitem [ref=f33e283]:
+                - text: 
+                - heading "Certified factories" [level=3] [ref=f33e284]
+                - generic [ref=f33e285]: EN1090 EXC4, CWB CSA W47.1, ISO 9001 and certified coating procedures.
+              - listitem [ref=f33e286]:
+                - text: 
+                - heading "Global manufacturing" [level=3] [ref=f33e287]
+                - generic [ref=f33e288]: Production in Europe and Asia for consistent availability.
+              - listitem [ref=f33e289]:
+                - text: 
+                - heading "Tailored solutions" [level=3] [ref=f33e290]
+                - generic [ref=f33e291]: Standard or fully customised bearings.
+              - listitem [ref=f33e292]:
+                - text: 
+                - heading "Full project support" [level=3] [ref=f33e293]
+                - generic [ref=f33e294]: Support from design to installation.
+            - text: 
+      - generic [ref=f33e297]:
+        - heading "Frequently Asked Questions about bearings" [level=2] [ref=f33e300]
+        - generic [ref=f33e301]:
+          - generic [ref=f33e302]:
+            - heading [level=3] [ref=f33e304]:
+              - button "What is a bridge bearing used for? " [ref=f33e305] [cursor=pointer]
+            - heading [level=3] [ref=f33e307]:
+              - button "What are the types of bridge bearings? " [ref=f33e308] [cursor=pointer]
+            - heading [level=3] [ref=f33e310]:
+              - button "How do I select the right type of bearing? " [ref=f33e311] [cursor=pointer]
+            - heading [level=3] [ref=f33e313]:
+              - button "Are VSL bearings CE-certified? " [ref=f33e314] [cursor=pointer]
+            - heading [level=3] [ref=f33e316]:
+              - button "Can VSL supply bearings only, or also install them? " [ref=f33e317] [cursor=pointer]
+          - text: 
+      - generic [ref=f33e319]:
+        - heading [level=2] [ref=f33e320]:
+          - text: Related
+          - strong [ref=f33e321]: technologies
+        - generic [ref=f33e322]:
+          - link [ref=f33e324] [cursor=pointer]:
+            - /url: https://vsl.com/technology/internal-post-tensioning-for-bridges
+            - generic [ref=f33e325]:
+              - heading "Internal post-tensioning for bridges" [level=3] [ref=f33e327]
+              - text: 
+          - link [ref=f33e329] [cursor=pointer]:
+            - /url: https://vsl.com/technology/external-tendons-for-bridges
+            - generic [ref=f33e330]:
+              - heading "External tendons for bridges" [level=3] [ref=f33e332]
+              - text: 
+          - link [ref=f33e334] [cursor=pointer]:
+            - /url: https://vsl.com/technology/stay-cable-systems
+            - generic [ref=f33e335]:
+              - heading "VSL Stay cable systems" [level=3] [ref=f33e337]
+              - text: 
+          - link [ref=f33e339] [cursor=pointer]:
+            - /url: https://vsl.com/technology/vsl-dampers-for-stay-cables
+            - generic [ref=f33e340]:
+              - heading "VSL dampers for stay cables" [level=3] [ref=f33e342]
+              - text: 
+        - text:                  
+      - generic [ref=f33e345]:
+        - generic [ref=f33e347]:
+          - heading "Looking to integrate high-performance structural bearings into your bridge or building project?" [level=2] [ref=f33e348]
+          - generic [ref=f33e349]: Contact VSL to discuss the right load transfer and movement control solution for your structure.
+        - button "Contact" [ref=f33e351] [cursor=pointer]
+      - text:  
+  - contentinfo:
+    - generic [ref=f33e352]:
+      - generic [ref=f33e354]:
+        - generic [ref=f33e356]:
+          - link "VSL International Home" [ref=f33e357] [cursor=pointer]:
+            - /url: https://vsl.com
+            - img "VSL International" [ref=f33e358]
+            - generic [ref=f33e359]: Home
+          - img "Building for life" [ref=f33e360]
+        - generic [ref=f33e361]:
+          - navigation "Our Key Solutions" [ref=f33e363]:
+            - list [ref=f33e364]:
+              - listitem [ref=f33e365]:
+                - link "Bridge Construction" [ref=f33e366] [cursor=pointer]:
+                  - /url: https://vsl.com/build/bridges
+              - listitem [ref=f33e367]:
+                - link "Bridge Repair and Maintenance" [ref=f33e368] [cursor=pointer]:
+                  - /url: https://vsl.com/repair/bridges-viaducts-and-footbridges
+              - listitem [ref=f33e369]:
+                - link "Tunnel Construction" [ref=f33e370] [cursor=pointer]:
+                  - /url: https://vsl.com/build/tunnels
+              - listitem [ref=f33e371]:
+                - link "Construction of Buildings" [ref=f33e372] [cursor=pointer]:
+                  - /url: https://vsl.com/build/buildings
+              - listitem [ref=f33e373]:
+                - link "Repair and Maintenance for Buildings" [ref=f33e374] [cursor=pointer]:
+                  - /url: https://vsl.com/repair/buildings
+              - listitem [ref=f33e375]:
+                - link "Construction of Industrial Facilities" [ref=f33e376] [cursor=pointer]:
+                  - /url: https://vsl.com/build/industry-energy-producing-structures/industrial-facilities
+              - listitem [ref=f33e377]:
+                - link "Repair of Marine Structures" [ref=f33e378] [cursor=pointer]:
+                  - /url: https://vsl.com/repair/marine-structures
+              - listitem [ref=f33e379]:
+                - link "Repair of Industrial Infrastructure" [ref=f33e380] [cursor=pointer]:
+                  - /url: https://vsl.com/repair/industry-energy-mining-infrastructure
+          - navigation "Our Key Products" [ref=f33e382]:
+            - list [ref=f33e383]:
+              - listitem [ref=f33e384]:
+                - link "Internal PT for Bridges" [ref=f33e385] [cursor=pointer]:
+                  - /url: https://vsl.com/technology/internal-post-tensioning-for-bridges
+              - listitem [ref=f33e386]:
+                - link "Stay Cable Systems" [ref=f33e387] [cursor=pointer]:
+                  - /url: https://vsl.com/technology/stay-cable-systems
+              - listitem [ref=f33e388]:
+                - link "Dampers for Cable-Stayed Bridges" [ref=f33e389] [cursor=pointer]:
+                  - /url: https://vsl.com/technology/vsl-dampers-for-stay-cables
+              - listitem [ref=f33e390]:
+                - link "Bearings" [ref=f33e391] [cursor=pointer]:
+                  - /url: https://vsl.com/technology/bearings
+              - listitem [ref=f33e392]:
+                - link "Ground Anchors" [ref=f33e393] [cursor=pointer]:
+                  - /url: https://vsl.com/technology/ground-anchors
+              - listitem [ref=f33e394]:
+                - link "VSoL Retaining Wall" [ref=f33e395] [cursor=pointer]:
+                  - /url: https://vsl.com/technology/vsol-retained-earth-walls
+              - listitem [ref=f33e396]:
+                - link "Heavy Lifting Systems" [ref=f33e397] [cursor=pointer]:
+                  - /url: https://vsl.com/technology/heavy-lifting-systems
+          - navigation "Resources" [ref=f33e399]:
+            - list [ref=f33e400]:
+              - listitem [ref=f33e401]:
+                - link "VSL Tech Hub" [ref=f33e402] [cursor=pointer]:
+                  - /url: https://vsl.com/account
+              - listitem [ref=f33e403]:
+                - link "Catalogues & Brochures" [ref=f33e404] [cursor=pointer]:
+                  - /url: https://vsl.com/brochures
+              - listitem [ref=f33e405]:
+                - link "Projects" [ref=f33e406] [cursor=pointer]:
+                  - /url: https://vsl.com/projects
+              - listitem [ref=f33e407]:
+                - link "Webinars" [ref=f33e408] [cursor=pointer]:
+                  - /url: https://vsl.com/webinars
+              - listitem [ref=f33e409]:
+                - link "Latest News" [ref=f33e410] [cursor=pointer]:
+                  - /url: https://vsl.com/news-insights
+              - listitem [ref=f33e411]:
+                - link "Environemental Declarations" [ref=f33e412] [cursor=pointer]:
+                  - /url: https://vsl.com/environmental-declarations
+              - listitem [ref=f33e413]:
+                - link "VSL’s climate score" [ref=f33e414] [cursor=pointer]:
+                  - /url: https://vsl.com/climate-score
+          - navigation "Key areas of expertise" [ref=f33e416]:
+            - list [ref=f33e417]:
+              - listitem [ref=f33e418]:
+                - link "Post-tensioning" [ref=f33e419] [cursor=pointer]:
+                  - /url: https://vsl.com/key-areas-expertise/post-tensioning
+              - listitem [ref=f33e420]:
+                - link "Ground engineering and foundations" [ref=f33e421] [cursor=pointer]:
+                  - /url: https://vsl.com/key-areas-expertise/ground-engineering-foundations-solutions
+              - listitem [ref=f33e422]:
+                - link "Heavy lifting" [ref=f33e423] [cursor=pointer]:
+                  - /url: https://vsl.com/key-areas-expertise/heavy-lifting
+              - listitem [ref=f33e424]:
+                - link "Construction methods for complex civil works" [ref=f33e425] [cursor=pointer]:
+                  - /url: https://vsl.com/key-areas-expertise/construction-methods-for-complex-civil-works
+              - listitem [ref=f33e426]:
+                - link "Repairs and preservation" [ref=f33e427] [cursor=pointer]:
+                  - /url: https://vsl.com/key-areas-expertise/repair-preservation
+          - navigation "Company" [ref=f33e429]:
+            - list [ref=f33e430]:
+              - listitem [ref=f33e431]:
+                - link "VSL Around the world" [ref=f33e432] [cursor=pointer]:
+                  - /url: https://vsl.com/office-locator
+              - listitem [ref=f33e433]:
+                - link "Who We Are" [ref=f33e434] [cursor=pointer]:
+                  - /url: https://vsl.com/who-we-are
+              - listitem [ref=f33e435]:
+                - link "Careers" [ref=f33e436] [cursor=pointer]:
+                  - /url: https://vsl.com/career
+          - navigation [ref=f33e438]:
+            - generic: Social networks
+            - list [ref=f33e439]:
+              - listitem [ref=f33e440]:
+                - link " Youtube" [ref=f33e441] [cursor=pointer]:
+                  - /url: https://www.youtube.com/playlist?list=PLybkXFHCnAYJhXBk_L8ITfC0o7f-fJ1m7
+                  - generic [ref=f33e442]: 
+                  - generic [ref=f33e443]: Youtube
+              - listitem [ref=f33e444]:
+                - link " Linkedin" [ref=f33e445] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/vsl-international/
+                  - generic [ref=f33e446]: 
+                  - generic [ref=f33e447]: Linkedin
+      - generic [ref=f33e448]:
+        - generic [ref=f33e449]:
+          - generic [ref=f33e450]:
+            - text: "© 2026 VSL International. Related website of:"
+            - link "Bouygues Construction " [ref=f33e451] [cursor=pointer]:
+              - /url: https://www.bouygues-construction.com/
+          - navigation [ref=f33e452]:
+            - list [ref=f33e453]:
+              - listitem [ref=f33e454]:
+                - link "Legal Mentions" [ref=f33e455] [cursor=pointer]:
+                  - /url: https://vsl.com/legal-mentions
+              - listitem [ref=f33e456]:
+                - link "Site Map" [ref=f33e457] [cursor=pointer]:
+                  - /url: https://vsl.com/sitemap
+              - listitem [ref=f33e458]:
+                - link "Privacy Policy" [ref=f33e459] [cursor=pointer]:
+                  - /url: https://vsl.com/privacy-policy
+              - listitem [ref=f33e460]:
+                - link "Cookies" [ref=f33e461] [cursor=pointer]:
+                  - /url: "#cookies"
+        - generic [ref=f33e463]:
+          - generic [ref=f33e464]:
+            - generic [ref=f33e465]:
+              - text: 0.53g of CO
+              - subscript: "2"
+              - text: /view
+            - link "Website Carbon" [ref=f33e466] [cursor=pointer]:
+              - /url: https://websitecarbon.com
+          - generic [ref=f33e467]: Cleaner than 46% of pages tested
+  - text:            
+  - generic:
+    - generic:
+      - button "Close":
+        - generic [aria-hidden]: 
+      - generic:
+        - generic: Hi ! 👋 How can we help you?
+        - generic: Your smart guide to explore VSL technologies, resources, and project expertise in real time.
+    - button "Open the chatbot" [ref=f33e468] [cursor=pointer]:
+      - generic [aria-hidden] [ref=f33e469]: 
+  - generic:
+    - generic:
+      - button "Back":
+        - generic [aria-hidden]: 
+        - text: Back
+      - img "VSL International"
+      - button "Close":
+        - generic [aria-hidden]: 
+    - generic:
+      - generic:
+        - generic: Hi ! 👋 How can we help you?
+        - generic:
+          - generic: Quick Access
+          - list:
+            - listitem:
+              - link "Explore Internal Post-Tensioning Systems ":
+                - /url: https://vsl.com/technology/internal-post-tensioning-for-bridges
+                - generic: Explore Internal Post-Tensioning Systems
+                - text: 
+            - listitem:
+              - link "Discover our latest projects ":
+                - /url: https://vsl.com/projects
+                - generic: Discover our latest projects
+                - text: 
+            - listitem:
+              - link "Technical Catalogues & Brochures ":
+                - /url: https://vsl.com/brochures
+                - generic: Technical Catalogues & Brochures
+                - text: 
+    - generic:
+      - generic: Let’s find what you need together!
+      - generic:
+        - generic: Write a message
+        - textbox "Write a message"
+        - button:
+          - generic [aria-hidden]: 
+  - region "Cookies management panel":
+    - heading "Cookies management panel" [level=2] [ref=f33e471]
+    - text:  ☐ ☐ ✛ ☑ ☐ ✛ ☐ ☐ ✛ ✛ ☐ ☐ ✛ ✛ ✛ ✛ ✛ ✛
+    - generic [ref=f33e472]:
+      - paragraph [ref=f33e473]:
+        - generic [ref=f33e474]:
+          - heading "This website uses cookies" [level=2] [ref=f33e475]
+          - text: By continuing to browse this site, you accept the use of cookies intended to optimize your experience. See our
+          - link "Privacy Policy" [ref=f33e476] [cursor=pointer]:
+            - /url: https://vsl.com/privacy-policy#cookies
+      - 'button "Cookies : I agree" [ref=f33e477] [cursor=pointer]': ☐ I agree
+      - 'button "Cookies : Deny all cookies" [ref=f33e478] [cursor=pointer]': ☐ Deny all cookies
+      - button "Personalize (modal window)" [ref=f33e479] [cursor=pointer]: Personalize

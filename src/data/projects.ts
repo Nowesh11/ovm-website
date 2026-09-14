@@ -92,7 +92,7 @@ export const projects: Project[] = [
     title: "Muara Lassa Bridge",
     location: "Sarawak",
     scope: "Expansion joints",
-    technologies: ["expansion-joints"],
+    technologies: ["bearing-expansion-joints-anti-seismic-device"],
     image: "/projects/muara-lassa-bridge.jpg",
   },
   {
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     title: "Batang Igan Bridge",
     location: "Sarawak",
     scope: "PT system, bearings, expansion joints & stay cables",
-    technologies: ["post-tensioning-systems", "bearing", "expansion-joints", "cable-systems"],
+    technologies: ["post-tensioning-systems", "bearing-expansion-joints-anti-seismic-device", "cable-systems"],
     image: "/projects/batang-igan-bridge.jpg",
   },
   {
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     title: "Batang Saribas Bridge No. 2",
     location: "Sarawak",
     scope: "Bearings & expansion joints",
-    technologies: ["bearing", "expansion-joints"],
+    technologies: ["bearing-expansion-joints-anti-seismic-device"],
     image: "/projects/batang-saribas-bridge-2.jpg",
   },
   {
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     location: "Malaysia, 665km",
     scope:
       "Anchorage, intelligent tensioning equipment, intelligent grouting equipment, elastomeric bearing, expansion joint. Project total length approximately 665 kilometers.",
-    technologies: ["post-tensioning-systems", "bearing", "expansion-joints"],
+    technologies: ["post-tensioning-systems", "bearing-expansion-joints-anti-seismic-device"],
     image: "/technologies/profile-2026/ecrl-aerial-pptx.jpg",
   },
   {
@@ -134,7 +134,7 @@ export const projects: Project[] = [
     location: "Sarawak",
     scope:
       "Stay cable subcontractor, PT systems, PT bars, expansion joints — main span 267.6m",
-    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
+    technologies: ["cable-systems", "post-tensioning-systems", "bearing-expansion-joints-anti-seismic-device"],
     image: "/projects/bintulu-jepak-bridge.jpg",
   },
   /* NOTE: possibly the same structure as "Bintulu-Jepak Bridge" above — both
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     location: "Sarawak, Malaysia",
     scope:
       "Supply and installation of 96 stay cables, supply of post-tensioning systems, high-strength PT bars, and expansion joints. Total length 3,586.234m, span arrangement 108.4m + 267.6m + 108.4m.",
-    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
+    technologies: ["cable-systems", "post-tensioning-systems", "bearing-expansion-joints-anti-seismic-device"],
     image: "/technologies/profile-2026/tun-abdul-taib-mahmud-bridge.jpg",
   },
   {
@@ -163,7 +163,7 @@ export const projects: Project[] = [
     title: "Batang Lupar 1 Bridge",
     location: "Sarawak",
     scope: "Stay cable subcontractor, PT bars, expansion joints — main span 324.4m",
-    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
+    technologies: ["cable-systems", "post-tensioning-systems", "bearing-expansion-joints-anti-seismic-device"],
     image: "/projects/batang-lupar-1-bridge.jpg",
   },
   {
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     title: "Sejingkat Bridge",
     location: "Sarawak",
     scope: "Stay cable subcontractor, PT system & expansion joint — main span 400m",
-    technologies: ["cable-systems", "post-tensioning-systems", "expansion-joints"],
+    technologies: ["cable-systems", "post-tensioning-systems", "bearing-expansion-joints-anti-seismic-device"],
     image: "/projects/sejingkat-bridge.jpg",
   },
   {
@@ -239,7 +239,7 @@ export const projectAnchorId = (slug: string) => `project-${slug}`;
  * The projects to list on a technology page, in carousel order.
  *
  * Empty for the technologies none of the Malaysian projects used
- * (anti-seismic devices, dampers, monitoring) — the page then skips the
+ * (dampers, monitoring) — the page then skips the
  * "Reference Projects" section rather than rendering an empty one.
  */
 export const projectsForTechnology = (technologySlug: string) =>

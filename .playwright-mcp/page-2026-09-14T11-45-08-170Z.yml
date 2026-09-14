@@ -1,0 +1,558 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e3]:
+    - generic [ref=f21e4]: Freyssinet (corporate website)
+    - generic:
+      - list
+  - banner [ref=f21e5]:
+    - generic:
+      - link [ref=f21e6] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+        - img "Freyssinet Corporate" [ref=f21e7]
+      - link " Menu" [ref=f21e8] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=f21e9]: 
+        - text: 
+        - generic [ref=f21e10]: Menu
+      - text:  
+  - text:         
+  - main [ref=f21e11]:
+    - generic [ref=f21e12]:
+      - generic [ref=f21e13]:
+        - generic [ref=f21e14]:
+          - generic [ref=f21e15]: Share this page
+          - list [ref=f21e16]:
+            - listitem [ref=f21e17]:
+              - link " Facebook" [ref=f21e18] [cursor=pointer]:
+                - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.freyssinet.com%2Fcase-study%2Fkrka-river-stress-ribbon-footbridge%2F
+                - generic [ref=f21e19]: 
+                - generic [ref=f21e20]: Facebook
+            - listitem [ref=f21e21]:
+              - link " Twitter" [ref=f21e22] [cursor=pointer]:
+                - /url: https://twitter.com/intent/tweet?text=Krka+River+Stress-Ribbon+Footbridge https%3A%2F%2Fwww.freyssinet.com%2Fcase-study%2Fkrka-river-stress-ribbon-footbridge%2F&original_referer=https%3A%2F%2Fwww.freyssinet.com%2Fcase-study%2Fkrka-river-stress-ribbon-footbridge%2F
+                - generic [ref=f21e23]: 
+                - generic [ref=f21e24]: Twitter
+            - listitem [ref=f21e25]:
+              - link " LinkedIn" [ref=f21e26] [cursor=pointer]:
+                - /url: https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.freyssinet.com%2Fcase-study%2Fkrka-river-stress-ribbon-footbridge%2F&title=Krka+River+Stress-Ribbon+Footbridge&summary=&source=https%3A%2F%2Fwww.freyssinet.com%2Fcase-study%2Fkrka-river-stress-ribbon-footbridge%2F
+                - generic [ref=f21e27]: 
+                - generic [ref=f21e28]: LinkedIn
+        - generic [ref=f21e29]:
+          - list [ref=f21e30]:
+            - listitem [ref=f21e31]:
+              - generic [ref=f21e32]: Build
+            - listitem [ref=f21e34]:
+              - generic [ref=f21e36]:
+                - generic: 
+                - text: Slovenia
+          - heading "Krka River Stress-Ribbon Footbridge" [level=1] [ref=f21e37]
+          - generic [ref=f21e39]: A new construction method and specialist equipment were developed to build Slovenia’s first stress-ribbon bridge; and the first in the world with tendons installed in grouted HDPE ducts.
+          - link "Scroll down Scroll down  " [ref=f21e40] [cursor=pointer]:
+            - /url: "#main-content"
+            - generic: Scroll down
+            - generic: Scroll down
+            - generic: 
+            - generic: 
+      - generic [ref=f21e44]:
+        - link "Home" [ref=f21e45] [cursor=pointer]:
+          - /url: https://www.freyssinet.com/
+        - text: /
+        - link "Case studies" [ref=f21e46] [cursor=pointer]:
+          - /url: https://www.freyssinet.com/innovation-portfolio/
+        - text: / Krka River Stress-Ribbon Footbridge
+      - tabpanel [ref=f21e49]:
+        - generic [ref=f21e52]:
+          - paragraph [ref=f21e55]: Innovations in the design and construction of stress-ribbon bridges were successfully delivered on this footbridge in Slovenia, creating an elegant and durable structure in a sensitive setting.
+          - list [ref=f21e57]:
+            - listitem [ref=f21e58]:
+              - generic [ref=f21e59]:
+                - generic [ref=f21e60]: Client
+                - generic [ref=f21e61]: City of Novo Mesto
+            - listitem [ref=f21e62]:
+              - generic [ref=f21e63]:
+                - generic [ref=f21e64]: Delivery date
+                - generic [ref=f21e65]: May 2023
+            - listitem [ref=f21e66]:
+              - generic [ref=f21e67]:
+                - generic [ref=f21e68]: Joint venture contractor
+                - generic [ref=f21e69]: CGP Novo Mesto/Freyssinet Adria
+            - listitem [ref=f21e70]:
+              - generic [ref=f21e71]:
+                - generic [ref=f21e72]: Consulting engineers
+                - generic [ref=f21e73]: Ponting Bridges, Pipenbaher Consulting Engineers
+            - listitem [ref=f21e74]:
+              - generic [ref=f21e75]:
+                - generic [ref=f21e76]: Architect
+                - generic [ref=f21e77]: Jereb & Budja Architects
+        - generic [ref=f21e80]:
+          - generic [ref=f21e83]:
+            - heading "A competition-winning design for a stress-ribbon bridge for pedestrians and cyclists in Novo Mesto was built using novel construction techniques and equipment developed by Freyssinet." [level=2] [ref=f21e84]
+            - paragraph [ref=f21e85]: It opens up new cycling and walking routes across the Krka River, directly connecting neighbourhoods for the first time and supporting the city’s aspiration to expand sustainable travel networks.
+            - paragraph [ref=f21e86]: The design and construction of the new crossing builds on known technology for this type of simple catenary bridge, introducing HDPE grouted ducts to improve durability of the tendons that support it.
+            - paragraph [ref=f21e87]: The footbridge is situated in a rural environment on the edge of the town, hence the commissioning authority sought a design that would have a minimum impact on the surroundings, to suit the low-key nature of its setting.
+            - paragraph [ref=f21e88]: Design team Ponting, Pipenbaher Consulting Engineers and Jereb & Budja Architects came up with the winning proposal in an open competition in 2017; a 4 m-wide stress ribbon bridge in which the 420 mm-thick deck elements form a slender catenary between the tree-lined banks.
+            - paragraph [ref=f21e89]: Members of the competition jury were impressed by the inventive structural concept and the way in which the elegant form of the bridge fitted effortlessly into the natural environment.
+          - list [ref=f21e91]:
+            - listitem [ref=f21e92]:
+              - generic [ref=f21e93]:
+                - generic [ref=f21e94]: 120.5m
+                - generic [ref=f21e95]: Length of the main span
+            - listitem [ref=f21e96]:
+              - generic [ref=f21e97]:
+                - generic [ref=f21e98]: 4m
+                - generic [ref=f21e99]: Width of bridge
+            - listitem [ref=f21e100]:
+              - generic [ref=f21e101]:
+                - generic [ref=f21e102]: 420mm
+                - generic [ref=f21e103]: Depth of deck
+            - listitem [ref=f21e104]:
+              - generic [ref=f21e105]:
+                - generic [ref=f21e106]: "46"
+                - generic [ref=f21e107]: Total number of precast elements forming the deck
+        - generic [ref=f21e111]:
+          - paragraph [ref=f21e112]:
+            - img "Slovenia footbridge" [ref=f21e113]
+          - paragraph [ref=f21e114]: The bridge is formed of 46 precast concrete panels supported on six tendons to create a 120 m-long link between the two banks. Mass concrete blocks and anchored secant-pile walls create the foundations on each side into which the tendons are connected.
+          - paragraph [ref=f21e115]: Freyssinet Adria was contracted to build the bridge in a joint venture with CGP Novo Mesto, being assigned responsibility for developing the construction method concept and designing and manufacturing the specialist temporary equipment needed to carry it out. Supply and installation of the tendons and erection of 46 precast deck units was also within the scope of works.
+          - paragraph [ref=f21e116]: The use of grouted tendons – thought to be a world-first on this type of bridge – was proposed by the team following the collapse of a stress-ribbon bridge in Prague in 2017, to address potential concerns about durability. This improvement to the design demanded development and implementation of a new construction method.
+          - paragraph [ref=f21e117]: The footbridge designer also specified that the deck elements be precast at least four months before installation, to ensure that any shrinkage of the concrete was largely complete.
+          - paragraph [ref=f21e118]: Four of the six tendons, each consisting of 47 strands in an HDPE duct, were erected in the first part of the works. This began with 12 m-long sections of duct being clamped to hangers suspended from a steel wire between temporary portals on each bank.
+          - paragraph [ref=f21e119]: Sections of duct were pulled out over the river one at a time, each being welded to the previous one, until the full length was in place. In order to ensure the strands remain parallel once threaded into the duct, which is critical for this type of structure, Freyssinet Adria used a specialist installation method that is usually adopted on cable-stay bridges.
+          - paragraph [ref=f21e120]: A custom-built trolley for placing the deck segments was developed by Freyssinet, enabling each to be transported efficiently and safely to its final position. The trolley ran on the tendons, with eight sets of wheels designed to evenly distribute the load of the segment during this operation.
+          - paragraph [ref=f21e121]: The two final tendons were then installed, followed by a sequence of deck concreting, tendon stressing and tendon grouting that was carefully planned and executed in line with the construction methodology.
+          - paragraph [ref=f21e122]: Load testing to 70% of the footbridge’s design capacity was carried out using 18 lorries with a total weight of 70 t – deflection of just 130 mm was measured.
+          - paragraph [ref=f21e123]:
+            - img "Slovenia project Krka River" [ref=f21e124]
+        - generic [ref=f21e126]:
+          - generic [ref=f21e128]:
+            - generic [ref=f21e131]:
+              - heading "You have a project?" [level=2] [ref=f21e132]
+              - generic [ref=f21e133]: Our local experts will help you achieve your project thanks to our large range of solutions.
+              - link " Find your local contact " [ref=f21e134] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/find-us/
+            - generic [ref=f21e137]:
+              - heading "R&D and Innovation" [level=2] [ref=f21e138]
+              - generic [ref=f21e139]: "Our innovation strategy reflects our ambition: to provide solutions that meet our customers’ needs, and which are also more sustainable and environmentally friendly."
+              - link " Discover our R&D vision " [ref=f21e140] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/company/rd-innovation/
+          - text:      
+        - generic [ref=f21e142]:
+          - heading "Contact us" [level=2] [ref=f21e143]
+          - paragraph [ref=f21e145]: You have a question about our solutions or you already have a project in mind? Please fill out the form below and our teams will get back to you shortly.
+          - generic [ref=f21e148]:
+            - list [ref=f21e150]:
+              - listitem [ref=f21e151]:
+                - generic [ref=f21e153]:
+                  - generic [ref=f21e154]:
+                    - text: Your profile*
+                    - generic [ref=f21e155]: "*"
+                  - generic [ref=f21e156]:
+                    - combobox "Your profile**" [ref=f21e157]:
+                      - option "I'm a company"
+                      - option "I'm a candidate"
+                      - option "I'm a journalist"
+                      - option "Other"
+                    - text: 
+              - listitem [ref=f21e158]:
+                - generic [ref=f21e160]:
+                  - generic [ref=f21e161]:
+                    - text: Country*
+                    - generic [ref=f21e162]: "*"
+                  - generic [ref=f21e163]:
+                    - combobox "Country**" [ref=f21e164]:
+                      - option "Afghanistan"
+                      - option "Albania"
+                      - option "Algeria"
+                      - option "American Samoa"
+                      - option "Andorra"
+                      - option "Angola"
+                      - option "Anguilla"
+                      - option "Antarctica"
+                      - option "Antigua and Barbuda"
+                      - option "Argentina"
+                      - option "Armenia"
+                      - option "Aruba"
+                      - option "Australia"
+                      - option "Austria"
+                      - option "Azerbaijan"
+                      - option "Bahamas"
+                      - option "Bahrain"
+                      - option "Bangladesh"
+                      - option "Barbados"
+                      - option "Belarus"
+                      - option "Belgium"
+                      - option "Belize"
+                      - option "Benin"
+                      - option "Bermuda"
+                      - option "Bhutan"
+                      - option "Bolivia"
+                      - option "Bonaire, Sint Eustatius and Saba"
+                      - option "Bosnia and Herzegovina"
+                      - option "Botswana"
+                      - option "Bouvet Island"
+                      - option "Brazil"
+                      - option "British Indian Ocean Territory"
+                      - option "Brunei Darussalam"
+                      - option "Bulgaria"
+                      - option "Burkina Faso"
+                      - option "Burundi"
+                      - option "Cabo Verde"
+                      - option "Cambodia"
+                      - option "Cameroon"
+                      - option "Canada"
+                      - option "Cayman Islands"
+                      - option "Central African Republic"
+                      - option "Chad"
+                      - option "Chile"
+                      - option "China"
+                      - option "Christmas Island"
+                      - option "Cocos Islands"
+                      - option "Colombia"
+                      - option "Comoros"
+                      - option "Congo"
+                      - option "Congo, Democratic Republic of the"
+                      - option "Cook Islands"
+                      - option "Costa Rica"
+                      - option "Croatia"
+                      - option "Cuba"
+                      - option "Curaçao"
+                      - option "Cyprus"
+                      - option "Czechia"
+                      - option "Côte d'Ivoire"
+                      - option "Denmark"
+                      - option "Djibouti"
+                      - option "Dominica"
+                      - option "Dominican Republic"
+                      - option "Ecuador"
+                      - option "Egypt"
+                      - option "El Salvador"
+                      - option "Equatorial Guinea"
+                      - option "Eritrea"
+                      - option "Estonia"
+                      - option "Eswatini"
+                      - option "Ethiopia"
+                      - option "Falkland Islands"
+                      - option "Faroe Islands"
+                      - option "Fiji"
+                      - option "Finland"
+                      - option "France"
+                      - option "French Guiana"
+                      - option "French Polynesia"
+                      - option "French Southern Territories"
+                      - option "Gabon"
+                      - option "Gambia"
+                      - option "Georgia"
+                      - option "Germany"
+                      - option "Ghana"
+                      - option "Gibraltar"
+                      - option "Greece"
+                      - option "Greenland"
+                      - option "Grenada"
+                      - option "Guadeloupe"
+                      - option "Guam"
+                      - option "Guatemala"
+                      - option "Guernsey"
+                      - option "Guinea"
+                      - option "Guinea-Bissau"
+                      - option "Guyana"
+                      - option "Haiti"
+                      - option "Heard Island and McDonald Islands"
+                      - option "Holy See"
+                      - option "Honduras"
+                      - option "Hong Kong"
+                      - option "Hungary"
+                      - option "Iceland"
+                      - option "India"
+                      - option "Indonesia"
+                      - option "Iran"
+                      - option "Iraq"
+                      - option "Ireland"
+                      - option "Isle of Man"
+                      - option "Israel"
+                      - option "Italy"
+                      - option "Jamaica"
+                      - option "Japan"
+                      - option "Jersey"
+                      - option "Jordan"
+                      - option "Kazakhstan"
+                      - option "Kenya"
+                      - option "Kiribati"
+                      - option "Korea, Democratic People's Republic of"
+                      - option "Korea, Republic of"
+                      - option "Kuwait"
+                      - option "Kyrgyzstan"
+                      - option "Lao People's Democratic Republic"
+                      - option "Latvia"
+                      - option "Lebanon"
+                      - option "Lesotho"
+                      - option "Liberia"
+                      - option "Libya"
+                      - option "Liechtenstein"
+                      - option "Lithuania"
+                      - option "Luxembourg"
+                      - option "Macao"
+                      - option "Madagascar"
+                      - option "Malawi"
+                      - option "Malaysia"
+                      - option "Maldives"
+                      - option "Mali"
+                      - option "Malta"
+                      - option "Marshall Islands"
+                      - option "Martinique"
+                      - option "Mauritania"
+                      - option "Mauritius"
+                      - option "Mayotte"
+                      - option "Mexico"
+                      - option "Micronesia"
+                      - option "Moldova"
+                      - option "Monaco"
+                      - option "Mongolia"
+                      - option "Montenegro"
+                      - option "Montserrat"
+                      - option "Morocco"
+                      - option "Mozambique"
+                      - option "Myanmar"
+                      - option "Namibia"
+                      - option "Nauru"
+                      - option "Nepal"
+                      - option "Netherlands"
+                      - option "New Caledonia"
+                      - option "New Zealand"
+                      - option "Nicaragua"
+                      - option "Niger"
+                      - option "Nigeria"
+                      - option "Niue"
+                      - option "Norfolk Island"
+                      - option "North Macedonia"
+                      - option "Northern Mariana Islands"
+                      - option "Norway"
+                      - option "Oman"
+                      - option "Pakistan"
+                      - option "Palau"
+                      - option "Palestine, State of"
+                      - option "Panama"
+                      - option "Papua New Guinea"
+                      - option "Paraguay"
+                      - option "Peru"
+                      - option "Philippines"
+                      - option "Pitcairn"
+                      - option "Poland"
+                      - option "Portugal"
+                      - option "Puerto Rico"
+                      - option "Qatar"
+                      - option "Romania"
+                      - option "Russian Federation"
+                      - option "Rwanda"
+                      - option "Réunion"
+                      - option "Saint Barthélemy"
+                      - option "Saint Helena, Ascension and Tristan da Cunha"
+                      - option "Saint Kitts and Nevis"
+                      - option "Saint Lucia"
+                      - option "Saint Martin"
+                      - option "Saint Pierre and Miquelon"
+                      - option "Saint Vincent and the Grenadines"
+                      - option "Samoa"
+                      - option "San Marino"
+                      - option "Sao Tome and Principe"
+                      - option "Saudi Arabia"
+                      - option "Senegal"
+                      - option "Serbia"
+                      - option "Seychelles"
+                      - option "Sierra Leone"
+                      - option "Singapore"
+                      - option "Sint Maarten"
+                      - option "Slovakia"
+                      - option "Slovenia"
+                      - option "Solomon Islands"
+                      - option "Somalia"
+                      - option "South Africa"
+                      - option "South Georgia and the South Sandwich Islands"
+                      - option "South Sudan"
+                      - option "Spain"
+                      - option "Sri Lanka"
+                      - option "Sudan"
+                      - option "Suriname"
+                      - option "Svalbard and Jan Mayen"
+                      - option "Sweden"
+                      - option "Switzerland"
+                      - option "Syria Arab Republic"
+                      - option "Taiwan"
+                      - option "Tajikistan"
+                      - option "Tanzania, the United Republic of"
+                      - option "Thailand"
+                      - option "Timor-Leste"
+                      - option "Togo"
+                      - option "Tokelau"
+                      - option "Tonga"
+                      - option "Trinidad and Tobago"
+                      - option "Tunisia"
+                      - option "Turkmenistan"
+                      - option "Turks and Caicos Islands"
+                      - option "Tuvalu"
+                      - option "Türkiye"
+                      - option "US Minor Outlying Islands"
+                      - option "Uganda"
+                      - option "Ukraine"
+                      - option "United Arab Emirates"
+                      - option "United Kingdom"
+                      - option "United States"
+                      - option "Uruguay"
+                      - option "Uzbekistan"
+                      - option "Vanuatu"
+                      - option "Venezuela"
+                      - option "Viet Nam"
+                      - option "Virgin Islands, British"
+                      - option "Virgin Islands, U.S."
+                      - option "Wallis and Futuna"
+                      - option "Western Sahara"
+                      - option "Yemen"
+                      - option "Zambia"
+                      - option "Zimbabwe"
+                      - option "Åland Islands"
+                    - text: 
+              - listitem [ref=f21e165]:
+                - generic [ref=f21e166]:
+                  - generic [ref=f21e167]:
+                    - text: First name
+                    - generic [ref=f21e168]: "*"
+                  - textbox "First name*" [ref=f21e170]
+              - listitem [ref=f21e171]:
+                - generic [ref=f21e172]:
+                  - generic [ref=f21e173]:
+                    - text: Last name
+                    - generic [ref=f21e174]: "*"
+                  - textbox "Last name*" [ref=f21e176]
+              - listitem [ref=f21e177]:
+                - generic [ref=f21e178]:
+                  - generic [ref=f21e179]:
+                    - text: Email
+                    - generic [ref=f21e180]: "*"
+                  - textbox "Email*" [ref=f21e182]
+              - listitem [ref=f21e183]:
+                - generic [ref=f21e184]:
+                  - generic [ref=f21e185]: Phone number
+                  - textbox "Phone number" [ref=f21e187]
+              - listitem [ref=f21e188]:
+                - generic [ref=f21e189]:
+                  - generic [ref=f21e190]:
+                    - text: Message
+                    - generic [ref=f21e191]: "*"
+                  - textbox "Message*" [ref=f21e193]
+              - listitem [ref=f21e194]:
+                - generic [ref=f21e198]:
+                  - superscript [ref=f21e199]: "*"
+                  - text: Mandatory fields
+              - listitem [ref=f21e200]:
+                - generic [ref=f21e203]:
+                  - generic [ref=f21e204]:
+                    - text: Consent
+                    - generic [ref=f21e205]: "*"
+                  - generic [ref=f21e206]:
+                    - checkbox "I agree to be contacted back by email provided following our terms of use*" [ref=f21e207]
+                    - generic [ref=f21e208] [cursor=pointer]:
+                      - generic [ref=f21e209]:
+                        - text: I agree to be contacted back by email provided following our
+                        - link "terms of use" [ref=f21e210]:
+                          - /url: https://www.freyssinet.com/legal-notice/
+                      - text: "*"
+              - listitem [ref=f21e211]:
+                - strong [ref=f21e214] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f21e215]: Attach a file
+                  - text: 
+              - listitem [ref=f21e216]:
+                - iframe [ref=f21e222]:
+                  - generic [ref=f22e2]:
+                    - generic [ref=f22e3]:
+                      - checkbox "I'm not a robot" [ref=f22e7]
+                      - generic [aria-hidden] [ref=f22e11]: I'm not a robot
+                    - generic [ref=f22e12]: reCAPTCHA
+            - button " Send your message " [ref=f21e224] [cursor=pointer]
+  - contentinfo [ref=f21e225]:
+    - link " Back to top" [ref=f21e226] [cursor=pointer]:
+      - /url: javascript:void(0)
+      - generic [ref=f21e227]: 
+      - generic [ref=f21e228]: Back to top
+    - generic [ref=f21e231]:
+      - link [ref=f21e233] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+      - generic [ref=f21e234]:
+        - heading "About Freyssinet" [level=3]
+        - list [ref=f21e235]:
+          - listitem [ref=f21e236]:
+            - link "Who we are" [ref=f21e237] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/who-we-are/
+          - listitem [ref=f21e238]:
+            - link "Our commitments" [ref=f21e239] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/our-commitments/
+          - listitem [ref=f21e240]:
+            - link "New build" [ref=f21e241] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/
+          - listitem [ref=f21e242]:
+            - link "Structural repair" [ref=f21e243] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/repair/
+          - listitem [ref=f21e244]:
+            - link "Our locations" [ref=f21e245] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/find-us/
+      - generic [ref=f21e246]:
+        - heading "Join us" [level=3]
+        - list [ref=f21e247]:
+          - listitem [ref=f21e248]:
+            - link "Careers" [ref=f21e249] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/join-our-teams/
+          - listitem [ref=f21e250]:
+            - link "Job offers" [ref=f21e251] [cursor=pointer]:
+              - /url: https://jobs.vinci.com/en/freyssinet
+          - listitem [ref=f21e252]:
+            - link "Employee stories" [ref=f21e253] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/category/employee-stories/
+      - generic [ref=f21e254]:
+        - heading "Stay updated" [level=3]
+        - list [ref=f21e255]:
+          - listitem [ref=f21e256]:
+            - link "Newsroom" [ref=f21e257] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/newsroom/
+          - listitem [ref=f21e258]:
+            - link "Contact us" [ref=f21e259] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/contact/
+        - list [ref=f21e260]:
+          - listitem [ref=f21e261]:
+            - link " linkedin Freyssinet Corporate" [ref=f21e262] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/freyssinet
+              - generic [ref=f21e263]: 
+              - generic [ref=f21e264]: linkedin Freyssinet Corporate
+          - listitem [ref=f21e265]:
+            - link " youtube Freyssinet Corporate" [ref=f21e266] [cursor=pointer]:
+              - /url: https://www.youtube.com/@freyssinetgroup
+              - generic [ref=f21e267]: 
+              - generic [ref=f21e268]: youtube Freyssinet Corporate
+    - generic [ref=f21e271]:
+      - generic [ref=f21e272]: © Freyssinet copyright 2026. All Rights Reserved
+      - list [ref=f21e275]:
+        - listitem [ref=f21e276]:
+          - link "Sitemap" [ref=f21e277] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/sitemap/
+        - listitem [ref=f21e278]:
+          - text: •
+          - link "Legal notice" [ref=f21e279] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/legal-notice/
+        - listitem [ref=f21e280]:
+          - text: •
+          - link "Credits" [ref=f21e281] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/credits/
+        - listitem [ref=f21e282]:
+          - text: •
+          - link "Privacy policy" [ref=f21e283] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/privacy-policy/
+        - listitem [ref=f21e284]:
+          - text: •
+          - link "Cookies policy" [ref=f21e285] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/cookies-policy/
+        - listitem [ref=f21e286]:
+          - text: •
+          - link "Accessibility" [ref=f21e287] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/accessibility/
+        - listitem [ref=f21e288]:
+          - text: •
+          - link "Ethics" [ref=f21e289] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/company/our-commitments/#content_3
+  - text:                                                                             

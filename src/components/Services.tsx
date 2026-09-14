@@ -31,7 +31,7 @@ const SERVICES: Service[] = [
   {
     icon: Waves,
     title: "Bearing and Vibrating Damping",
-    href: "/technologies/bearing",
+    href: "/technologies/bearing-expansion-joints-anti-seismic-device",
     description: "Structural bearings, isolators and dampers that absorb load and motion.",
   },
   {

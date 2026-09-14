@@ -1,0 +1,571 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e7]:
+      - generic [ref=e11]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "ꀅ Service System" [ref=e17] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e18]:
+            - link "Project" [ref=e20] [cursor=pointer]:
+              - /url: /gcyj
+          - listitem [ref=e21]:
+            - link "ꀅ About us" [ref=e23] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e24]:
+            - link "ꀅ Download" [ref=e26] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e27]:
+            - link "News" [ref=e29] [cursor=pointer]:
+              - /url: /xw
+          - listitem [ref=e30]:
+            - link "Global Websites" [ref=e32] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e36]:
+          - link "끠" [ref=e37] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - textbox "Please enter keyword" [ref=e39]
+        - generic [ref=e44] [cursor=pointer]:
+          - generic [ref=e45]: ꀅ
+          - link "English" [ref=e47]:
+            - /url: javascript:void(0)
+        - generic [ref=e50]:
+          - link "Share 微信" [ref=e51] [cursor=pointer]:
+            - /url: "#"
+          - link "Share linkedin" [ref=e52] [cursor=pointer]:
+            - /url: "#"
+          - link "Share Facebook" [ref=e53] [cursor=pointer]:
+            - /url: "#"
+      - link [ref=e61] [cursor=pointer]:
+        - /url: /sy
+      - list [ref=e64]:
+        - listitem [ref=e65]:
+          - link "Construction Service" [ref=e67] [cursor=pointer]:
+            - /url: /sgfw
+        - listitem [ref=e68]:
+          - link "Maintenance" [ref=e70] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e71]:
+          - link "Monitoring" [ref=e73] [cursor=pointer]:
+            - /url: /productinfo/1270177.html
+        - listitem [ref=e74]:
+          - link "Leading-edge Technology" [ref=e76] [cursor=pointer]:
+            - /url: /qyjs
+        - listitem [ref=e77]:
+          - link "Equipment" [ref=e79] [cursor=pointer]:
+            - /url: /zb
+      - generic [ref=e82]:
+        - list [ref=e83]:
+          - listitem
+          - listitem [ref=e84] [cursor=pointer]:
+            - link "Post-tensioning" [ref=e85]:
+              - /url: /hz
+          - listitem
+        - list
+      - generic [ref=e88]:
+        - list [ref=e89]:
+          - listitem
+          - listitem [ref=e90] [cursor=pointer]:
+            - link "Cable" [ref=e91]:
+              - /url: /ql
+          - listitem
+        - list
+      - generic [ref=e94]:
+        - list [ref=e95]:
+          - listitem
+          - listitem [ref=e96] [cursor=pointer]:
+            - link "Bearing and EJ." [ref=e97]:
+              - /url: /xjjgz
+          - listitem
+        - list
+    - generic [ref=e103]:
+      - generic [ref=e107]:
+        - generic [ref=e111]:
+          - paragraph [ref=e123]:
+            - strong [ref=e124]:
+              - generic [ref=e125]: Five-hundred-meter Aperture Spherical Radio Telescope (FAST) Project of National Astronomical Observatories, China, 2016
+          - paragraph [ref=e139]:
+            - strong [ref=e140]:
+              - generic [ref=e141]: Hong Kong-Zhuhai-Macao Bridge, China, 2016
+          - paragraph [ref=e156]:
+            - strong [ref=e157]:
+              - generic [ref=e158]: Yang Si Gang Bridge, China, 2016
+          - paragraph [ref=e172]:
+            - strong [ref=e173]:
+              - generic [ref=e174]: The 3rd Ping Nan Bridge, China, 2019
+          - paragraph [ref=e188]:
+            - strong [ref=e189]:
+              - generic [ref=e190]: Yavuz Sultan Selim Bridge, Turkey, 2016
+          - paragraph [ref=e204]:
+            - strong [ref=e205]:
+              - generic [ref=e206]: Feng Huang Ling Bridge, China, 2022
+        - generic [ref=e211]:
+          - generic [ref=e212] [cursor=pointer]
+          - generic [ref=e213] [cursor=pointer]
+          - generic [ref=e214] [cursor=pointer]
+          - generic [ref=e215] [cursor=pointer]
+          - generic [ref=e216] [cursor=pointer]
+          - generic [ref=e217] [cursor=pointer]
+        - generic [ref=e218]: 넳
+        - generic [ref=e220]: 넲
+      - generic [ref=e224]:
+        - paragraph [ref=e229]:
+          - strong [ref=e232]: ENGINEERED QUALITY, LEADING INNOVATION.
+        - paragraph [ref=e237]:
+          - strong [ref=e240]: "-- THE STRENGTH BEHIND THE SPAN."
+        - paragraph [ref=e245]:
+          - generic [ref=e246]: Liuzhou OVM Machinery Co., Ltd. is affiliated to Guangxi LiuGong Group Co., Ltd., and is a state-owned large company with a focus on the prestressed industry.
+      - generic [ref=e251]:
+        - generic [ref=e255]:
+          - link [ref=e259] [cursor=pointer]:
+            - /url: /hz
+          - paragraph [ref=e264]:
+            - link [ref=e265] [cursor=pointer]:
+              - /url: /hz
+              - strong [ref=e269]: Post-tensioning
+        - paragraph [ref=e274]:
+          - strong [ref=e277]: Products and Services
+        - generic [ref=e281]:
+          - link [ref=e285] [cursor=pointer]:
+            - /url: /ql
+          - paragraph [ref=e290]:
+            - strong [ref=e294]: Cable
+        - generic [ref=e298]:
+          - link [ref=e302] [cursor=pointer]:
+            - /url: /xjjgz
+          - paragraph [ref=e307]:
+            - link [ref=e308] [cursor=pointer]:
+              - /url: /gzxjzz
+              - strong [ref=e312]: Bearing and Vibration Damping
+        - generic [ref=e316]:
+          - link [ref=e320] [cursor=pointer]:
+            - /url: /sgfw
+          - paragraph [ref=e325]:
+            - link [ref=e326] [cursor=pointer]:
+              - /url: /bridge
+              - strong [ref=e330]: Construction Service
+        - generic [ref=e334]:
+          - link [ref=e338] [cursor=pointer]:
+            - /url: /whfw
+          - paragraph [ref=e343]:
+            - strong [ref=e347]: Maintenance
+        - generic [ref=e351]:
+          - link [ref=e355] [cursor=pointer]:
+            - /url: /jc
+          - paragraph [ref=e360]:
+            - link [ref=e361] [cursor=pointer]:
+              - /url: /zdcjjkzxt
+              - strong [ref=e365]: Monitoring
+        - generic [ref=e369]:
+          - link [ref=e373] [cursor=pointer]:
+            - /url: /qyjs
+          - paragraph [ref=e378]:
+            - strong [ref=e382]: Leading-edge Technology
+      - generic [ref=e386]:
+        - paragraph [ref=e391]:
+          - strong [ref=e394]: INFRASTRUCTURE
+        - generic [ref=e398]:
+          - link [ref=e405] [cursor=pointer]:
+            - /url: /buildings
+            - emphasis [ref=e407]: Buildings
+          - link "념" [ref=e410] [cursor=pointer]:
+            - /url: /buildings
+            - emphasis [ref=e412]:
+              - generic [ref=e413]: 념
+        - generic [ref=e417]:
+          - link [ref=e424] [cursor=pointer]:
+            - /url: /bridges
+            - emphasis [ref=e426]: Bridges
+          - link "념" [ref=e429] [cursor=pointer]:
+            - /url: /bridges
+            - emphasis [ref=e431]:
+              - generic [ref=e432]: 념
+        - generic [ref=e436]:
+          - link [ref=e443] [cursor=pointer]:
+            - /url: /geologicalengineering
+            - emphasis [ref=e445]: Geological engineering
+          - link "념" [ref=e448] [cursor=pointer]:
+            - /url: /geologicalengineering
+            - emphasis [ref=e450]:
+              - generic [ref=e451]: 념
+        - generic [ref=e455]:
+          - link [ref=e462] [cursor=pointer]:
+            - /url: /nuclearindustry
+            - emphasis [ref=e464]: Nuclear industry
+          - link "념" [ref=e467] [cursor=pointer]:
+            - /url: /nuclearindustry
+            - emphasis [ref=e469]:
+              - generic [ref=e470]: 념
+        - generic [ref=e474]:
+          - link [ref=e481] [cursor=pointer]:
+            - /url: /renewableenergy
+            - emphasis [ref=e483]: Renewable Energy
+          - link "념" [ref=e486] [cursor=pointer]:
+            - /url: /renewableenergy
+            - emphasis [ref=e488]:
+              - generic [ref=e489]: 념
+        - generic [ref=e493]:
+          - link [ref=e500] [cursor=pointer]:
+            - /url: /waterconservancyhydropower
+            - emphasis [ref=e502]: Water conservancy & Hydropower
+          - link "념" [ref=e505] [cursor=pointer]:
+            - /url: /waterconservancyhydropower
+            - emphasis [ref=e507]:
+              - generic [ref=e508]: 념
+      - generic [ref=e512]:
+        - paragraph [ref=e517]:
+          - strong [ref=e520]: KEY CORE COMPETENCIES
+        - emphasis [ref=e526] [cursor=pointer]: Cable Stayed Bridge Technology
+        - emphasis [ref=e532] [cursor=pointer]: Suspension Bridge Technology
+        - emphasis [ref=e538] [cursor=pointer]: Low Carbon (Nuclear Power, Lng, Wind Power, Photovoltaic Technology, Etc.)
+        - emphasis [ref=e544] [cursor=pointer]: Smart Devices
+        - emphasis [ref=e550] [cursor=pointer]: Monitoring, Etc
+      - generic [ref=e554]:
+        - paragraph [ref=e559]:
+          - strong [ref=e562]: ABOUT OVM
+        - paragraph [ref=e571]:
+          - generic [ref=e572]: Liuzhou OVM Machinery Co., Ltd. is affiliated to Guangxi LiuGong Group Co., Ltd., and is a state-owned large company with a focus on the prestressed industry. After nearly sixty years of development, OVM has become a diversified and specialized company integrating research and development, technical consulting, manufacturing, monitoring and inspection, and engineering construction.
+        - link [ref=e576] [cursor=pointer]:
+          - /url: /qyjj
+          - emphasis [ref=e579]: See More >>
+      - generic [ref=e583]:
+        - paragraph [ref=e588]:
+          - strong [ref=e591]: CONTACT US
+        - generic [ref=e603]:
+          - generic [ref=e605]:
+            - generic [ref=e608]:
+              - generic [ref=e612]:
+                - generic [ref=e613]: Full Name *
+                - textbox [ref=e618]
+              - generic [ref=e622]:
+                - generic [ref=e623]: Entity（Company /University/Institute etc.） *
+                - textbox [ref=e628]
+            - generic [ref=e631]:
+              - generic [ref=e635]:
+                - generic [ref=e636]: Title
+                - textbox [ref=e641]
+              - generic [ref=e645]:
+                - generic [ref=e646]: Email Address *
+                - textbox [ref=e651]
+            - generic [ref=e654]:
+              - generic [ref=e658]:
+                - generic [ref=e659]: Product Interested In *
+                - generic [ref=e663] [cursor=pointer]:
+                  - textbox "Please select" [ref=e664]
+                  - generic [ref=e665]: ꄳ
+              - generic [ref=e669]:
+                - generic [ref=e670]: Country *
+                - textbox [ref=e675]
+            - generic [ref=e678]:
+              - generic [ref=e679]: Message
+              - textbox [ref=e684]
+          - emphasis [ref=e692] [cursor=pointer]: Submit
+      - generic [ref=e696]:
+        - generic [ref=e700]:
+          - generic [ref=e701]: "9"
+          - generic [ref=e703]: National level R&D platforms
+        - generic [ref=e707]:
+          - generic [ref=e708]: "86"
+          - generic [ref=e710]: Participate and publish standards
+        - generic [ref=e714]:
+          - generic [ref=e715]: "1275"
+          - generic [ref=e717]: Patents
+        - generic [ref=e721]:
+          - generic [ref=e722]: "12"
+          - generic [ref=e724]: Including overseas patents
+        - link [ref=e727] [cursor=pointer]:
+          - /url: /ourrd
+          - emphasis [ref=e730]: See More >>
+      - generic [ref=e734]:
+        - paragraph [ref=e739]:
+          - strong [ref=e742]: NEWS
+        - generic [ref=e744]:
+          - list [ref=e747]:
+            - listitem [ref=e748]:
+              - link [ref=e749] [cursor=pointer]:
+                - /url: /newsinfo/3211356.html
+                - generic [ref=e752]:
+                  - heading "OVM Tech Powers FAST to National Science & Technology Progress First Class Prize" [level=5] [ref=e753]
+                  - paragraph [ref=e754]: 2026-08-03
+            - listitem [ref=e755]:
+              - link [ref=e756] [cursor=pointer]:
+                - /url: /newsinfo/3150682.html
+                - generic [ref=e759]:
+                  - heading "OVM Celebrates Successful Main Span Closure of Malaysia's Batang Lupar 1 Bridge — A New Milestone for Sarawak's Coastal Connectivity" [level=5] [ref=e760]
+                  - paragraph [ref=e761]: 2026-02-10
+            - listitem [ref=e762]:
+              - link [ref=e763] [cursor=pointer]:
+                - /url: /newsinfo/3118521.html
+                - generic [ref=e766]:
+                  - heading "OVM Supports World-Record Extradosed Bridge as Qujiang Grand Bridge Achieves Closure" [level=5] [ref=e767]
+                  - paragraph [ref=e768]: 2025-12-22
+            - listitem [ref=e769]:
+              - link [ref=e770] [cursor=pointer]:
+                - /url: /newsinfo/3111220.html
+                - generic [ref=e773]:
+                  - heading "World's First Full Carbon Fiber Cable Wheel-Spoke Tension Structure Debuts at Jinan Yaoqiang Airport" [level=5] [ref=e774]
+                  - paragraph [ref=e775]: 2025-12-03
+            - listitem [ref=e776]:
+              - link [ref=e777] [cursor=pointer]:
+                - /url: /newsinfo/3104936.html
+                - generic [ref=e780]:
+                  - heading "OVM Intelligent Cable Force Monitoring System Supports the First Extradosed Bridge in Lesotho — the Senqu Bridge" [level=5] [ref=e781]
+                  - paragraph [ref=e782]: 2025-11-14
+            - listitem [ref=e783]:
+              - link [ref=e784] [cursor=pointer]:
+                - /url: /newsinfo/3104928.html
+                - generic [ref=e787]:
+                  - 'heading "“OVM Speed” Demonstrated: Baihualake Bridge Achieves Early Closure" [level=5] [ref=e788]'
+                  - paragraph [ref=e789]: 2025-11-14
+            - listitem [ref=e790]:
+              - link [ref=e791] [cursor=pointer]:
+                - /url: /newsinfo/3104897.html
+                - generic [ref=e794]:
+                  - heading "OVM Anchorage and Heavy-Lift Cable Crane Support the Yanji Yangtze River Bridge Project" [level=5] [ref=e795]
+                  - paragraph [ref=e796]: 2025-11-14
+            - listitem [ref=e797]:
+              - link [ref=e798] [cursor=pointer]:
+                - /url: /newsinfo/3104894.html
+                - generic [ref=e801]:
+                  - heading "OVM Assists the Successful Closure of the World's Third-Highest Bridge" [level=5] [ref=e802]
+                  - paragraph [ref=e803]: 2025-11-14
+            - listitem [ref=e804]:
+              - link [ref=e805] [cursor=pointer]:
+                - /url: /newsinfo/3104892.html
+                - generic [ref=e808]:
+                  - 'heading "Anchoring a World Record, Building a Landmark: OVM’s Anchorage System Lets the Huajiang Gorge Bridge Fly" [level=5] [ref=e809]'
+                  - paragraph [ref=e810]: 2025-11-14
+            - listitem [ref=e811]:
+              - link [ref=e812] [cursor=pointer]:
+                - /url: /newsinfo/1084398.html
+                - generic [ref=e815]:
+                  - heading "OVM Showcases Leading Prestressing & Seismic Solutions at Concrete Show SEA 2025" [level=5] [ref=e816]
+                  - paragraph [ref=e817]: 2025-09-15
+          - generic [ref=e818] [cursor=pointer]: 넳
+          - generic [ref=e819] [cursor=pointer]: 넲
+      - generic [ref=e824]:
+        - link "끇" [ref=e827] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e829]:
+            - generic [ref=e830]: 끇
+        - link "끇" [ref=e833] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e835]:
+            - generic [ref=e836]: 끇
+        - link "끇" [ref=e839] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e841]:
+            - generic [ref=e842]: 끇
+        - link "끇" [ref=e845] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e847]:
+            - generic [ref=e848]: 끇
+        - link "끇" [ref=e851] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e853]:
+            - generic [ref=e854]: 끇
+        - link "끇" [ref=e857] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e859]:
+            - generic [ref=e860]: 끇
+        - link "끇" [ref=e863] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e865]:
+            - generic [ref=e866]: 끇
+        - link "끇" [ref=e869] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e871]:
+            - generic [ref=e872]: 끇
+        - link "끇" [ref=e875] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e877]:
+            - generic [ref=e878]: 끇
+        - link "끇" [ref=e881] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e883]:
+            - generic [ref=e884]: 끇
+        - link "끇" [ref=e887] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e889]:
+            - generic [ref=e890]: 끇
+        - link "끇" [ref=e893] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e895]:
+            - generic [ref=e896]: 끇
+        - link "끇" [ref=e899] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e901]:
+            - generic [ref=e902]: 끇
+        - link "끇" [ref=e905] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e907]:
+            - generic [ref=e908]: 끇
+        - link "끇" [ref=e911] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e913]:
+            - generic [ref=e914]: 끇
+        - link "끇" [ref=e917] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e919]:
+            - generic [ref=e920]: 끇
+        - link "끇" [ref=e923] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e925]:
+            - generic [ref=e926]: 끇
+        - link "끇" [ref=e929] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e931]:
+            - generic [ref=e932]: 끇
+        - link "끇" [ref=e935] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e937]:
+            - generic [ref=e938]: 끇
+        - link "끇" [ref=e941] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e943]:
+            - generic [ref=e944]: 끇
+        - link "끇" [ref=e947] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e949]:
+            - generic [ref=e950]: 끇
+        - link "끇" [ref=e953] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e955]:
+            - generic [ref=e956]: 끇
+        - link "끇" [ref=e959] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e961]:
+            - generic [ref=e962]: 끇
+        - link "끇" [ref=e965] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e967]:
+            - generic [ref=e968]: 끇
+        - link "끇" [ref=e971] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e973]:
+            - generic [ref=e974]: 끇
+        - link "끇" [ref=e977] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e979]:
+            - generic [ref=e980]: 끇
+        - link "끇" [ref=e983] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e985]:
+            - generic [ref=e986]: 끇
+        - link "끇" [ref=e989] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e991]:
+            - generic [ref=e992]: 끇
+        - link "끇" [ref=e995] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e997]:
+            - generic [ref=e998]: 끇
+        - link "끇" [ref=e1001] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1003]:
+            - generic [ref=e1004]: 끇
+        - link "끇" [ref=e1007] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1009]:
+            - generic [ref=e1010]: 끇
+        - link "끇" [ref=e1013] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1015]:
+            - generic [ref=e1016]: 끇
+        - link "끇" [ref=e1019] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1021]:
+            - generic [ref=e1022]: 끇
+        - link "끇" [ref=e1025] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1027]:
+            - generic [ref=e1028]: 끇
+        - link "끇" [ref=e1031] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1033]:
+            - generic [ref=e1034]: 끇
+        - link "끇" [ref=e1037] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1039]:
+            - generic [ref=e1040]: 끇
+        - link "끇" [ref=e1043] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1045]:
+            - generic [ref=e1046]: 끇
+        - link "끇" [ref=e1049] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1051]:
+            - generic [ref=e1052]: 끇
+        - link "끇" [ref=e1055] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1057]:
+            - generic [ref=e1058]: 끇
+        - link "끇" [ref=e1061] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1063]:
+            - generic [ref=e1064]: 끇
+        - link "끇" [ref=e1067] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - emphasis [ref=e1069]:
+            - generic [ref=e1070]: 끇
+    - generic [ref=e1072]:
+      - generic [ref=e1075]:
+        - link "All rights reserved © Liuzhou OVM Machinery Co., Ltd." [ref=e1088] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - text:  All rights reserved © Liuzhou OVM Machinery Co., Ltd.
+        - generic [ref=e1092]:
+          - paragraph [ref=e1097]:
+            - generic [ref=e1098]: Liuzhou OVM Machinery Co., Ltd.
+          - generic [ref=e1104]:
+            - paragraph [ref=e1105]:
+              - generic [ref=e1106]: "Tel: +86-772-3116402"
+            - paragraph [ref=e1108]:
+              - generic [ref=e1110]:
+                - text: "Website:"
+                - link "www.ovm.cn" [ref=e1111] [cursor=pointer]:
+                  - /url: http://www.ovm.cn
+            - paragraph [ref=e1112]:
+              - generic [ref=e1114]:
+                - text: "E-mail:"
+                - link "sales@ovm.cn" [ref=e1115] [cursor=pointer]:
+                  - /url: mailto:sales@ovm.cn
+            - paragraph [ref=e1116]:
+              - generic [ref=e1117]: "Address: No.1 Yanghui Road, Liuzhou, Guangxi, 545006, P.R.China."
+        - generic [ref=e1122]:
+          - paragraph [ref=e1127]:
+            - generic [ref=e1128]: ABOUT OVM
+          - list [ref=e1134]:
+            - listitem [ref=e1135]:
+              - link "Corporate Culture" [ref=e1137] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=e1138]:
+              - link "Company Profile" [ref=e1140] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=e1141]:
+              - link "Developing Route" [ref=e1143] [cursor=pointer]:
+                - /url: /qyjj
+            - listitem [ref=e1144]:
+              - link "Qualification Certification" [ref=e1146] [cursor=pointer]:
+                - /url: /qyjj
+          - list [ref=e1150]:
+            - listitem [ref=e1151]:
+              - link "Innovative Technology" [ref=e1153] [cursor=pointer]:
+                - /url: /cxnl
+            - listitem [ref=e1154]:
+              - link "Marketing Network" [ref=e1156] [cursor=pointer]:
+                - /url: /yxwl
+            - listitem [ref=e1157]:
+              - link "Employee Story" [ref=e1159] [cursor=pointer]:
+                - /url: /yggs
+            - listitem [ref=e1160]:
+              - link "Talent Recruitment" [ref=e1162] [cursor=pointer]:
+                - /url: /rczp
+      - link "낂" [ref=e1166] [cursor=pointer]:
+        - /url: mailto:sales@ovm.cn
+        - emphasis [ref=e1168]:
+          - generic [ref=e1169]: 낂
+  - generic [ref=e1173]:
+    - link "本网站由阿里云提供云计算及安全服务" [ref=e1175] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com/webdesign/webdesign?source=5176.11533457&userCode=i7rzleoi
+    - link "Powered by 万网" [ref=e1187] [cursor=pointer]:
+      - /url: https://wanwang.aliyun.com

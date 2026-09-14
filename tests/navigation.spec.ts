@@ -90,7 +90,7 @@ test.describe("navigation", () => {
       await expect(page.locator("aside")).toHaveCount(0);
     });
 
-    test("mobile menu exposes all 7 technology links", async ({ page }) => {
+    test("mobile menu exposes every technology link", async ({ page }) => {
       await page.goto("/");
       await page.getByRole("button", { name: /open menu/i }).click();
 

@@ -114,7 +114,7 @@ test.describe("technology reference projects", () => {
   test("each card carries the project's photo, name, location and scope", async ({
     page,
   }) => {
-    await page.goto("/technologies/bearing");
+    await page.goto("/technologies/bearing-expansion-joints-anti-seismic-device");
     await scrollThroughPage(page);
 
     const section = page
@@ -135,7 +135,7 @@ test.describe("technology reference projects", () => {
   test("a card click scrolls to and highlights the matching homepage card", async ({
     page,
   }) => {
-    await page.goto("/technologies/expansion-joints");
+    await page.goto("/technologies/bearing-expansion-joints-anti-seismic-device");
     await scrollThroughPage(page);
 
     await page.locator('a[href="/#project-muara-lassa-bridge"]').first().click();

@@ -13,10 +13,10 @@ import { technologyLinks } from "@/data/technologies";
    bare "#hash" would resolve against the wrong document. */
 const LINKS = [
   { label: "Home", href: "/", children: null },
-  { label: "OVM Technologies", href: "/#technologies", children: technologyLinks },
   /* Standalone — the equipment pages carry their own sidebar index, so the
      nav points at /equipment and lets that redirect to the first item. */
   { label: "Equipment", href: "/equipment", children: null },
+  { label: "OVM Technologies", href: "/#technologies", children: technologyLinks },
   { label: "About", href: "/about", children: null },
   { label: "News", href: "/news", children: null },
 ];

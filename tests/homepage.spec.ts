@@ -51,7 +51,7 @@ test.describe("homepage", () => {
     expect(discoverHrefs).toEqual([
       "/technologies/post-tensioning-systems",
       "/technologies/cable-systems",
-      "/technologies/bearing",
+      "/technologies/bearing-expansion-joints-anti-seismic-device",
       "/technologies/structural-health-monitoring",
     ]);
 

@@ -12,7 +12,7 @@ const PAGES = [
   { name: "about", path: "/about" },
   { name: "contact", path: "/contact" },
   { name: "news-index", path: "/news" },
-  { name: "technology-bearing", path: "/technologies/bearing" },
+  { name: "technology-bearing", path: "/technologies/bearing-expansion-joints-anti-seismic-device" },
 ] as const;
 
 test.describe("responsive layout", () => {

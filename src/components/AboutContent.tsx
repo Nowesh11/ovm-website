@@ -53,7 +53,7 @@ const EXPERTISE: Expertise[] = [
   },
   {
     name: "Bearings & Expansion Joints",
-    href: "/technologies/bearing",
+    href: "/technologies/bearing-expansion-joints-anti-seismic-device",
     image: "/technologies/bearing-anti-seismic-hero.jpg",
     description:
       "OVM provides high-quality bearings designed to accommodate structural movements, ensure load transfer, and enhance the durability of bridges and buildings, alongside durable expansion joints designed for seamless traffic flow and long-term performance.",

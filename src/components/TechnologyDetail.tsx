@@ -7,7 +7,12 @@ import { Activity, Anchor, ArrowRight, Blocks, Cable, ChevronRight, Layers, MapP
 import type { LucideIcon } from "lucide-react";
 
 import { projectAnchorId, projectsForTechnology } from "@/data/projects";
-import type { TechIconKey, Technology } from "@/data/technologies";
+import type {
+  TechIconKey,
+  Technology,
+  TechnologyComponent,
+  TechnologyType,
+} from "@/data/technologies";
 
 /* Resolved here rather than in the data module, so `technologies.ts` stays
    plain data that can cross the server/client boundary. */
@@ -51,25 +56,23 @@ const reveal = {
 };
 
 export default function TechnologyDetail({ tech }: { tech: Technology }) {
-  const { slug, name, icon, heroImage, summary, types, components, diagrams, galleryImages } =
-    tech;
+  const {
+    slug,
+    name,
+    icon,
+    heroImage,
+    summary,
+    types,
+    components,
+    diagrams,
+    groups,
+    galleryImages,
+  } = tech;
   const Icon = ICONS[icon];
 
   /* Pulled from the one project list rather than stored per technology, so
      the homepage carousel and these cards can never drift apart. */
   const referenceProjects = projectsForTechnology(slug);
-
-  /* 1 part gets a single wide card; 2 fill the row. Past that, prefer the
-     column count that divides evenly, so the last row is never a lone
-     orphan card — 6 and 9 parts run three across, 4 and 8 run four. */
-  const componentColumns =
-    components.length === 1
-      ? "max-w-sm grid-cols-1"
-      : components.length === 2
-        ? "grid-cols-1 sm:grid-cols-2"
-        : components.length % 4 === 0
-          ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-          : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
 
   return (
     <>
@@ -167,88 +170,147 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
           >
             {summary}
           </motion.p>
+
+          {groups && groups.length > 0 && (
+            <motion.nav
+              variants={rise}
+              aria-label="Product lines on this page"
+              className="mt-8 flex flex-wrap gap-2.5"
+            >
+              {groups.map((group) => {
+                const GroupIcon = ICONS[group.icon];
+                return (
+                  <a
+                    key={group.id}
+                    href={`#${group.id}`}
+                    className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-4 py-2 text-sm font-medium text-white backdrop-blur-md transition-colors duration-300 hover:border-amber/50 hover:text-amber-400"
+                  >
+                    <GroupIcon size={15} strokeWidth={1.9} className="text-amber" />
+                    {group.name}
+                  </a>
+                );
+              })}
+            </motion.nav>
+          )}
         </motion.div>
       </section>
 
       {/* ---------------------------------------------------------------
           Types
       --------------------------------------------------------------- */}
-      <section className="relative overflow-hidden py-20 sm:py-24">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -left-40 top-1/4 -z-10 h-[28rem] w-[32rem] rounded-full bg-navy/10 blur-[150px]"
-        />
+      {!groups && (
+        <section className="relative overflow-hidden py-20 sm:py-24">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-40 top-1/4 -z-10 h-[28rem] w-[32rem] rounded-full bg-navy/10 blur-[150px]"
+          />
 
-        <div className="shell">
-          <motion.div {...reveal}>
-            <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
-              <span className="h-px w-8 bg-gradient-to-r from-amber to-transparent" />
-              Types
-            </span>
-            <h2 className="mt-5 font-display text-2xl font-bold leading-[1.15] tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
-              Systems we supply
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={gridContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.12 }}
-            className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2"
-          >
-            {types.map(({ name: typeName, desc }) => (
-              <motion.article
-                key={typeName}
-                variants={gridRise}
-                className="group relative overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)]"
-              >
-                <span className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-90" />
-
-                <div className="relative">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-gradient-to-br from-amber/20 via-surface-2 to-navy/30 text-amber shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105">
-                    <Icon size={19} strokeWidth={1.9} />
-                  </span>
-
-                  <h3 className="mt-5 font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white transition-colors duration-300 group-hover:text-amber-400">
-                    {typeName}
-                  </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-muted">{desc}</p>
-                </div>
-              </motion.article>
-            ))}
-          </motion.div>
-
-          {/* Project photography, in the dark full-bleed treatment. Product
-              shots live in "System Supply" below instead. */}
-          {galleryImages.length > 0 && (
-            <motion.div
-              {...reveal}
-              className={`mt-12 grid gap-5 ${
-                galleryImages.length === 1
-                  ? "max-w-3xl grid-cols-1"
-                  : "grid-cols-1 sm:grid-cols-2"
-              }`}
-            >
-              {galleryImages.map((src) => (
-                <div
-                  key={src}
-                  className="relative aspect-[16/10] overflow-hidden rounded-[16px] border border-line bg-surface"
-                >
-                  <Image
-                    src={src}
-                    alt={`${name} — OVM project photography`}
-                    fill
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-deep/45 to-transparent" />
-                </div>
-              ))}
+          <div className="shell">
+            <motion.div {...reveal}>
+              <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
+                <span className="h-px w-8 bg-gradient-to-r from-amber to-transparent" />
+                Types
+              </span>
+              <h2 className="mt-5 font-display text-2xl font-bold leading-[1.15] tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
+                Systems we supply
+              </h2>
             </motion.div>
-          )}
-        </div>
-      </section>
+
+            <TypeGrid types={types} Icon={Icon} />
+
+            {/* Project photography, in the dark full-bleed treatment. Product
+                shots live in "System Supply" below instead. */}
+            {galleryImages.length > 0 && (
+              <motion.div
+                {...reveal}
+                className={`mt-12 grid gap-5 ${
+                  galleryImages.length === 1
+                    ? "max-w-3xl grid-cols-1"
+                    : "grid-cols-1 sm:grid-cols-2"
+                }`}
+              >
+                {galleryImages.map((src) => (
+                  <div
+                    key={src}
+                    className="relative aspect-[16/10] overflow-hidden rounded-[16px] border border-line bg-surface"
+                  >
+                    <Image
+                      src={src}
+                      alt={`${name} — OVM project photography`}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                    <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-deep/45 to-transparent" />
+                  </div>
+                ))}
+              </motion.div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* ---------------------------------------------------------------
+          Product lines — a combined page gives each line its own section
+          holding that line's types and parts together, so a reader never
+          has to match a type up with its components further down.
+      --------------------------------------------------------------- */}
+      {groups?.map((group, i) => {
+        const GroupIcon = ICONS[group.icon];
+
+        return (
+          <section
+            key={group.id}
+            id={group.id}
+            className={`relative scroll-mt-20 overflow-hidden py-20 sm:py-24 ${
+              i > 0 ? "border-t border-line" : ""
+            }`}
+          >
+            <div
+              aria-hidden
+              className={`pointer-events-none absolute top-1/4 -z-10 h-[28rem] w-[32rem] rounded-full bg-navy/10 blur-[150px] ${
+                i % 2 === 0 ? "-left-40" : "-right-40"
+              }`}
+            />
+
+            <div className="shell">
+              <motion.div {...reveal}>
+                <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
+                  <span className="h-px w-8 bg-gradient-to-r from-amber to-transparent" />
+                  {String(i + 1).padStart(2, "0")} / {String(groups.length).padStart(2, "0")}
+                </span>
+                <h2 className="mt-5 flex items-center gap-4 font-display text-2xl font-bold leading-[1.15] tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-line bg-gradient-to-br from-amber/20 via-surface-2 to-navy/30 text-amber">
+                    <GroupIcon size={20} strokeWidth={1.9} />
+                  </span>
+                  {group.name}
+                </h2>
+                <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted">
+                  {group.summary}
+                </p>
+              </motion.div>
+
+              <TypeGrid types={group.types} Icon={GroupIcon} />
+
+              {group.components.length > 0 && (
+                <>
+                  <motion.div {...reveal} className="mt-16">
+                    <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
+                      <span className="h-px w-8 bg-gradient-to-r from-amber to-transparent" />
+                      System Supply
+                    </span>
+                    <h3 className="mt-4 font-display text-xl font-bold leading-snug tracking-[-0.02em] text-white sm:text-2xl">
+                      {group.name} components
+                    </h3>
+                  </motion.div>
+
+                  <ComponentGrid components={group.components} techName={group.name} />
+                </>
+              )}
+            </div>
+          </section>
+        );
+      })}
 
       {/* ---------------------------------------------------------------
           Technical reference — labelled line drawings. Same light-plate
@@ -342,53 +404,7 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
               </p>
             </motion.div>
 
-            <motion.div
-              variants={gridContainer}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.12 }}
-              className={`mt-12 grid gap-5 ${componentColumns}`}
-            >
-              {components.map(({ name: partName, image, desc, plate }, i) => (
-                <motion.figure
-                  key={image}
-                  variants={gridRise}
-                  className="group flex flex-col overflow-hidden rounded-[14px] border border-line bg-surface transition-all duration-400 hover:-translate-y-1 hover:border-amber/40 hover:shadow-[0_24px_50px_-24px_rgba(0,0,0,0.9)]"
-                >
-                  {/* Studio product shots are cut out on white and need a
-                      light plate — the dark card would swallow them. The
-                      profile-deck renders bring their own dark ground, so
-                      they fill a dark plate instead of floating on white. */}
-                  <div
-                    className={`relative aspect-[4/3] ${
-                      plate === "dark" ? "bg-ink-deep" : "bg-white"
-                    }`}
-                  >
-                    <Image
-                      src={image}
-                      alt={`${partName} — OVM ${name}`}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                      className={`transition-transform duration-500 group-hover:scale-[1.04] ${
-                        plate === "dark" ? "object-cover" : "object-contain p-5"
-                      }`}
-                    />
-                    <span className="absolute left-3 top-3 rounded-md bg-ink-deep/80 px-2 py-1 font-mono text-[10px] font-semibold tabular-nums tracking-[0.1em] text-amber">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-
-                  <figcaption className="flex flex-1 flex-col border-t border-line px-5 py-4">
-                    <h3 className="font-display text-sm font-bold leading-snug tracking-[-0.01em] text-white transition-colors duration-300 group-hover:text-amber-400">
-                      {partName}
-                    </h3>
-                    {desc && (
-                      <p className="mt-2 text-xs leading-relaxed text-muted">{desc}</p>
-                    )}
-                  </figcaption>
-                </motion.figure>
-              ))}
-            </motion.div>
+            <ComponentGrid components={components} techName={name} />
           </div>
         </section>
       )}
@@ -483,5 +499,110 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
         </section>
       )}
     </>
+  );
+}
+
+function TypeGrid({ types, Icon }: { types: TechnologyType[]; Icon: LucideIcon }) {
+  return (
+    <motion.div
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.12 }}
+      className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2"
+    >
+      {types.map(({ name: typeName, desc }) => (
+        <motion.article
+          key={typeName}
+          variants={gridRise}
+          className="group relative overflow-hidden rounded-[16px] border border-line bg-surface p-7 transition-all duration-400 hover:-translate-y-1.5 hover:border-navy-300/45 hover:bg-surface-2 hover:shadow-[0_28px_60px_-24px_rgba(0,0,0,0.95),0_0_0_1px_rgba(79,143,214,0.14)]"
+        >
+          <span className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-90" />
+
+          <div className="relative">
+            <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-gradient-to-br from-amber/20 via-surface-2 to-navy/30 text-amber shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105">
+              <Icon size={19} strokeWidth={1.9} />
+            </span>
+
+            <h3 className="mt-5 font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white transition-colors duration-300 group-hover:text-amber-400">
+              {typeName}
+            </h3>
+            <p className="mt-2.5 text-sm leading-relaxed text-muted">{desc}</p>
+          </div>
+        </motion.article>
+      ))}
+    </motion.div>
+  );
+}
+
+/* 1 part gets a single wide card; 2 fill the row. Past that, prefer the
+   column count that divides evenly, so the last row is never a lone
+   orphan card — 6 and 9 parts run three across, 4 and 8 run four. */
+const componentColumnsFor = (count: number) =>
+  count === 1
+    ? "max-w-sm grid-cols-1"
+    : count === 2
+      ? "grid-cols-1 sm:grid-cols-2"
+      : count % 4 === 0
+        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+        : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+
+function ComponentGrid({
+  components,
+  techName,
+}: {
+  components: TechnologyComponent[];
+  techName: string;
+}) {
+  const columns = componentColumnsFor(components.length);
+
+  return (
+    <motion.div
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.12 }}
+      className={`mt-12 grid gap-5 ${columns}`}
+    >
+      {components.map(({ name: partName, image, desc, plate }, i) => (
+        <motion.figure
+          key={image}
+          variants={gridRise}
+          className="group flex flex-col overflow-hidden rounded-[14px] border border-line bg-surface transition-all duration-400 hover:-translate-y-1 hover:border-amber/40 hover:shadow-[0_24px_50px_-24px_rgba(0,0,0,0.9)]"
+        >
+          {/* Studio product shots are cut out on white and need a
+              light plate — the dark card would swallow them. The
+              profile-deck renders bring their own dark ground, so
+              they fill a dark plate instead of floating on white. */}
+          <div
+            className={`relative aspect-[4/3] ${
+              plate === "dark" ? "bg-ink-deep" : "bg-white"
+            }`}
+          >
+            <Image
+              src={image}
+              alt={`${partName} — OVM ${techName}`}
+              fill
+              sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+              className={`transition-transform duration-500 group-hover:scale-[1.04] ${
+                plate === "dark" ? "object-cover" : "object-contain p-5"
+              }`}
+            />
+            <span className="absolute left-3 top-3 rounded-md bg-ink-deep/80 px-2 py-1 font-mono text-[10px] font-semibold tabular-nums tracking-[0.1em] text-amber">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+          </div>
+
+          <figcaption className="flex flex-1 flex-col border-t border-line px-5 py-4">
+            <h3 className="font-display text-sm font-bold leading-snug tracking-[-0.01em] text-white transition-colors duration-300 group-hover:text-amber-400">
+              {partName}
+            </h3>
+            {desc && (
+              <p className="mt-2 text-xs leading-relaxed text-muted">{desc}</p>
+            )}
+          </figcaption>
+        </motion.figure>
+      ))}
+    </motion.div>
   );
 }

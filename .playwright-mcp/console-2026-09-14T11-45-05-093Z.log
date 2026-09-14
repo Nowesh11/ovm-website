@@ -1,0 +1,2 @@
+[    1029ms] [ERROR] Error with Permissions-Policy header: Parse of permissions policy failed because of errors reported by structured header parser. @ :0
+[    9114ms] [WARNING] The resource https://www.freyssinet.com/wp-content/uploads/2023/05/Slovenia-Project-Footbridge.webp was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.freyssinet.com/case-study/krka-river-stress-ribbon-footbridge/:0

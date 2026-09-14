@@ -1,0 +1,706 @@
+- generic [active] [ref=f13e1]:
+  - generic [ref=f13e3]:
+    - generic [ref=f13e4]: Freyssinet (corporate website)
+    - generic:
+      - list
+  - banner [ref=f13e5]:
+    - generic:
+      - link [ref=f13e6] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+        - img "Freyssinet Corporate" [ref=f13e7]
+      - link " Menu" [ref=f13e8] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=f13e9]: 
+        - text: 
+        - generic [ref=f13e10]: Menu
+      - text:  
+  - text:         
+  - main [ref=f13e11]:
+    - generic [ref=f13e12]:
+      - text: 
+      - list [ref=f13e16]:
+        - listitem [ref=f13e17]:
+          - generic [ref=f13e18]:
+            - button "Build Solution " [ref=f13e19] [cursor=pointer]:
+              - generic [ref=f13e20]: Build
+              - generic [ref=f13e21]: Solution
+              - text: 
+            - list [ref=f13e22]:
+              - listitem [ref=f13e23]:
+                - link "Cable systems" [ref=f13e24] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/cable-systems/
+              - listitem [ref=f13e25]:
+                - link "Post tensioning systems" [ref=f13e26] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/post-tensioning-systems/
+              - listitem [ref=f13e27]:
+                - link "Expansion joints" [ref=f13e28] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/expansion-joints/
+              - listitem [ref=f13e29]:
+                - link "Seismic protection" [ref=f13e30] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/seismic-protection/
+              - listitem [ref=f13e31]:
+                - link "Heavy lifting handling" [ref=f13e32] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/heavy-lifting-handling/
+              - listitem [ref=f13e33]:
+                - link "Bridge deck construction" [ref=f13e34] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/bridge-deck-construction/
+              - listitem [ref=f13e35]:
+                - link "Anchoring systems for geotechnics" [ref=f13e36] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/anchoring-systems-for-geotechnics/
+              - listitem [ref=f13e37]:
+                - link "Waterproofing geomembranes" [ref=f13e38] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/waterproofing-geomembranes/
+        - listitem [ref=f13e39]:
+          - generic [ref=f13e40]:
+            - button "Build Structure " [ref=f13e41] [cursor=pointer]:
+              - generic [ref=f13e42]: Build
+              - generic [ref=f13e43]: Structure
+              - text: 
+            - list [ref=f13e44]:
+              - listitem [ref=f13e45]:
+                - link "Bridges" [ref=f13e46] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/bridges/
+              - listitem [ref=f13e47]:
+                - link "Buildings" [ref=f13e48] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/buildings/
+              - listitem [ref=f13e49]:
+                - link "Energy infrastructures" [ref=f13e50] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/energy-infrastructures/
+              - listitem [ref=f13e51]:
+                - link "Water infrastructures" [ref=f13e52] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/build/water-infrastructures/
+    - generic [ref=f13e53]:
+      - generic [ref=f13e54]:
+        - generic [ref=f13e55]:
+          - generic [ref=f13e56]: Share this page
+          - list [ref=f13e57]:
+            - listitem [ref=f13e58]:
+              - link " Facebook" [ref=f13e59] [cursor=pointer]:
+                - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.freyssinet.com%2Fsolution%2Fbuild%2Fbearings%2F
+                - generic [ref=f13e60]: 
+                - generic [ref=f13e61]: Facebook
+            - listitem [ref=f13e62]:
+              - link " Twitter" [ref=f13e63] [cursor=pointer]:
+                - /url: https://twitter.com/intent/tweet?text=Bearings https%3A%2F%2Fwww.freyssinet.com%2Fsolution%2Fbuild%2Fbearings%2F&original_referer=https%3A%2F%2Fwww.freyssinet.com%2Fsolution%2Fbuild%2Fbearings%2F
+                - generic [ref=f13e64]: 
+                - generic [ref=f13e65]: Twitter
+            - listitem [ref=f13e66]:
+              - link " LinkedIn" [ref=f13e67] [cursor=pointer]:
+                - /url: https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.freyssinet.com%2Fsolution%2Fbuild%2Fbearings%2F&title=Bearings&summary=&source=https%3A%2F%2Fwww.freyssinet.com%2Fsolution%2Fbuild%2Fbearings%2F
+                - generic [ref=f13e68]: 
+                - generic [ref=f13e69]: LinkedIn
+        - generic [ref=f13e70]:
+          - list [ref=f13e71]:
+            - listitem [ref=f13e72]:
+              - generic [ref=f13e73]: Build
+          - heading "Bearings" [level=1] [ref=f13e75]
+          - generic [ref=f13e77]: As mechanical parts that manage the inevitable movements of bridge structures, bearings are one of their most important structural components. The selection of the right bearing type for use requires the attention of a specialist. So does its installation, monitoring, maintenance and replacement.
+          - text:  
+      - generic [ref=f13e81]:
+        - link "Home" [ref=f13e82] [cursor=pointer]:
+          - /url: https://www.freyssinet.com/
+        - text: / Solutions /
+        - link "Build" [ref=f13e83] [cursor=pointer]:
+          - /url: " https://www.freyssinet.com/solution/build/"
+        - text: / Bearings
+      - tabpanel [ref=f13e86]:
+        - generic [ref=f13e89]:
+          - paragraph [ref=f13e92]: "The forces acting on bridges are multiple and of various origins: structure’s weight, shrinkage and creep, wind loads, temperature changes, traffic loads, horizontal loads such as accelerating, braking or skidding, impact forces due to collisions, support sagging, seismic forces, etc. Freyssinet bearings are designed to ensure that loads are transferred between the superstructure and the substructure and that they enable movement and rotation of the superstructure."
+          - list [ref=f13e94]:
+            - listitem [ref=f13e95]:
+              - generic [ref=f13e96]:
+                - generic [ref=f13e97]: Applications
+                - generic [ref=f13e98]: Bridges Buildings Stadiums Water infrastructure Energy infrastructure
+        - generic [ref=f13e101]:
+          - generic [ref=f13e103]:
+            - heading "A wide range of bearings" [level=2] [ref=f13e104]
+            - generic [ref=f13e105]:
+              - paragraph [ref=f13e106]:
+                - strong [ref=f13e107]: Freyssinet has developed a wide range of TETRON® bearings based on
+                - strong [ref=f13e108]: five designs
+                - text: ":"
+              - list [ref=f13e109]:
+                - listitem [ref=f13e110]: Elastomeric bearings
+                - listitem [ref=f13e111]: Pot bearings
+                - listitem [ref=f13e112]: Spherical bearings
+                - listitem [ref=f13e113]: Guide and restraint bearings
+                - listitem [ref=f13e114]: Linear rocker bearings
+              - paragraph [ref=f13e115]:
+                - strong [ref=f13e116]: Each design is available in
+                - strong [ref=f13e117]: three operating modes
+                - text: "allowing for different translational and rotational movements to suit the function of each structure:"
+              - list [ref=f13e118]:
+                - listitem [ref=f13e119]: Fixed
+                - listitem [ref=f13e120]: Guided-sliding
+                - listitem [ref=f13e121]: Free-sliding
+              - paragraph [ref=f13e122]: All our bearings are CE Marked. They are custom made and can be designed and manufactured in accordance with various standards, the most common being EN1337 (Europe), BS 5400 (UK), AASHTO LRFD 2012 (US) and AS 5100 (Australia).
+          - generic [ref=f13e124]:
+            - generic [ref=f13e125]:
+              - heading [level=2] [ref=f13e127]:
+                - button " Fixed bearings (FX)" [expanded] [ref=f13e128] [cursor=pointer]
+              - generic [ref=f13e131]:
+                - paragraph [ref=f13e132]
+                - paragraph [ref=f13e133]
+                - list [ref=f13e134]:
+                  - listitem [ref=f13e135]: Transfer of vertical loads
+                  - listitem [ref=f13e136]: Transfer of horizontal forces both in longitudinal and transversal direction
+                  - listitem [ref=f13e137]: Sliding movements restrained
+                  - listitem [ref=f13e138]: Rotations enabled
+            - heading [level=2] [ref=f13e141]:
+              - button " Guided-sliding bearings (GGT -Transverse and GGL -Longitudinal)" [ref=f13e142] [cursor=pointer]
+            - heading [level=2] [ref=f13e145]:
+              - button " Free-sliding bearings (GL)" [ref=f13e146] [cursor=pointer]
+        - generic [ref=f13e149]:
+          - generic [ref=f13e150]: Select the right bearing type for your project
+          - text:  
+        - generic [ref=f13e157]:
+          - generic [ref=f13e158]: Custom-designed bearings
+          - generic [ref=f13e159]:
+            - paragraph [ref=f13e160]:
+              - strong [ref=f13e161]: Freyssinet also provides a variety of bespoke devices designed, manufactured and tested to custom specifications
+              - text: ", such as -but not limited to:"
+            - list [ref=f13e162]:
+              - listitem [ref=f13e163]: Various types of uplift bearings, including double-cap spherical bearings with a mechanism to support uplift loads in service
+              - listitem [ref=f13e164]: Permanent “launch-over” bearings for erecting bridges using the incremental launching method
+              - listitem [ref=f13e165]: Sliding pads for all types of sliding, launching or skidding operations, with improved sliding materials
+              - listitem [ref=f13e166]: Jackable bearings, with vertical load adjustment during construction (single jacking) or during service (multiple jacking)
+              - listitem [ref=f13e167]: Bearings with integrated seismic devices -viscous dampers or shock transmission units
+              - listitem [ref=f13e168]: Cylindrical bearings and other moment-restraining bearings
+              - listitem [ref=f13e169]: Bearings with required horizontal stiffness
+              - listitem [ref=f13e170]: Bearings for acoustic isolation.
+            - paragraph [ref=f13e171]: These devices are designed in close cooperation by our structural engineers and bearing specialists.
+        - generic [ref=f13e174]:
+          - generic [ref=f13e176]:
+            - generic [ref=f13e177]: "Levante stadium in Spain: double-cap uplift spherical bearings for possible uplift in service, with rotational preset and movement stoppers."
+            - generic [ref=f13e180]: "Paris Metro line 2, France: jackable bearings for vertical adjustment"
+            - generic [ref=f13e183]: "Nowra Bridge, Australia : stainless steel spherical bearings for incremental launching"
+          - generic:
+            - button "Previous" [ref=f13e186] [cursor=pointer]: ‹
+            - button " Next" [ref=f13e187] [cursor=pointer]:  ›
+          - generic [ref=f13e188]:
+            - button [ref=f13e189] [cursor=pointer]
+            - button [ref=f13e190] [cursor=pointer]
+            - button [ref=f13e191] [cursor=pointer]
+        - generic [ref=f13e192]:
+          - generic [ref=f13e194]:
+            - generic [ref=f13e195]: Full service
+            - heading "From design to maintenance" [level=2] [ref=f13e196]
+          - generic [ref=f13e198]:
+            - generic [ref=f13e200]:
+              - generic [ref=f13e204]:
+                - heading "Assessment and design services" [level=3] [ref=f13e205]
+                - paragraph [ref=f13e207]: A dedicated technical department (Atlante) assists you in the early stages of the project, to select the type of bearing best suited to the project and to size it, according to the needs of the structure and the budget available. This team, based in Italy, is made up of engineers and draftmen who are experts in structural and mechanical engineering, and use specific software providing 3D drawings.
+              - generic [ref=f13e211]:
+                - heading "Guarantee of the product performance and quality" [level=3] [ref=f13e212]
+                - paragraph [ref=f13e214]: Our TETRON® bearings are manufactured in-house. We integrate all the necessary skills for bearing design, prototype testing, manufacturing, quality control and shipping. Our test centre, known as ISOLAB and located near the Bearing Technical Department in Italy, has the status of an official laboratory and has all the necessary equipment to carry out static and dynamic tests according to international standards.
+              - generic [ref=f13e218]:
+                - heading "Technical support or full installation" [level=3] [ref=f13e219]
+                - paragraph [ref=f13e221]: Depending on your needs, we can provide technical assistance or proceed to the full installation of the bearings through our specialist teams around the world.
+              - generic [ref=f13e225]:
+                - heading "Inspection and maintenance" [level=3] [ref=f13e226]
+                - paragraph [ref=f13e228]: A maintenance guide is provided for each delivery. It specifies the frequency of bearing inspection according to the characteristics of the structure and its environment, in order to optimize its service life. Freyssinet specialists are available to carry out these inspections.
+                - link " " [ref=f13e229] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/solution/repair/bearings-maintenance/
+            - text:  
+            - generic [ref=f13e230]:
+              - button [ref=f13e231] [cursor=pointer]
+              - button [ref=f13e232] [cursor=pointer]
+        - generic [ref=f13e235]:
+          - generic [ref=f13e237]:
+            - link "Elastomeric bearings Acting as elastic connections between structural elements, elastomeric bearings are the most commonly used bearings. They allow the transmission of vertical forces, horizontal movements, structure rotation in any direction and horizontal forces within defined limits. " [ref=f13e239] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/bearings/elastomeric-bearings/
+              - generic [aria-hidden] [ref=f13e242]:
+                - generic [ref=f13e243]: Elastomeric bearings
+                - generic [ref=f13e244]: Elastomeric bearings
+                - generic [ref=f13e245]: Elastomeric bearings
+                - generic [ref=f13e246]: Elastomeric bearings
+              - heading "Elastomeric bearings" [level=3] [ref=f13e247]
+              - generic [ref=f13e248]: Acting as elastic connections between structural elements, elastomeric bearings are the most commonly used bearings. They allow the transmission of vertical forces, horizontal movements, structure rotation in any direction and horizontal forces within defined limits.
+              - text: 
+            - link "Tetron® pot bearings The structural rotations are adjusted thanks to an elastomeric pad, confined into a steel pot, which responds with high vertical stiffness and low rotation resistance. They are cost-effective for high vertical loads, and small to moderate horizontal loads. " [ref=f13e250] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/bearings/tetron-pot-bearings/
+              - generic [aria-hidden] [ref=f13e253]:
+                - generic [ref=f13e254]: Tetron® pot bearings
+                - generic [ref=f13e255]: Tetron® pot bearings
+                - generic [ref=f13e256]: Tetron® pot bearings
+                - generic [ref=f13e257]: Tetron® pot bearings
+              - heading "Tetron® pot bearings" [level=3] [ref=f13e258]
+              - generic [ref=f13e259]: The structural rotations are adjusted thanks to an elastomeric pad, confined into a steel pot, which responds with high vertical stiffness and low rotation resistance. They are cost-effective for high vertical loads, and small to moderate horizontal loads.
+              - text: 
+            - link "Tetron® spherical bearings Its spherical plate allows rotation around each axis at low friction. They are very durable and can withstand higher vertical loads than pot bearings as well as high rotations. " [ref=f13e261] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/bearings/tetron-spherical-bearings/
+              - generic [aria-hidden] [ref=f13e264]:
+                - generic [ref=f13e265]: Tetron® spherical bearings
+                - generic [ref=f13e266]: Tetron® spherical bearings
+                - generic [ref=f13e267]: Tetron® spherical bearings
+                - generic [ref=f13e268]: Tetron® spherical bearings
+              - heading "Tetron® spherical bearings" [level=3] [ref=f13e269]
+              - generic [ref=f13e270]: Its spherical plate allows rotation around each axis at low friction. They are very durable and can withstand higher vertical loads than pot bearings as well as high rotations.
+              - text: 
+            - link "Tetron® guide and restraint bearings Freyssinet guide bearings type TETRON SK and restraint bearings type TETRON PK are used in the case of large horizontal loads to be transferred. They are usually combined with free sliding bearings. " [ref=f13e272] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/bearings/tetron-guide-and-restraint-bearings/
+              - generic [aria-hidden] [ref=f13e275]:
+                - generic [ref=f13e276]: Tetron® guide and restraint bearings
+                - generic [ref=f13e277]: Tetron® guide and restraint bearings
+                - generic [ref=f13e278]: Tetron® guide and restraint bearings
+                - generic [ref=f13e279]: Tetron® guide and restraint bearings
+              - heading "Tetron® guide and restraint bearings" [level=3] [ref=f13e280]
+              - generic [ref=f13e281]: Freyssinet guide bearings type TETRON SK and restraint bearings type TETRON PK are used in the case of large horizontal loads to be transferred. They are usually combined with free sliding bearings.
+              - text: 
+            - link "Tetron® linear rocker bearings TETRON® Linear rocker bearings provide an economical and durable solution for steel structures. The maximum vertical load is determined by the size of the bearing. Rotation is only possible in one direction. " [ref=f13e283] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/bearings/tetron-linear-rocker-bearings/
+              - generic [aria-hidden] [ref=f13e286]:
+                - generic [ref=f13e287]: Tetron® linear rocker bearings
+                - generic [ref=f13e288]: Tetron® linear rocker bearings
+                - generic [ref=f13e289]: Tetron® linear rocker bearings
+                - generic [ref=f13e290]: Tetron® linear rocker bearings
+              - heading "Tetron® linear rocker bearings" [level=3] [ref=f13e291]
+              - generic [ref=f13e292]: TETRON® Linear rocker bearings provide an economical and durable solution for steel structures. The maximum vertical load is determined by the size of the bearing. Rotation is only possible in one direction.
+              - text: 
+            - link "Add-ons for bearings Freyssinet offers additional options to its range of bearings to meet specific structural or environmental needs, reduce space requirements, simplify installation methods or facilitate future monitoring of the structure. " [ref=f13e294] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/bearings/add-ons-for-bearings/
+              - generic [aria-hidden] [ref=f13e297]:
+                - generic [ref=f13e298]: Add-ons for bearings
+                - generic [ref=f13e299]: Add-ons for bearings
+                - generic [ref=f13e300]: Add-ons for bearings
+                - generic [ref=f13e301]: Add-ons for bearings
+              - heading "Add-ons for bearings" [level=3] [ref=f13e302]
+              - generic [ref=f13e303]: Freyssinet offers additional options to its range of bearings to meet specific structural or environmental needs, reduce space requirements, simplify installation methods or facilitate future monitoring of the structure.
+              - text: 
+            - link [ref=f13e305] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/repair/bearings-maintenance/
+              - generic [aria-hidden] [ref=f13e308]:
+                - generic [ref=f13e309]: Bearings maintenance
+                - generic [ref=f13e310]: Bearings maintenance
+                - generic [ref=f13e311]: Bearings maintenance
+                - generic [ref=f13e312]: Bearings maintenance
+              - heading "Bearings maintenance" [level=3] [ref=f13e313]
+              - text: 
+          - text:  
+          - generic [ref=f13e314]:
+            - button [ref=f13e315] [cursor=pointer]
+            - button [ref=f13e316] [cursor=pointer]
+            - button [ref=f13e317] [cursor=pointer]
+            - button [ref=f13e318] [cursor=pointer]
+            - button [ref=f13e319] [cursor=pointer]
+        - generic [ref=f13e321]:
+          - heading "Contact us" [level=2] [ref=f13e322]
+          - paragraph [ref=f13e324]: You have a question about our solutions or you already have a project in mind? Please fill out the form below and our teams will get back to you shortly.
+          - generic [ref=f13e327]:
+            - list [ref=f13e329]:
+              - listitem [ref=f13e330]:
+                - generic [ref=f13e332]:
+                  - generic [ref=f13e333]:
+                    - text: Your profile*
+                    - generic [ref=f13e334]: "*"
+                  - generic [ref=f13e335]:
+                    - combobox "Your profile**" [ref=f13e336]:
+                      - option "I'm a company"
+                      - option "I'm a candidate"
+                      - option "I'm a journalist"
+                      - option "Other"
+                    - text: 
+              - listitem [ref=f13e337]:
+                - generic [ref=f13e339]:
+                  - generic [ref=f13e340]:
+                    - text: Country*
+                    - generic [ref=f13e341]: "*"
+                  - generic [ref=f13e342]:
+                    - combobox "Country**" [ref=f13e343]:
+                      - option "Afghanistan"
+                      - option "Albania"
+                      - option "Algeria"
+                      - option "American Samoa"
+                      - option "Andorra"
+                      - option "Angola"
+                      - option "Anguilla"
+                      - option "Antarctica"
+                      - option "Antigua and Barbuda"
+                      - option "Argentina"
+                      - option "Armenia"
+                      - option "Aruba"
+                      - option "Australia"
+                      - option "Austria"
+                      - option "Azerbaijan"
+                      - option "Bahamas"
+                      - option "Bahrain"
+                      - option "Bangladesh"
+                      - option "Barbados"
+                      - option "Belarus"
+                      - option "Belgium"
+                      - option "Belize"
+                      - option "Benin"
+                      - option "Bermuda"
+                      - option "Bhutan"
+                      - option "Bolivia"
+                      - option "Bonaire, Sint Eustatius and Saba"
+                      - option "Bosnia and Herzegovina"
+                      - option "Botswana"
+                      - option "Bouvet Island"
+                      - option "Brazil"
+                      - option "British Indian Ocean Territory"
+                      - option "Brunei Darussalam"
+                      - option "Bulgaria"
+                      - option "Burkina Faso"
+                      - option "Burundi"
+                      - option "Cabo Verde"
+                      - option "Cambodia"
+                      - option "Cameroon"
+                      - option "Canada"
+                      - option "Cayman Islands"
+                      - option "Central African Republic"
+                      - option "Chad"
+                      - option "Chile"
+                      - option "China"
+                      - option "Christmas Island"
+                      - option "Cocos Islands"
+                      - option "Colombia"
+                      - option "Comoros"
+                      - option "Congo"
+                      - option "Congo, Democratic Republic of the"
+                      - option "Cook Islands"
+                      - option "Costa Rica"
+                      - option "Croatia"
+                      - option "Cuba"
+                      - option "Curaçao"
+                      - option "Cyprus"
+                      - option "Czechia"
+                      - option "Côte d'Ivoire"
+                      - option "Denmark"
+                      - option "Djibouti"
+                      - option "Dominica"
+                      - option "Dominican Republic"
+                      - option "Ecuador"
+                      - option "Egypt"
+                      - option "El Salvador"
+                      - option "Equatorial Guinea"
+                      - option "Eritrea"
+                      - option "Estonia"
+                      - option "Eswatini"
+                      - option "Ethiopia"
+                      - option "Falkland Islands"
+                      - option "Faroe Islands"
+                      - option "Fiji"
+                      - option "Finland"
+                      - option "France"
+                      - option "French Guiana"
+                      - option "French Polynesia"
+                      - option "French Southern Territories"
+                      - option "Gabon"
+                      - option "Gambia"
+                      - option "Georgia"
+                      - option "Germany"
+                      - option "Ghana"
+                      - option "Gibraltar"
+                      - option "Greece"
+                      - option "Greenland"
+                      - option "Grenada"
+                      - option "Guadeloupe"
+                      - option "Guam"
+                      - option "Guatemala"
+                      - option "Guernsey"
+                      - option "Guinea"
+                      - option "Guinea-Bissau"
+                      - option "Guyana"
+                      - option "Haiti"
+                      - option "Heard Island and McDonald Islands"
+                      - option "Holy See"
+                      - option "Honduras"
+                      - option "Hong Kong"
+                      - option "Hungary"
+                      - option "Iceland"
+                      - option "India"
+                      - option "Indonesia"
+                      - option "Iran"
+                      - option "Iraq"
+                      - option "Ireland"
+                      - option "Isle of Man"
+                      - option "Israel"
+                      - option "Italy"
+                      - option "Jamaica"
+                      - option "Japan"
+                      - option "Jersey"
+                      - option "Jordan"
+                      - option "Kazakhstan"
+                      - option "Kenya"
+                      - option "Kiribati"
+                      - option "Korea, Democratic People's Republic of"
+                      - option "Korea, Republic of"
+                      - option "Kuwait"
+                      - option "Kyrgyzstan"
+                      - option "Lao People's Democratic Republic"
+                      - option "Latvia"
+                      - option "Lebanon"
+                      - option "Lesotho"
+                      - option "Liberia"
+                      - option "Libya"
+                      - option "Liechtenstein"
+                      - option "Lithuania"
+                      - option "Luxembourg"
+                      - option "Macao"
+                      - option "Madagascar"
+                      - option "Malawi"
+                      - option "Malaysia"
+                      - option "Maldives"
+                      - option "Mali"
+                      - option "Malta"
+                      - option "Marshall Islands"
+                      - option "Martinique"
+                      - option "Mauritania"
+                      - option "Mauritius"
+                      - option "Mayotte"
+                      - option "Mexico"
+                      - option "Micronesia"
+                      - option "Moldova"
+                      - option "Monaco"
+                      - option "Mongolia"
+                      - option "Montenegro"
+                      - option "Montserrat"
+                      - option "Morocco"
+                      - option "Mozambique"
+                      - option "Myanmar"
+                      - option "Namibia"
+                      - option "Nauru"
+                      - option "Nepal"
+                      - option "Netherlands"
+                      - option "New Caledonia"
+                      - option "New Zealand"
+                      - option "Nicaragua"
+                      - option "Niger"
+                      - option "Nigeria"
+                      - option "Niue"
+                      - option "Norfolk Island"
+                      - option "North Macedonia"
+                      - option "Northern Mariana Islands"
+                      - option "Norway"
+                      - option "Oman"
+                      - option "Pakistan"
+                      - option "Palau"
+                      - option "Palestine, State of"
+                      - option "Panama"
+                      - option "Papua New Guinea"
+                      - option "Paraguay"
+                      - option "Peru"
+                      - option "Philippines"
+                      - option "Pitcairn"
+                      - option "Poland"
+                      - option "Portugal"
+                      - option "Puerto Rico"
+                      - option "Qatar"
+                      - option "Romania"
+                      - option "Russian Federation"
+                      - option "Rwanda"
+                      - option "Réunion"
+                      - option "Saint Barthélemy"
+                      - option "Saint Helena, Ascension and Tristan da Cunha"
+                      - option "Saint Kitts and Nevis"
+                      - option "Saint Lucia"
+                      - option "Saint Martin"
+                      - option "Saint Pierre and Miquelon"
+                      - option "Saint Vincent and the Grenadines"
+                      - option "Samoa"
+                      - option "San Marino"
+                      - option "Sao Tome and Principe"
+                      - option "Saudi Arabia"
+                      - option "Senegal"
+                      - option "Serbia"
+                      - option "Seychelles"
+                      - option "Sierra Leone"
+                      - option "Singapore"
+                      - option "Sint Maarten"
+                      - option "Slovakia"
+                      - option "Slovenia"
+                      - option "Solomon Islands"
+                      - option "Somalia"
+                      - option "South Africa"
+                      - option "South Georgia and the South Sandwich Islands"
+                      - option "South Sudan"
+                      - option "Spain"
+                      - option "Sri Lanka"
+                      - option "Sudan"
+                      - option "Suriname"
+                      - option "Svalbard and Jan Mayen"
+                      - option "Sweden"
+                      - option "Switzerland"
+                      - option "Syria Arab Republic"
+                      - option "Taiwan"
+                      - option "Tajikistan"
+                      - option "Tanzania, the United Republic of"
+                      - option "Thailand"
+                      - option "Timor-Leste"
+                      - option "Togo"
+                      - option "Tokelau"
+                      - option "Tonga"
+                      - option "Trinidad and Tobago"
+                      - option "Tunisia"
+                      - option "Turkmenistan"
+                      - option "Turks and Caicos Islands"
+                      - option "Tuvalu"
+                      - option "Türkiye"
+                      - option "US Minor Outlying Islands"
+                      - option "Uganda"
+                      - option "Ukraine"
+                      - option "United Arab Emirates"
+                      - option "United Kingdom"
+                      - option "United States"
+                      - option "Uruguay"
+                      - option "Uzbekistan"
+                      - option "Vanuatu"
+                      - option "Venezuela"
+                      - option "Viet Nam"
+                      - option "Virgin Islands, British"
+                      - option "Virgin Islands, U.S."
+                      - option "Wallis and Futuna"
+                      - option "Western Sahara"
+                      - option "Yemen"
+                      - option "Zambia"
+                      - option "Zimbabwe"
+                      - option "Åland Islands"
+                    - text: 
+              - listitem [ref=f13e344]:
+                - generic [ref=f13e345]:
+                  - generic [ref=f13e346]:
+                    - text: First name
+                    - generic [ref=f13e347]: "*"
+                  - textbox "First name*" [ref=f13e349]
+              - listitem [ref=f13e350]:
+                - generic [ref=f13e351]:
+                  - generic [ref=f13e352]:
+                    - text: Last name
+                    - generic [ref=f13e353]: "*"
+                  - textbox "Last name*" [ref=f13e355]
+              - listitem [ref=f13e356]:
+                - generic [ref=f13e357]:
+                  - generic [ref=f13e358]:
+                    - text: Email
+                    - generic [ref=f13e359]: "*"
+                  - textbox "Email*" [ref=f13e361]
+              - listitem [ref=f13e362]:
+                - generic [ref=f13e363]:
+                  - generic [ref=f13e364]: Phone number
+                  - textbox "Phone number" [ref=f13e366]
+              - listitem [ref=f13e367]:
+                - generic [ref=f13e368]:
+                  - generic [ref=f13e369]:
+                    - text: Message
+                    - generic [ref=f13e370]: "*"
+                  - textbox "Message*" [ref=f13e372]
+              - listitem [ref=f13e373]:
+                - generic [ref=f13e377]:
+                  - superscript [ref=f13e378]: "*"
+                  - text: Mandatory fields
+              - listitem [ref=f13e379]:
+                - generic [ref=f13e382]:
+                  - generic [ref=f13e383]:
+                    - text: Consent
+                    - generic [ref=f13e384]: "*"
+                  - generic [ref=f13e385]:
+                    - checkbox "I agree to be contacted back by email provided following our terms of use*" [ref=f13e386]
+                    - generic [ref=f13e387] [cursor=pointer]:
+                      - generic [ref=f13e388]:
+                        - text: I agree to be contacted back by email provided following our
+                        - link "terms of use" [ref=f13e389]:
+                          - /url: https://www.freyssinet.com/legal-notice/
+                      - text: "*"
+              - listitem [ref=f13e390]:
+                - strong [ref=f13e393] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=f13e394]: Attach a file
+                  - text: 
+              - listitem [ref=f13e395]:
+                - iframe [ref=f13e401]:
+                  - generic [ref=f14e2]:
+                    - generic [ref=f14e3]:
+                      - checkbox "I'm not a robot" [ref=f14e7]
+                      - generic [aria-hidden] [ref=f14e11]: I'm not a robot
+                    - generic [ref=f14e12]: reCAPTCHA
+            - button " Send your message " [ref=f13e403] [cursor=pointer]
+  - contentinfo [ref=f13e404]:
+    - link " Back to top" [ref=f13e405] [cursor=pointer]:
+      - /url: javascript:void(0)
+      - generic [ref=f13e406]: 
+      - generic [ref=f13e407]: Back to top
+    - generic [ref=f13e410]:
+      - link [ref=f13e412] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+      - generic [ref=f13e413]:
+        - heading "About Freyssinet" [level=3]
+        - list [ref=f13e414]:
+          - listitem [ref=f13e415]:
+            - link "Who we are" [ref=f13e416] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/who-we-are/
+          - listitem [ref=f13e417]:
+            - link "Our commitments" [ref=f13e418] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/our-commitments/
+          - listitem [ref=f13e419]:
+            - link "New build" [ref=f13e420] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/
+          - listitem [ref=f13e421]:
+            - link "Structural repair" [ref=f13e422] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/repair/
+          - listitem [ref=f13e423]:
+            - link "Our locations" [ref=f13e424] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/find-us/
+      - generic [ref=f13e425]:
+        - heading "Join us" [level=3]
+        - list [ref=f13e426]:
+          - listitem [ref=f13e427]:
+            - link "Careers" [ref=f13e428] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/join-our-teams/
+          - listitem [ref=f13e429]:
+            - link "Job offers" [ref=f13e430] [cursor=pointer]:
+              - /url: https://jobs.vinci.com/en/freyssinet
+          - listitem [ref=f13e431]:
+            - link "Employee stories" [ref=f13e432] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/category/employee-stories/
+      - generic [ref=f13e433]:
+        - heading "Stay updated" [level=3]
+        - list [ref=f13e434]:
+          - listitem [ref=f13e435]:
+            - link "Newsroom" [ref=f13e436] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/newsroom/
+          - listitem [ref=f13e437]:
+            - link "Contact us" [ref=f13e438] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/contact/
+        - list [ref=f13e439]:
+          - listitem [ref=f13e440]:
+            - link " linkedin Freyssinet Corporate" [ref=f13e441] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/freyssinet
+              - generic [ref=f13e442]: 
+              - generic [ref=f13e443]: linkedin Freyssinet Corporate
+          - listitem [ref=f13e444]:
+            - link " youtube Freyssinet Corporate" [ref=f13e445] [cursor=pointer]:
+              - /url: https://www.youtube.com/@freyssinetgroup
+              - generic [ref=f13e446]: 
+              - generic [ref=f13e447]: youtube Freyssinet Corporate
+    - generic [ref=f13e450]:
+      - generic [ref=f13e451]: © Freyssinet copyright 2026. All Rights Reserved
+      - list [ref=f13e454]:
+        - listitem [ref=f13e455]:
+          - link "Sitemap" [ref=f13e456] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/sitemap/
+        - listitem [ref=f13e457]:
+          - text: •
+          - link "Legal notice" [ref=f13e458] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/legal-notice/
+        - listitem [ref=f13e459]:
+          - text: •
+          - link "Credits" [ref=f13e460] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/credits/
+        - listitem [ref=f13e461]:
+          - text: •
+          - link "Privacy policy" [ref=f13e462] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/privacy-policy/
+        - listitem [ref=f13e463]:
+          - text: •
+          - link "Cookies policy" [ref=f13e464] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/cookies-policy/
+        - listitem [ref=f13e465]:
+          - text: •
+          - link "Accessibility" [ref=f13e466] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/accessibility/
+        - listitem [ref=f13e467]:
+          - text: •
+          - link "Ethics" [ref=f13e468] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/company/our-commitments/#content_3
+  - text:                                                                             

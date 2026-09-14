@@ -37,6 +37,17 @@ export type TechnologyDiagram = {
   image: string;
 };
 
+/** A product line on a combined page — its own heading, types and parts. */
+export type TechnologyGroup = {
+  /** In-page anchor, e.g. `/technologies/…#bearing`. */
+  id: string;
+  name: string;
+  icon: TechIconKey;
+  summary: string;
+  types: TechnologyType[];
+  components: TechnologyComponent[];
+};
+
 export type Technology = {
   slug: string;
   name: string;
@@ -50,6 +61,9 @@ export type Technology = {
   components: TechnologyComponent[];
   /** Line drawings, rendered in their own section above the parts list. */
   diagrams?: TechnologyDiagram[];
+  /** Set where several product lines share one page. Each group renders its
+      own types and parts; the top-level `types` / `components` stay empty. */
+  groups?: TechnologyGroup[];
   galleryImages: string[];
 };
 
@@ -261,123 +275,133 @@ export const technologies: Technology[] = [
     ],
   },
   {
-    slug: "bearing",
-    name: "Bearing",
+    /* One page for the three lines — they share standards, certification and
+       most of their reference projects. The old per-line URLs redirect to the
+       matching group anchor (see next.config.ts). */
+    slug: "bearing-expansion-joints-anti-seismic-device",
+    name: "Bearing, Expansion Joints & Anti-Seismic Device",
     icon: "layers",
     heroImage: "/technologies/bearing-anti-seismic-hero.jpg",
     summary:
-      "OVM provides durable bearings to bridges and buildings of every kind, complying with the specifications of JT, AASHTO, BS, JIS and other international standards. Natural rubber and neoprene type bearings are available, spherical and pot bearings feature high performance, and damping bearings with lead cores are introduced to projects especially in seismic zones.",
-    types: [
+      "OVM provides durable bearings, expansion joints and anti-seismic devices to bridges and buildings of every kind, complying with the specifications of JT, AASHTO, BS, JIS and other international standards — from elastomeric, pot and spherical bearings, through modular, finger and strip seal joints, to lead-core damping bearings for structures in seismic zones.",
+    types: [],
+    components: [],
+    groups: [
       {
-        name: "Elastomeric bearings",
-        desc: "Flexible bearings made of reinforced elastomer to absorb movements and distribute loads.",
+        id: "bearing",
+        name: "Bearing",
+        icon: "layers",
+        summary:
+          "Natural rubber and neoprene type bearings are available, while spherical and pot bearings feature high performance — accommodating structural movements, ensuring load transfer, and enhancing the durability of bridges and buildings.",
+        types: [
+          {
+            name: "Elastomeric bearings",
+            desc: "Flexible bearings made of reinforced elastomer to absorb movements and distribute loads.",
+          },
+          {
+            name: "Pot bearings",
+            desc: "High-capacity bearings using a confined elastomer pad for rotation and load distribution.",
+          },
+          {
+            name: "Spherical bearings",
+            desc: "Bearings with a spherical sliding surface, allowing rotation and movement in multiple directions.",
+          },
+        ],
+        components: [
+          {
+            name: "Elastomeric Bearing",
+            image: "/technologies/diagrams/bearing-elastomeric-diagram.jpg",
+          },
+          {
+            name: "Pot Bearing",
+            image: "/technologies/diagrams/bearing-pot-diagram.jpg",
+          },
+          {
+            name: "Spherical Bearing",
+            image: "/technologies/diagrams/bearing-spherical-diagram.jpg",
+          },
+          {
+            name: "Bearings",
+            image: "/technologies/profile-2026/bearing-photo-real.jpg",
+            desc: "Types: elastomeric, pot, spherical, lead rubber, high damping rubber, and pendulum bearing. Designed and manufactured to AASHTO LRFD, EN1337, EN15129, BS5400, with CE certification and test reports from CTL (USA), MILANO (Italy), and KIT (Germany).",
+            plate: "dark",
+          },
+          /* 2026 render set. */
+          {
+            name: "Laminated Elastomeric Bearing (Square)",
+            image: "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-square.png",
+          },
+          {
+            name: "Laminated Elastomeric Bearing (Round)",
+            image: "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-round.png",
+          },
+          {
+            name: "Load Testing Rig",
+            image: "/technologies/renders-2026/bearing/bearing-load-testing-rig.png",
+            desc: "Bearing performance is verified under controlled load testing before deployment.",
+          },
+        ],
       },
       {
-        name: "Pot bearings",
-        desc: "High-capacity bearings using a confined elastomer pad for rotation and load distribution.",
-      },
-      {
-        name: "Spherical bearings",
-        desc: "Bearings with a spherical sliding surface, allowing rotation and movement in multiple directions.",
-      },
-    ],
-    components: [
-      {
-        name: "Elastomeric Bearing",
-        image: "/technologies/diagrams/bearing-elastomeric-diagram.jpg",
-      },
-      {
-        name: "Pot Bearing",
-        image: "/technologies/diagrams/bearing-pot-diagram.jpg",
-      },
-      {
-        name: "Spherical Bearing",
-        image: "/technologies/diagrams/bearing-spherical-diagram.jpg",
-      },
-      {
-        name: "Bearings",
-        image: "/technologies/profile-2026/bearing-photo-real.jpg",
-        desc: "Types: elastomeric, pot, spherical, lead rubber, high damping rubber, and pendulum bearing. Designed and manufactured to AASHTO LRFD, EN1337, EN15129, BS5400, with CE certification and test reports from CTL (USA), MILANO (Italy), and KIT (Germany).",
-        plate: "dark",
-      },
-      /* 2026 render set. */
-      {
-        name: "Laminated Elastomeric Bearing (Square)",
-        image: "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-square.png",
-      },
-      {
-        name: "Laminated Elastomeric Bearing (Round)",
-        image: "/technologies/renders-2026/bearing/bearing-elastomeric-laminated-round.png",
-      },
-      {
-        name: "Load Testing Rig",
-        image: "/technologies/renders-2026/bearing/bearing-load-testing-rig.png",
-        desc: "Bearing performance is verified under controlled load testing before deployment.",
-      },
-    ],
-    galleryImages: [],
-  },
-  {
-    slug: "expansion-joints",
-    name: "Expansion Joints",
-    icon: "blocks",
-    heroImage: null,
-    summary:
-      "OVM provides durable expansion joints to various structures, complying with the specifications of JT, AASHTO, BS, JIS and other international standards. Natural rubber and neoprene type joints are available across the movement range, engineered for seamless traffic flow and long-term performance alongside OVM's bearing and damper lines.",
-    types: [
-      {
-        name: "Modular expansion joints",
-        desc: "Designed for large movement ranges, ensuring seamless traffic flow and long-term performance.",
-      },
-      {
-        name: "Finger joints",
-        desc: "High-durability joints designed to accommodate extensive movements while ensuring noise reduction.",
-      },
-      {
-        name: "Strip seal joints",
-        desc: "Waterproof and highly flexible rubber-sealed expansion joints designed for moderate movement structures.",
-      },
-    ],
-    components: [
-      {
-        name: "Modular / Finger Expansion Joint",
-        image: "/technologies/diagrams/expansion-joint-diagram.jpg",
-      },
-      {
+        id: "expansion-joints",
         name: "Expansion Joints",
-        image: "/technologies/profile-2026/expansion-joint-photo-real.jpg",
-        desc: "Types: rubber expansion joint, strip seal expansion joint, modular expansion joint, finger expansion joint. Same international standards compliance and CE certification as our bearing products.",
-        plate: "dark",
+        icon: "blocks",
+        summary:
+          "Natural rubber and neoprene type joints are available across the movement range, engineered for seamless traffic flow and long-term performance alongside OVM's bearing and damper lines.",
+        types: [
+          {
+            name: "Modular expansion joints",
+            desc: "Designed for large movement ranges, ensuring seamless traffic flow and long-term performance.",
+          },
+          {
+            name: "Finger joints",
+            desc: "High-durability joints designed to accommodate extensive movements while ensuring noise reduction.",
+          },
+          {
+            name: "Strip seal joints",
+            desc: "Waterproof and highly flexible rubber-sealed expansion joints designed for moderate movement structures.",
+          },
+        ],
+        components: [
+          {
+            name: "Modular / Finger Expansion Joint",
+            image: "/technologies/diagrams/expansion-joint-diagram.jpg",
+          },
+          {
+            name: "Expansion Joints",
+            image: "/technologies/profile-2026/expansion-joint-photo-real.jpg",
+            desc: "Types: rubber expansion joint, strip seal expansion joint, modular expansion joint, finger expansion joint. Same international standards compliance and CE certification as our bearing products.",
+            plate: "dark",
+          },
+          /* 2026 render set. */
+          {
+            name: "Expansion Joint — Deck Cross-Section",
+            image: "/technologies/renders-2026/expansion-joints/expansion-joint-deck-cutaway.png",
+          },
+          {
+            name: "Modular Expansion Joint Hardware",
+            image: "/technologies/renders-2026/expansion-joints/expansion-joint-modular-hardware.png",
+          },
+        ],
       },
-      /* 2026 render set. */
       {
-        name: "Expansion Joint — Deck Cross-Section",
-        image: "/technologies/renders-2026/expansion-joints/expansion-joint-deck-cutaway.png",
-      },
-      {
-        name: "Modular Expansion Joint Hardware",
-        image: "/technologies/renders-2026/expansion-joints/expansion-joint-modular-hardware.png",
-      },
-    ],
-    galleryImages: [],
-  },
-  {
-    slug: "anti-seismic-device",
-    name: "Anti-Seismic Device",
-    icon: "shield",
-    heroImage: "/technologies/bearing-anti-seismic-hero.jpg",
-    summary:
-      "OVM provides durable bearings, expansion joints and dampers to various structures, complying with the specifications of JT, AASHTO, BS, JIS and other international standards. For structures in seismic zones, damping bearings with lead cores are introduced to absorb and dissipate seismic energy, protecting critical infrastructure during earthquake events.",
-    types: [
-      {
-        name: "Lead-core damping bearing",
-        desc: "A damping bearing with a lead core, introduced to projects especially in seismic zones to absorb shock during seismic events.",
-      },
-    ],
-    components: [
-      {
-        name: "Lead-Core Damping Bearing",
-        image: "/technologies/diagrams/anti-seismic-lead-core-diagram.jpg",
+        id: "anti-seismic-device",
+        name: "Anti-Seismic Device",
+        icon: "shield",
+        summary:
+          "For structures in seismic zones, damping bearings with lead cores are introduced to absorb and dissipate seismic energy, protecting critical infrastructure during earthquake events.",
+        types: [
+          {
+            name: "Lead-core damping bearing",
+            desc: "A damping bearing with a lead core, introduced to projects especially in seismic zones to absorb shock during seismic events.",
+          },
+        ],
+        components: [
+          {
+            name: "Lead-Core Damping Bearing",
+            image: "/technologies/diagrams/anti-seismic-lead-core-diagram.jpg",
+          },
+        ],
       },
     ],
     galleryImages: [],

@@ -1,0 +1,316 @@
+- generic [active] [ref=f20e1]:
+  - generic [ref=f20e3]:
+    - generic [ref=f20e4]: Freyssinet (corporate website)
+    - generic:
+      - list
+  - banner [ref=f20e5]:
+    - generic:
+      - link [ref=f20e6] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+        - img "Freyssinet Corporate" [ref=f20e7]
+      - link " Menu" [ref=f20e8] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=f20e9]: 
+        - text: 
+        - generic [ref=f20e10]: Menu
+      - text:  
+  - text:         
+  - main [ref=f20e11]:
+    - generic [ref=f20e12]:
+      - generic [ref=f20e13]:
+        - generic [ref=f20e14]:
+          - generic [ref=f20e15]: Share this page
+          - list [ref=f20e16]:
+            - listitem [ref=f20e17]:
+              - link " Facebook" [ref=f20e18] [cursor=pointer]:
+                - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.freyssinet.com%2Four-case-studies%2F
+                - generic [ref=f20e19]: 
+                - generic [ref=f20e20]: Facebook
+            - listitem [ref=f20e21]:
+              - link " Twitter" [ref=f20e22] [cursor=pointer]:
+                - /url: https://twitter.com/intent/tweet?text=Our+case+studies https%3A%2F%2Fwww.freyssinet.com%2Four-case-studies%2F&original_referer=https%3A%2F%2Fwww.freyssinet.com%2Four-case-studies%2F
+                - generic [ref=f20e23]: 
+                - generic [ref=f20e24]: Twitter
+            - listitem [ref=f20e25]:
+              - link " LinkedIn" [ref=f20e26] [cursor=pointer]:
+                - /url: https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.freyssinet.com%2Four-case-studies%2F&title=Our+case+studies&summary=&source=https%3A%2F%2Fwww.freyssinet.com%2Four-case-studies%2F
+                - generic [ref=f20e27]: 
+                - generic [ref=f20e28]: LinkedIn
+        - generic [ref=f20e29]:
+          - list
+          - heading "Our case studies" [level=1] [ref=f20e30]
+          - text:  
+      - generic [ref=f20e35]:
+        - link "Home" [ref=f20e36] [cursor=pointer]:
+          - /url: https://www.freyssinet.com/
+        - text: / Our case studies
+      - generic [ref=f20e39]:
+        - generic [ref=f20e41]:
+          - text: 
+          - generic [ref=f20e42]:
+            - text: 
+            - generic [ref=f20e43]:
+              - generic [ref=f20e44]:
+                - generic [ref=f20e45]: "Filter by:"
+                - button " Clear filters" [ref=f20e46] [cursor=pointer]:
+                  - generic [ref=f20e47]: 
+                  - text: Clear filters
+              - generic [ref=f20e48]:
+                - button "Country " [ref=f20e50] [cursor=pointer]
+                - button "Activity " [ref=f20e52] [cursor=pointer]
+                - button "Solutions " [ref=f20e54] [cursor=pointer]
+                - button "Structure " [ref=f20e56] [cursor=pointer]
+                - button "Apply the filters" [ref=f20e57] [cursor=pointer]
+        - generic [ref=f20e58]:
+          - generic [ref=f20e60]:
+            - link [ref=f20e61] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/rapid-expansion-joint-replacement-on-the-toulouse-eastern-ring-road/
+            - generic [ref=f20e62]:
+              - generic [ref=f20e63]:
+                - generic [ref=f20e64]: Repair
+                - generic [ref=f20e65]:
+                  - generic: 
+                  - text: France
+              - heading [level=3] [ref=f20e66]:
+                - link "Rapid replacement of expansion joints on Toulouse Eastern ring road" [ref=f20e67] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/rapid-expansion-joint-replacement-on-the-toulouse-eastern-ring-road/
+              - generic [ref=f20e68]: Freyssinet successfully replaced 164 linear metres of expansion joints on a heavily trafficked transport corridor through a carefully planned night-time operation, ensuring minimal disruption to road users and full compliance with safety standards.
+            - link " " [ref=f20e71] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/rapid-expansion-joint-replacement-on-the-toulouse-eastern-ring-road/
+          - generic [ref=f20e73]:
+            - link [ref=f20e74] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/port-lympia-car-park-in-nice-france/
+            - generic [ref=f20e75]:
+              - generic [ref=f20e76]:
+                - generic [ref=f20e77]: Repair
+                - generic [ref=f20e78]:
+                  - generic: 
+                  - text: France
+              - heading [level=3] [ref=f20e79]:
+                - link "Port Lympia car park in Nice, France" [ref=f20e80] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/port-lympia-car-park-in-nice-france/
+              - generic [ref=f20e81]: On behalf of the Nice Chamber of Commerce and Industry, Freyssinet has reinforced the buttresses, vertical bearers and foundation slab of level -5 of the Port Lympia car park in Nice, located 15 metres under the sea.
+            - link " " [ref=f20e84] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/port-lympia-car-park-in-nice-france/
+          - generic [ref=f20e86]:
+            - link [ref=f20e87] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/krka-river-stress-ribbon-footbridge/
+            - generic [ref=f20e88]:
+              - generic [ref=f20e89]:
+                - generic [ref=f20e90]: Build
+                - generic [ref=f20e91]:
+                  - generic: 
+                  - text: Slovenia
+              - heading [level=3] [ref=f20e92]:
+                - link "Krka River Stress-Ribbon Footbridge" [ref=f20e93] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/krka-river-stress-ribbon-footbridge/
+              - generic [ref=f20e94]: A new construction method and specialist equipment were developed to build Slovenia’s first stress-ribbon bridge; and the first in the world with tendons installed in grouted HDPE ducts.
+            - link " " [ref=f20e97] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/krka-river-stress-ribbon-footbridge/
+          - generic [ref=f20e99]:
+            - link [ref=f20e100] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/rio-antirrio-bridge-inspection-maintenance/
+            - generic [ref=f20e101]:
+              - generic [ref=f20e102]:
+                - generic [ref=f20e103]: Repair
+                - generic [ref=f20e104]:
+                  - generic: 
+                  - text: Greece
+              - heading [level=3] [ref=f20e105]:
+                - link "Long-term maintenance for Rio-Antirrio bridge" [ref=f20e106] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/rio-antirrio-bridge-inspection-maintenance/
+              - generic [ref=f20e107]: As the designer, supplier and installer of the stay cables and lightning protection system, Freyssinet assists Gefyra SA in the inspection and maintenance of the cables.
+            - link " " [ref=f20e110] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/rio-antirrio-bridge-inspection-maintenance/
+          - generic [ref=f20e112]:
+            - link [ref=f20e113] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/marly-le-roi-viaduct-steel-deck-replacement/
+            - generic [ref=f20e114]:
+              - generic [ref=f20e115]:
+                - generic [ref=f20e116]: Repair
+                - generic [ref=f20e117]:
+                  - generic: 
+                  - text: France
+              - heading [level=3] [ref=f20e118]:
+                - link "Marly-le-Roi viaduct steel deck replacement" [ref=f20e119] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/marly-le-roi-viaduct-steel-deck-replacement/
+              - generic [ref=f20e120]: Given the very dense urban area and limited ground space available, replacement of the bridge steel deck had to be performed at heights, with consecutive lateral sliding operations.
+            - link " " [ref=f20e123] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/marly-le-roi-viaduct-steel-deck-replacement/
+          - generic [ref=f20e125]:
+            - link [ref=f20e126] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/the-coastal-highway-prestressed-road-in-la-reunion/
+            - generic [ref=f20e127]:
+              - generic [ref=f20e128]:
+                - generic [ref=f20e129]: Build
+                - generic [ref=f20e130]:
+                  - generic: 
+                  - text: France
+              - heading [level=3] [ref=f20e131]:
+                - link "New coastal highway prestressed road in La Reunion" [ref=f20e132] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/the-coastal-highway-prestressed-road-in-la-reunion/
+              - generic [ref=f20e133]: On the Reunion Island, Freyssinet teams carried out the prestressing of the viaduct of the new coastal highway, the longest viaduct in France at 5,400 metres.
+            - link " " [ref=f20e136] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/the-coastal-highway-prestressed-road-in-la-reunion/
+          - generic [ref=f20e138]:
+            - link [ref=f20e139] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/studena-dam-underwater-rehabilitation/
+            - generic [ref=f20e140]:
+              - generic [ref=f20e141]:
+                - generic [ref=f20e142]: Repair
+                - generic [ref=f20e143]:
+                  - generic: 
+                  - text: Bulgaria
+              - heading [level=3] [ref=f20e144]:
+                - link "Studena dam underwater rehabilitation" [ref=f20e145] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/studena-dam-underwater-rehabilitation/
+            - link " " [ref=f20e148] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/studena-dam-underwater-rehabilitation/
+          - generic [ref=f20e150]:
+            - link [ref=f20e151] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/el-quimbo-dam-waterproofing/
+            - generic [ref=f20e152]:
+              - generic [ref=f20e153]:
+                - generic [ref=f20e154]: Repair
+                - generic [ref=f20e155]:
+                  - generic: 
+                  - text: Colombia
+              - heading [level=3] [ref=f20e156]:
+                - link "El Quimbo dam waterproofing" [ref=f20e157] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/el-quimbo-dam-waterproofing/
+              - generic [ref=f20e158]: Deformations of significant magnitude caused the opening of the horizontal joint face slabs and parapet wall of the El Quimbo dam. They resulted in the rupture of the external joint waterstop at the contact upstream face slabs/concrete parapet wall and compromised the water tightness of the vertical joints of the parapet wall at various locations.
+            - link " " [ref=f20e161] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/el-quimbo-dam-waterproofing/
+          - generic [ref=f20e163]:
+            - link [ref=f20e164] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/lian-tang-interchange-highway-erection/
+            - generic [ref=f20e165]:
+              - generic [ref=f20e166]:
+                - generic [ref=f20e167]: Build
+                - generic [ref=f20e168]:
+                  - generic: 
+                  - text: Hong Kong
+              - heading [level=3] [ref=f20e169]:
+                - link "Lian Tang interchange highway erection" [ref=f20e170] [cursor=pointer]:
+                  - /url: https://www.freyssinet.com/case-study/lian-tang-interchange-highway-erection/
+              - generic [ref=f20e171]: Cantilever erection by lifting frame was the preferred construction method to build the four precast segmental viaducts of the Lian Tang interchange highway located next to Kiu Tau, Fanling.
+            - link " " [ref=f20e174] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/case-study/lian-tang-interchange-highway-erection/
+        - navigation [ref=f20e176]:
+          - list [ref=f20e177]:
+            - listitem [ref=f20e178]:
+              - generic [ref=f20e179]: "1"
+            - listitem [ref=f20e180]:
+              - link "2" [ref=f20e181] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/our-case-studies/page/2/
+            - listitem [ref=f20e182]:
+              - link "3" [ref=f20e183] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/our-case-studies/page/3/
+            - listitem [ref=f20e184]:
+              - generic [ref=f20e185]: …
+            - listitem [ref=f20e186]:
+              - link "9" [ref=f20e187] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/our-case-studies/page/9/
+            - listitem [ref=f20e188]:
+              - link "Next" [ref=f20e189] [cursor=pointer]:
+                - /url: https://www.freyssinet.com/our-case-studies/page/2/
+  - contentinfo:
+    - link " Back to top" [ref=f20e190] [cursor=pointer]:
+      - /url: javascript:void(0)
+      - generic [ref=f20e191]: 
+      - generic [ref=f20e192]: Back to top
+    - generic [ref=f20e195]:
+      - link [ref=f20e197] [cursor=pointer]:
+        - /url: https://www.freyssinet.com/
+      - generic [ref=f20e198]:
+        - heading "About Freyssinet" [level=3]
+        - list [ref=f20e199]:
+          - listitem [ref=f20e200]:
+            - link "Who we are" [ref=f20e201] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/who-we-are/
+          - listitem [ref=f20e202]:
+            - link "Our commitments" [ref=f20e203] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/our-commitments/
+          - listitem [ref=f20e204]:
+            - link "New build" [ref=f20e205] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/build/
+          - listitem [ref=f20e206]:
+            - link "Structural repair" [ref=f20e207] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/solution/repair/
+          - listitem [ref=f20e208]:
+            - link "Our locations" [ref=f20e209] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/find-us/
+      - generic [ref=f20e210]:
+        - heading "Join us" [level=3]
+        - list [ref=f20e211]:
+          - listitem [ref=f20e212]:
+            - link "Careers" [ref=f20e213] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/company/join-our-teams/
+          - listitem [ref=f20e214]:
+            - link "Job offers" [ref=f20e215] [cursor=pointer]:
+              - /url: https://jobs.vinci.com/en/freyssinet
+          - listitem [ref=f20e216]:
+            - link "Employee stories" [ref=f20e217] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/category/employee-stories/
+      - generic [ref=f20e218]:
+        - heading "Stay updated" [level=3]
+        - list [ref=f20e219]:
+          - listitem [ref=f20e220]:
+            - link "Newsroom" [ref=f20e221] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/newsroom/
+          - listitem [ref=f20e222]:
+            - link "Contact us" [ref=f20e223] [cursor=pointer]:
+              - /url: https://www.freyssinet.com/contact/
+        - list [ref=f20e224]:
+          - listitem [ref=f20e225]:
+            - link " linkedin Freyssinet Corporate" [ref=f20e226] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/freyssinet
+              - generic [ref=f20e227]: 
+              - generic [ref=f20e228]: linkedin Freyssinet Corporate
+          - listitem [ref=f20e229]:
+            - link " youtube Freyssinet Corporate" [ref=f20e230] [cursor=pointer]:
+              - /url: https://www.youtube.com/@freyssinetgroup
+              - generic [ref=f20e231]: 
+              - generic [ref=f20e232]: youtube Freyssinet Corporate
+    - generic [ref=f20e235]:
+      - generic [ref=f20e236]: © Freyssinet copyright 2026. All Rights Reserved
+      - list [ref=f20e239]:
+        - listitem [ref=f20e240]:
+          - link "Sitemap" [ref=f20e241] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/sitemap/
+        - listitem [ref=f20e242]:
+          - text: •
+          - link "Legal notice" [ref=f20e243] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/legal-notice/
+        - listitem [ref=f20e244]:
+          - text: •
+          - link "Credits" [ref=f20e245] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/credits/
+        - listitem [ref=f20e246]:
+          - text: •
+          - link "Privacy policy" [ref=f20e247] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/privacy-policy/
+        - listitem [ref=f20e248]:
+          - text: •
+          - link "Cookies policy" [ref=f20e249] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/cookies-policy/
+        - listitem [ref=f20e250]:
+          - text: •
+          - link "Accessibility" [ref=f20e251] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/accessibility/
+        - listitem [ref=f20e252]:
+          - text: •
+          - link "Ethics" [ref=f20e253] [cursor=pointer]:
+            - /url: https://www.freyssinet.com/company/our-commitments/#content_3
+  - generic [ref=f20e255]:
+    - generic [ref=f20e256]:
+      - strong [ref=f20e257]: With full transparency…
+      - text: By continuing to visit this website, you are agreeing to the use of cookies and other similar technologies by Soletanche Freyssinet, in order to improve your experience on our site, to enable gathering traffic statistics and to enable sharing content on social medias.
+    - generic [ref=f20e258]:
+      - link "Accept" [ref=f20e260] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "Refuse cookies" [ref=f20e262] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - generic [ref=f20e263]: Read more
+      - generic [ref=f20e265]: Cookies Settings
+  - text:                                                                             

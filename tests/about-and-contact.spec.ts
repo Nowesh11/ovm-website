@@ -53,7 +53,7 @@ test.describe("about page", () => {
 
     expect(hrefs).toContain("/technologies/post-tensioning-systems");
     expect(hrefs).toContain("/technologies/cable-systems");
-    expect(hrefs).toContain("/technologies/bearing");
+    expect(hrefs).toContain("/technologies/bearing-expansion-joints-anti-seismic-device");
 
     for (const href of hrefs.filter((h) => h.startsWith("/technologies/"))) {
       expect((await request.get(href)).status()).toBe(200);
