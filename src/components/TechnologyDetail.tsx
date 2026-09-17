@@ -3,7 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Activity, Anchor, ArrowRight, Blocks, Cable, ChevronRight, Layers, MapPin, Radar, ShieldCheck } from "lucide-react";
+import {
+  Activity,
+  Anchor,
+  ArrowRight,
+  Award,
+  Blocks,
+  Cable,
+  Check,
+  ChevronRight,
+  FileCheck2,
+  Layers,
+  MapPin,
+  Radar,
+  Settings2,
+  ShieldCheck,
+  Wrench,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 import { projectAnchorId, projectsForTechnology } from "@/data/projects";
@@ -11,6 +27,9 @@ import type {
   TechIconKey,
   Technology,
   TechnologyComponent,
+  TechnologyEquipment,
+  TechnologyStandard,
+  TechnologySubProduct,
   TechnologyType,
 } from "@/data/technologies";
 
@@ -67,12 +86,39 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
     diagrams,
     groups,
     galleryImages,
+    features,
+    standards,
+    authoredStandards,
+    certifications,
+    subProducts,
+    equipment,
+    services,
   } = tech;
   const Icon = ICONS[icon];
 
   /* Pulled from the one project list rather than stored per technology, so
      the homepage carousel and these cards can never drift apart. */
   const referenceProjects = projectsForTechnology(slug);
+
+  /* Hero jump nav. A combined page advertises its product lines; a single
+     line advertises the deep sections instead. Built from what actually
+     rendered, so a link can never point at a section that is not there. */
+  const jumpLinks: { id: string; label: string; icon: LucideIcon }[] = [
+    ...(groups?.map((group) => ({
+      id: group.id,
+      label: group.name,
+      icon: ICONS[group.icon],
+    })) ?? []),
+    ...(!groups && subProducts?.length
+      ? [{ id: "product-range", label: "Product Range", icon: Layers }]
+      : []),
+    ...(equipment?.length
+      ? [{ id: "equipment", label: "Equipment", icon: Settings2 }]
+      : []),
+    ...(standards?.length || authoredStandards?.length || certifications?.length
+      ? [{ id: "standards", label: "Standards", icon: FileCheck2 }]
+      : []),
+  ];
 
   return (
     <>
@@ -171,34 +217,52 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
             {summary}
           </motion.p>
 
-          {groups && groups.length > 0 && (
+          {jumpLinks.length > 0 && (
             <motion.nav
               variants={rise}
-              aria-label="Product lines on this page"
+              aria-label="Sections on this page"
               className="mt-8 flex flex-wrap gap-2.5"
             >
-              {groups.map((group) => {
-                const GroupIcon = ICONS[group.icon];
-                return (
-                  <a
-                    key={group.id}
-                    href={`#${group.id}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-4 py-2 text-sm font-medium text-white backdrop-blur-md transition-colors duration-300 hover:border-amber/50 hover:text-amber-400"
-                  >
-                    <GroupIcon size={15} strokeWidth={1.9} className="text-amber" />
-                    {group.name}
-                  </a>
-                );
-              })}
+              {jumpLinks.map(({ id, label, icon: JumpIcon }) => (
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-4 py-2 text-sm font-medium text-white backdrop-blur-md transition-colors duration-300 hover:border-amber/50 hover:text-amber-400"
+                >
+                  <JumpIcon size={15} strokeWidth={1.9} className="text-amber" />
+                  {label}
+                </a>
+              ))}
             </motion.nav>
           )}
         </motion.div>
       </section>
 
       {/* ---------------------------------------------------------------
+          Key features — the headline capabilities of the line, straight
+          from OVM's product documentation.
+      --------------------------------------------------------------- */}
+      {features && features.length > 0 && (
+        <section className="relative overflow-hidden border-b border-line py-20 sm:py-24">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-40 top-0 -z-10 h-[26rem] w-[30rem] rounded-full bg-amber/[0.06] blur-[150px]"
+          />
+
+          <div className="shell">
+            <SectionHeading
+              eyebrow="Key Features"
+              title={`Why specify OVM ${name.toLowerCase()}`}
+            />
+            <FeatureList items={features} />
+          </div>
+        </section>
+      )}
+
+      {/* ---------------------------------------------------------------
           Types
       --------------------------------------------------------------- */}
-      {!groups && (
+      {!groups && (types.length > 0 || galleryImages.length > 0) && (
         <section className="relative overflow-hidden py-20 sm:py-24">
           <div
             aria-hidden
@@ -251,6 +315,32 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
       )}
 
       {/* ---------------------------------------------------------------
+          Product range — the named systems within this line, each with its
+          own features and the numbered part callouts from OVM's assembly
+          drawings. The deepest technical content on the page.
+      --------------------------------------------------------------- */}
+      {subProducts && subProducts.length > 0 && (
+        <section
+          id="product-range"
+          className="relative scroll-mt-20 overflow-hidden border-t border-line py-20 sm:py-24"
+        >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-40 top-1/4 -z-10 h-[30rem] w-[34rem] rounded-full bg-navy/12 blur-[150px]"
+          />
+
+          <div className="shell">
+            <SectionHeading
+              eyebrow="Product Range"
+              title="The systems in detail"
+              lead={`Each OVM ${name.toLowerCase()} variant, with its published features and the labelled components of its assembly.`}
+            />
+            <SubProductList subProducts={subProducts} />
+          </div>
+        </section>
+      )}
+
+      {/* ---------------------------------------------------------------
           Product lines — a combined page gives each line its own section
           holding that line's types and parts together, so a reader never
           has to match a type up with its components further down.
@@ -291,6 +381,31 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
               </motion.div>
 
               <TypeGrid types={group.types} Icon={GroupIcon} />
+
+              {group.features && group.features.length > 0 && (
+                <FeatureList items={group.features} />
+              )}
+
+              {group.subProducts && group.subProducts.length > 0 && (
+                <SubProductList subProducts={group.subProducts} />
+              )}
+
+              {group.standards && group.standards.length > 0 && (
+                <div className="mt-16">
+                  <SectionHeading
+                    as="h3"
+                    eyebrow="Standards"
+                    title={`${group.name} — design and manufacture`}
+                  />
+                  <StandardsGrid standards={group.standards} />
+                </div>
+              )}
+
+              {group.certifications && group.certifications.length > 0 && (
+                <div className="mt-12">
+                  <CertificationList items={group.certifications} />
+                </div>
+              )}
 
               {group.components.length > 0 && (
                 <>
@@ -410,6 +525,105 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
       )}
 
       {/* ---------------------------------------------------------------
+          Equipment — the plant OVM supplies to install, stress and grout
+          the system, so a contractor can source the whole operation here.
+      --------------------------------------------------------------- */}
+      {equipment && equipment.length > 0 && (
+        <section
+          id="equipment"
+          className="relative scroll-mt-20 overflow-hidden border-t border-line py-20 sm:py-24"
+        >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-40 top-1/3 -z-10 h-[26rem] w-[30rem] rounded-full bg-navy/10 blur-[150px]"
+          />
+
+          <div className="shell">
+            <SectionHeading
+              eyebrow="Equipment & Service"
+              title="Plant for installation, stressing and grouting"
+              lead="Jacks, pumps, swaging and grouting equipment supplied and supported by OVM alongside the system itself."
+            />
+            <EquipmentGrid equipment={equipment} />
+          </div>
+        </section>
+      )}
+
+      {/* ---------------------------------------------------------------
+          Standards, co-authored standards and certification.
+      --------------------------------------------------------------- */}
+      {((standards && standards.length > 0) ||
+        (authoredStandards && authoredStandards.length > 0) ||
+        (certifications && certifications.length > 0)) && (
+        <section
+          id="standards"
+          className="relative scroll-mt-20 overflow-hidden border-t border-line py-20 sm:py-24"
+        >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-40 top-1/4 -z-10 h-[26rem] w-[30rem] rounded-full bg-amber/[0.05] blur-[150px]"
+          />
+
+          <div className="shell">
+            {standards && standards.length > 0 && (
+              <>
+                <SectionHeading
+                  eyebrow="Standards & Compliance"
+                  title="Designed, tested and certified against"
+                  lead={`OVM ${name.toLowerCase()} comply with the specifications and recommendations below.`}
+                />
+                <StandardsGrid standards={standards} />
+              </>
+            )}
+
+            {authoredStandards && authoredStandards.length > 0 && (
+              <div className={standards && standards.length > 0 ? "mt-16" : ""}>
+                <SectionHeading
+                  as="h3"
+                  eyebrow="Standards We Wrote"
+                  title="Standards OVM helped draft"
+                  lead="OVM sits on the drafting committee for the national and industry standards that govern this system."
+                />
+                <StandardsGrid standards={authoredStandards} authored />
+              </div>
+            )}
+
+            {certifications && certifications.length > 0 && (
+              <div className="mt-16">
+                <SectionHeading
+                  as="h3"
+                  eyebrow="Certification"
+                  title="Approvals and test reports"
+                />
+                <CertificationList items={certifications} />
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* ---------------------------------------------------------------
+          Contracting scope — what OVM undertakes beyond supply.
+      --------------------------------------------------------------- */}
+      {services && services.length > 0 && (
+        <section className="relative overflow-hidden border-t border-line py-20 sm:py-24">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-40 top-1/3 -z-10 h-[26rem] w-[30rem] rounded-full bg-navy/10 blur-[150px]"
+          />
+
+          <div className="shell">
+            <SectionHeading
+              eyebrow="Construction Service"
+              title="What OVM undertakes on site"
+              lead="Beyond product supply, OVM works as a specialist contractor across the full scope below."
+            />
+            <ServiceList items={services} />
+          </div>
+        </section>
+      )}
+
+      {/* ---------------------------------------------------------------
           Reference projects — filtered out of the one project list in
           `data/projects.ts` by this technology's slug, so a project is
           described once and appears wherever it applies. Technologies none
@@ -502,13 +716,324 @@ export default function TechnologyDetail({ tech }: { tech: Technology }) {
   );
 }
 
+/* ------------------------------------------------------------------
+   Shared section furniture. Every band below the hero opens with the
+   same amber eyebrow rule and display heading, so the page reads as one
+   document rather than a stack of unrelated blocks.
+------------------------------------------------------------------ */
+function SectionHeading({
+  eyebrow,
+  title,
+  lead,
+  as = "h2",
+}: {
+  eyebrow: string;
+  title: string;
+  lead?: string;
+  as?: "h2" | "h3";
+}) {
+  const Title = as;
+
+  return (
+    <motion.div {...reveal}>
+      <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
+        <span className="h-px w-8 bg-gradient-to-r from-amber to-transparent" />
+        {eyebrow}
+      </span>
+      <Title
+        className={`mt-5 font-display font-bold leading-[1.15] tracking-[-0.03em] text-white ${
+          as === "h2" ? "text-2xl sm:text-3xl lg:text-4xl" : "text-xl sm:text-2xl"
+        }`}
+      >
+        {title}
+      </Title>
+      {lead && (
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted">{lead}</p>
+      )}
+    </motion.div>
+  );
+}
+
+/** Ticked bullet list — used for every "features" block on the page. */
+function FeatureList({ items, columns = true }: { items: string[]; columns?: boolean }) {
+  return (
+    <motion.ul
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
+      className={`mt-10 grid gap-x-8 gap-y-4 ${
+        columns ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"
+      }`}
+    >
+      {items.map((item) => (
+        <motion.li key={item} variants={gridRise} className="flex gap-3.5">
+          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-amber/30 bg-amber/10 text-amber">
+            <Check size={12} strokeWidth={3} />
+          </span>
+          <span className="text-sm leading-relaxed text-muted">{item}</span>
+        </motion.li>
+      ))}
+    </motion.ul>
+  );
+}
+
+/* Sub-systems within a line. Each card carries its own features and, where
+   OVM publishes one, the numbered part callout from the assembly drawing —
+   the numbering here matches the numbering on the drawing. */
+function SubProductList({ subProducts }: { subProducts: TechnologySubProduct[] }) {
+  return (
+    <motion.div
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.05 }}
+      /* Both this list and the types grid render <article> cards, so the
+         suite needs a hook to tell them apart. */
+      data-testid="sub-products"
+      className="mt-12 flex flex-col gap-5"
+    >
+      {subProducts.map((sub, i) => (
+        <motion.article
+          key={sub.id}
+          id={sub.id}
+          variants={gridRise}
+          className="group scroll-mt-24 overflow-hidden rounded-[18px] border border-line bg-surface transition-all duration-400 hover:border-navy-300/45 hover:shadow-[0_28px_60px_-28px_rgba(0,0,0,0.95)]"
+        >
+          <div className="border-b border-line bg-gradient-to-r from-surface-2 via-surface to-surface px-6 py-5 sm:px-8">
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <span className="font-mono text-[11px] font-semibold tabular-nums tracking-[0.1em] text-amber">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-display text-lg font-bold leading-snug tracking-[-0.02em] text-white sm:text-xl">
+                {sub.name}
+              </h3>
+            </div>
+            {sub.summary && (
+              <p className="mt-3 max-w-4xl text-sm leading-relaxed text-muted">
+                {sub.summary}
+              </p>
+            )}
+          </div>
+
+          {(sub.features || sub.assemblies || sub.applications) && (
+            <div className="px-6 py-6 sm:px-8">
+              {sub.features && (
+                <ul className="flex flex-col gap-3">
+                  {sub.features.map((feature) => (
+                    <li key={feature} className="flex gap-3">
+                      <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber" />
+                      <span className="text-sm leading-relaxed text-muted">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {sub.applications && (
+                <div className={sub.features ? "mt-7" : ""}>
+                  <h4 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-dim">
+                    Applications
+                  </h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {sub.applications.map((app) => (
+                      <span
+                        key={app}
+                        className="rounded-full border border-line bg-surface-2 px-3.5 py-1.5 text-xs leading-relaxed text-muted"
+                      >
+                        {app}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {sub.assemblies && (
+                <div
+                  className={`grid gap-4 ${
+                    sub.features || sub.applications ? "mt-7" : ""
+                  } ${sub.assemblies.length > 1 ? "sm:grid-cols-2" : "grid-cols-1"}`}
+                >
+                  {sub.assemblies.map((assembly) => (
+                    <div
+                      key={assembly.name}
+                      className="rounded-[12px] border border-line bg-ink-deep/40 p-5"
+                    >
+                      <h4 className="font-display text-sm font-bold leading-snug text-white">
+                        {assembly.name}
+                      </h4>
+
+                      {assembly.parts && (
+                        <ol className="mt-3.5 flex flex-col gap-1.5">
+                          {assembly.parts.map((part, pi) => (
+                            <li key={part} className="flex gap-2.5 text-xs text-muted">
+                              <span className="font-mono tabular-nums text-amber/70">
+                                {String(pi + 1).padStart(2, "0")}
+                              </span>
+                              <span className="leading-relaxed">{part}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+
+                      {assembly.notes && (
+                        <ul className="mt-4 flex flex-col gap-2 border-t border-line pt-3.5">
+                          {assembly.notes.map((note) => (
+                            <li
+                              key={note}
+                              className="text-[11px] leading-relaxed text-muted-dim"
+                            >
+                              {note}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </motion.article>
+      ))}
+    </motion.div>
+  );
+}
+
+/* Compliance. `authored` marks the standards OVM sat on the drafting
+   committee for, which is a stronger claim than conformance and so gets
+   its own visual treatment. */
+function StandardsGrid({
+  standards,
+  authored = false,
+}: {
+  standards: TechnologyStandard[];
+  authored?: boolean;
+}) {
+  return (
+    <motion.div
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
+      className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {standards.map(({ code, title }) => (
+        <motion.div
+          key={code}
+          variants={gridRise}
+          className={`flex gap-3.5 rounded-[12px] border p-4 transition-colors duration-300 ${
+            authored
+              ? "border-amber/30 bg-amber/[0.06] hover:border-amber/55"
+              : "border-line bg-surface hover:border-navy-300/45"
+          }`}
+        >
+          <span
+            className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${
+              authored ? "bg-amber/15 text-amber" : "bg-surface-2 text-amber/75"
+            }`}
+          >
+            <FileCheck2 size={14} strokeWidth={2} />
+          </span>
+          <div className="min-w-0">
+            <p className="font-mono text-xs font-semibold tracking-[0.02em] text-white">
+              {code}
+            </p>
+            <p className="mt-1 text-xs leading-relaxed text-muted">{title}</p>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+function CertificationList({ items }: { items: string[] }) {
+  return (
+    <motion.ul
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
+      className="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2"
+    >
+      {items.map((item) => (
+        <motion.li
+          key={item}
+          variants={gridRise}
+          className="flex gap-3.5 rounded-[12px] border border-line bg-surface p-4 transition-colors duration-300 hover:border-amber/40"
+        >
+          <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-amber/12 text-amber">
+            <Award size={14} strokeWidth={2} />
+          </span>
+          <span className="text-sm leading-relaxed text-muted">{item}</span>
+        </motion.li>
+      ))}
+    </motion.ul>
+  );
+}
+
+function EquipmentGrid({ equipment }: { equipment: TechnologyEquipment[] }) {
+  return (
+    <motion.div
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.08 }}
+      className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {equipment.map(({ name, desc }) => (
+        <motion.div
+          key={name}
+          variants={gridRise}
+          className="group rounded-[14px] border border-line bg-surface p-5 transition-all duration-400 hover:-translate-y-1 hover:border-amber/40 hover:bg-surface-2"
+        >
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-gradient-to-br from-amber/20 via-surface-2 to-navy/30 text-amber">
+            <Settings2 size={16} strokeWidth={1.9} />
+          </span>
+          <h3 className="mt-4 font-display text-sm font-bold leading-snug text-white transition-colors duration-300 group-hover:text-amber-400">
+            {name}
+          </h3>
+          {desc && <p className="mt-2 text-xs leading-relaxed text-muted">{desc}</p>}
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+function ServiceList({ items }: { items: string[] }) {
+  return (
+    <motion.ul
+      variants={gridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.08 }}
+      className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-2"
+    >
+      {items.map((item) => (
+        <motion.li
+          key={item}
+          variants={gridRise}
+          className="flex gap-3.5 border-b border-line pb-3"
+        >
+          <Wrench size={15} className="mt-0.5 shrink-0 text-amber" strokeWidth={1.9} />
+          <span className="text-sm leading-relaxed text-muted">{item}</span>
+        </motion.li>
+      ))}
+    </motion.ul>
+  );
+}
+
 function TypeGrid({ types, Icon }: { types: TechnologyType[]; Icon: LucideIcon }) {
+  /* A group whose depth lives entirely in its sub-products carries no types;
+     bail out rather than leaving the section's top margin behind. */
+  if (types.length === 0) return null;
+
   return (
     <motion.div
       variants={gridContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.12 }}
+      data-testid="types-grid"
       className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2"
     >
       {types.map(({ name: typeName, desc }) => (

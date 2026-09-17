@@ -51,14 +51,18 @@ test.describe("technology pages", () => {
         for (const group of expected.groups) {
           const section = page.locator(`section#${group.id}`);
           await expect(section.locator("h2")).toHaveText(group.name);
-          await expect(section.locator("article")).toHaveCount(group.typeCount);
+          await expect(
+            section.locator('[data-testid="types-grid"] article'),
+          ).toHaveCount(group.typeCount);
         }
-      } else {
+      } else if (expected.typeCount > 0) {
         await expect(page.getByRole("heading", { name: "Systems we supply" })).toBeVisible();
         const typesGrid = page
           .locator("section")
           .filter({ has: page.getByRole("heading", { name: "Systems we supply" }) });
-        await expect(typesGrid.locator("article")).toHaveCount(expected.typeCount);
+        await expect(
+          typesGrid.locator('[data-testid="types-grid"] article'),
+        ).toHaveCount(expected.typeCount);
       }
 
       // Reference projects render only when the entry has projects
@@ -98,6 +102,64 @@ test.describe("technology pages", () => {
       await expect(
         page.getByRole("heading", { name: /Have a project in mind/i }),
       ).toHaveCount(0);
+    });
+
+    /* The detailed product documentation sourced from OVM's own product
+       pages: per-system features, assembly part callouts, plant and
+       standards. Guards against a page silently losing its depth. */
+    test(`${slug} renders its OVM product documentation`, async ({ page }) => {
+      await page.goto(`/technologies/${slug}`);
+      await scrollThroughPage(page);
+
+      // Key features
+      const features = page
+        .locator("section")
+        .filter({ has: page.getByRole("heading", { name: /^Why specify OVM/ }) });
+      if (expected.featureCount > 0) {
+        await expect(features.locator("li")).toHaveCount(expected.featureCount);
+      } else {
+        await expect(page.getByRole("heading", { name: /^Why specify OVM/ })).toHaveCount(0);
+      }
+
+      // Product range — on a combined page it lives inside each group
+      if (expected.groups) {
+        await expect(page.locator("section#product-range")).toHaveCount(0);
+        for (const group of expected.groups) {
+          await expect(
+            page.locator(`section#${group.id} [data-testid="sub-products"] > article`),
+          ).toHaveCount(group.subProductCount);
+        }
+      }
+
+      await expect(page.locator('[data-testid="sub-products"] > article')).toHaveCount(
+        expected.subProductCount,
+      );
+
+      if (expected.subProductCount === 0) {
+        await expect(page.getByRole("heading", { name: "The systems in detail" })).toHaveCount(0);
+      }
+
+      // Equipment & Service
+      const equipmentSection = page.locator("section#equipment");
+      if (expected.equipmentCount > 0) {
+        await expect(
+          equipmentSection.getByRole("heading", {
+            name: "Plant for installation, stressing and grouting",
+          }),
+        ).toBeVisible();
+        await expect(equipmentSection.locator("h3")).toHaveCount(expected.equipmentCount);
+      } else {
+        await expect(equipmentSection).toHaveCount(0);
+      }
+
+      // Standards & Compliance
+      const standards = page.locator("section#standards");
+      await expect(standards).toHaveCount(expected.hasStandards ? 1 : 0);
+      if (expected.hasStandards) {
+        await expect(
+          standards.getByRole("heading", { name: "Designed, tested and certified against" }),
+        ).toBeVisible();
+      }
     });
 
     test(`${slug} system supply matches its parts list`, async ({ page }) => {
@@ -249,7 +311,7 @@ test.describe("technology pages", () => {
   test("combined page links each product line from the hero", async ({ page }) => {
     await page.goto("/technologies/bearing-expansion-joints-anti-seismic-device");
 
-    const jump = page.getByRole("navigation", { name: "Product lines on this page" });
+    const jump = page.getByRole("navigation", { name: "Sections on this page" });
     await expect(jump.locator("a")).toHaveText([
       "Bearing",
       "Expansion Joints",

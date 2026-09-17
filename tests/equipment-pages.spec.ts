@@ -142,6 +142,10 @@ test.describe("equipment section", () => {
 });
 
 test.describe("equipment navbar link", () => {
+  /* One case starts from a technology page, which now carries OVM's detailed
+     product documentation and takes longer to settle before the click. */
+  test.describe.configure({ timeout: 90_000 });
+
   const OTHER_PAGES = [
     "/",
     "/about",

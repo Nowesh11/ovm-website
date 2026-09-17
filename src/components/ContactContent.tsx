@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
+import { ChevronRight, Mail, MapPin} from "lucide-react";
 
 import ContactForm from "@/components/ContactForm";
 import {
@@ -165,15 +165,7 @@ export default function ContactContent() {
                   </div>
                 </a>
 
-                <a href={CONTACT.phoneHref} className={rowClass}>
-                  <span className={iconClass}>
-                    <Phone size={19} strokeWidth={1.9} />
-                  </span>
-                  <div className="min-w-0">
-                    <p className={labelClass}>Phone</p>
-                    <p className={valueClass}>{CONTACT.phone}</p>
-                  </div>
-                </a>
+                
 
                 <a href={EMAIL_HREF} className={rowClass}>
                   <span className={iconClass}>

@@ -41,29 +41,51 @@ export const TECH_EXPECTATIONS: Record<
     componentCount: number;
     /** Cards in the "Technical Reference" section; 0 means it must not render. */
     diagramCount: number;
+    /** Cards in the "Product Range" section, which carries the detailed
+        per-system content sourced from OVM's own product documentation.
+        0 means the section must not render. */
+    subProductCount: number;
+    /** Ticked items in the "Key Features" band; 0 means it must not render. */
+    featureCount: number;
+    /** Cards in "Equipment & Service"; 0 means it must not render. */
+    equipmentCount: number;
+    /** True where the page carries a Standards & Compliance section. */
+    hasStandards: boolean;
     /** Product-line sections on a combined page, in order. Counts above are
         then totals across every line. */
-    groups?: readonly { id: string; name: string; typeCount: number; componentCount: number }[];
+    groups?: readonly {
+      id: string;
+      name: string;
+      typeCount: number;
+      componentCount: number;
+      subProductCount: number;
+    }[];
   }
 > = {
-  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 23, galleryCount: 2, componentCount: 10, diagramCount: 3 },
-  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 9, galleryCount: 3, componentCount: 13, diagramCount: 5 },
+  "post-tensioning-systems": { name: "Post-Tensioning Systems", hasHeroImage: true, typeCount: 5, projectCount: 23, galleryCount: 2, componentCount: 6, diagramCount: 3, subProductCount: 5, featureCount: 6, equipmentCount: 15, hasStandards: true },
+  "cable-systems": { name: "Cable Systems", hasHeroImage: true, typeCount: 5, projectCount: 9, galleryCount: 3, componentCount: 13, diagramCount: 5, subProductCount: 7, featureCount: 5, equipmentCount: 0, hasStandards: true },
   "bearing-expansion-joints-anti-seismic-device": {
     name: "Bearing, Expansion Joints & Anti-Seismic Device",
     hasHeroImage: true,
-    typeCount: 7,
+    /* Every bearing, joint and isolator is described in full by its group's
+       Product Range cards, so no group carries a types grid. */
+    typeCount: 0,
     projectCount: 8,
     galleryCount: 0,
     componentCount: 12,
     diagramCount: 0,
+    subProductCount: 9,
+    featureCount: 0,
+    equipmentCount: 0,
+    hasStandards: false,
     groups: [
-      { id: "bearing", name: "Bearing", typeCount: 3, componentCount: 7 },
-      { id: "expansion-joints", name: "Expansion Joints", typeCount: 3, componentCount: 4 },
-      { id: "anti-seismic-device", name: "Anti-Seismic Device", typeCount: 1, componentCount: 1 },
+      { id: "bearing", name: "Bearing", typeCount: 0, componentCount: 7, subProductCount: 3 },
+      { id: "expansion-joints", name: "Expansion Joints", typeCount: 0, componentCount: 4, subProductCount: 4 },
+      { id: "anti-seismic-device", name: "Anti-Seismic Device", typeCount: 0, componentCount: 1, subProductCount: 2 },
     ],
   },
-  dampers: { name: "Dampers", hasHeroImage: false, typeCount: 2, projectCount: 0, galleryCount: 0, componentCount: 3, diagramCount: 0 },
-  "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 0, galleryCount: 1, componentCount: 0, diagramCount: 0 },
+  dampers: { name: "Dampers", hasHeroImage: false, typeCount: 3, projectCount: 0, galleryCount: 0, componentCount: 3, diagramCount: 0, subProductCount: 3, featureCount: 0, equipmentCount: 0, hasStandards: false },
+  "structural-health-monitoring": { name: "Structural Health Monitoring", hasHeroImage: true, typeCount: 4, projectCount: 0, galleryCount: 1, componentCount: 0, diagramCount: 0, subProductCount: 0, featureCount: 0, equipmentCount: 0, hasStandards: false },
 };
 
 /** Every image referenced by a `components` entry, across all technologies. */

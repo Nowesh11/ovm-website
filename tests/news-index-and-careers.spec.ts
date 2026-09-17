@@ -66,6 +66,10 @@ test.describe("news index", () => {
 /* The catalogue download feature was removed at the client's request — no
    button, no PDFs in the repo, and nothing served from /catalogues. */
 test.describe("catalogue downloads are gone", () => {
+  /* This sweep scrolls the full length of the technology pages, which now
+     carry OVM's detailed product documentation and run to several screens. */
+  test.describe.configure({ timeout: 90_000 });
+
   const ROUTES = [
     "/",
     "/about",
